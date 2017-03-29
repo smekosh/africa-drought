@@ -1,0 +1,164 @@
+/* Language fonts */
+.albanian {
+	&.primary{
+		font-family: Arial, sans;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+/*
+//courtesy of Pangea
+.armenian
+.arabic
+.avar
+.azeri--latin
+.bosnian--latin
+.belarusian
+.chechen
+.dari
+.english
+.georgian
+.kabardian
+.kazakh
+.kyrgyz
+.latin
+.macedonian 
+.pashto
+.persian‎
+.romanian
+.russian
+.tajik--cyrillic
+.tatar
+.turkmen
+.ukrainian
+.uzbek--cyrillic
+*/
+
+.amharic {
+	&.primary{
+		font-family: "Nyala", "Geez Unicode", "GF Zemen Unicode", "Arial Unicode MS", Arial, Tahoma, Helvetica, sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+.Armenian {
+	&.primary{
+		font-family: Sylfaen, Arial, Helvetica, 'Arial Unicode MS', sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+.Bengali {
+	&.primary{
+		font-family: Shonar, Vrinda, Arial, Helvetica, sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+.Burmese {
+	&.primary{
+		font-family: 'Zawgyi-One-Embedded';
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+.Chinese {
+	&.primary{
+		font-family: NSimSun,SimSun,PMingLiU,Arial,Helvetica,"Arial Unicode MS",sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Khmer {
+	&.primary{
+		font-family: "Khmer OS", Arial, Helvetica, sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Korean {
+	&.primary{
+		font-family: Dotum, Arial,Helvetica,"Arial Unicode MS",sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Lao {
+	&.primary{
+		font-family: SaysetthaMXRegular,SaysetthaOTRegular;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Persian {
+	&.primary{
+		font-family: Arial,"Arabic Transparent",Helvetica,sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Thai {
+	&.primary{
+		font-family: Arial;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Tibetian {
+	&.primary{
+		font-family: "Microsoft Himalaya", Arial,Helvetica,"Arial Unicode MS",sans-serif;;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+Tigrinya {
+	&.primary{
+		font-family: 'Nyala','Geez Unicode','GF Zemen Unicode','visual Geez Unicode',EthiopiaJiretRegular,Arial,Helvetica,"Arial Unicode MS",sans-serif;
+	}
+	&.secondary{
+		font-family: Times, serif;
+	}
+}
+
+
+.voa__project {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: $font__sansDisplay;
+	}
+
+	strong{
+		font-family: $font__sansDisplay;
+	}
+
+	.voa__story p{
+		font-family: $font__serif;
+	}
+}
