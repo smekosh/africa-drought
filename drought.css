@@ -1,0 +1,166 @@
+a {
+    color: #23527c;
+}
+h1, h2 {
+   font-family: "Noto Serif";
+   text-align: center;
+}
+
+h1 {
+    color: #222;
+    font-size: 2.1em;
+    margin: 20px 0 0 0;
+}
+h2 {
+    color: #555;
+    font-family: 'noto sans';
+    text-transform: uppercase;
+    font-size: .9em;
+   margin: 10px 0 20px 0;
+}  
+
+h3 {
+    font-family: 'Noto Sans';
+    font-size:.9em;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+h4,h5,h6 {
+    font-family: 'Noto Sans';
+    font-size:1.5em;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 20px;
+}
+h5 {
+    font-size: .8em;
+    font-weight: normal;
+    margin-bottom: 5px
+}      
+h6 {
+    color: #111;
+    font-size: 1.2em;
+    text-transform: none;
+}     
+h6.last-item {
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Noto Serif';
+
+}
+p.lead {
+    color:#333;
+    font-family: 'Noto Serif';
+    font-size: 1em;
+    font-style: italic;            
+    line-height: 22px;
+    margin: 40px 0;
+    text-align: center;
+}    
+
+ol.stories {
+    margin-left: -40px;
+}
+ol.stories li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+ol.stories a {
+    font-family: 'Noto Serif';
+    font-size: .9em;
+}
+
+span.pubdate {
+    color: #777;
+    display: block;
+     font-family: 'Noto Sans';
+     font-weight: bold;
+    font-size: .8em;           
+}
+span.byline {
+    color: #777;
+    display: block;
+     font-family: 'Noto Sans';
+    font-size: .8em;           
+}        
+
+nav {
+    font-family: 'Noto Sans';
+    font-size: .9em;
+    margin-top:30px;
+    text-transform: uppercase;
+}
+
+nav a {
+    letter-spacing: 1px;
+}
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}  
+nav ul {
+    margin-left: -40px;
+    text-align: center;
+}
+
+article h1 {
+    margin: 0;
+    font-size: 1.2em;                
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+button {
+	margin: 10px 0;
+}
+
+p.note {
+    font-size: .8em;
+    font-style: italic;
+    color: #888;
+}
+
+.wrapper {
+    background-color: #eee;
+    margin-bottom: 40px;
+}
+.wrapper-footer {
+    background-color: #444;
+    margin-top:20px;
+}
+.wrapper-footer p.lead {
+        color: #fff;
+}
+.wrapper-footer h3 {
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+.marquee {
+    margin-bottom: 20px;
+}
+
+.at-a-glance {
+border-left: 20px solid #ddd;
+}
+
+h1.featured-story {
+    font-size: 1.6em;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+p.intro {
+    margin-bottom: 30px;
+}
