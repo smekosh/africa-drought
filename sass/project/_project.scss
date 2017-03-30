@@ -1,1 +1,20 @@
 // Put project-specific CSS here.
+
+.voa__project {
+	.voa__country-profile {
+		background-color: #FFF;
+		border-radius: 3px;
+		//box-shadow: 2px 2px 4px rgba(20,20,20,.4);
+		padding: 20px 15px 10px 15px;
+	}
+
+	.voa__country-profile {
+		.voa__stats {
+			padding-left: 0;
+			list-style: none;
+		}
+	}
+	.voa__paragraph-label {
+		font-weight: bold;
+	}
+}
