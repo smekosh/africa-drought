@@ -49,11 +49,11 @@ function showInfo(data, tabletop) {
 	var stringHeadlines = "";
 	var numberOfStories = 4;
 
-	stringHeadlines += '<img src="http://placehold.it/640x360" />';
-	stringHeadlines += '<h3 style="margin-bottom: 20px;"><a href="' + data[0].Link + '">' + data[0].Title + '</a></h3>';
+	stringHeadlines += '<a href="http://www.voanews.com' + data[0].Link + '"><img src="http://placehold.it/640x360" />';
+	stringHeadlines += '<h3 style="margin-bottom: 20px;">' + data[0].Title + '</h3></a>';
 
 	for (var i = 1; i < numberOfStories; i++ ){
-		stringHeadlines += '<p><a href="//voanews.com' + data[i].Link + '">' + data[i].Title + '</a></p>';
+		stringHeadlines += '<p><a href="//www.voanews.com' + data[i].Link + '">' + data[i].Title + '</a></p>';
 	}
 
 	$("#recentHeadlines").html(stringHeadlines)
