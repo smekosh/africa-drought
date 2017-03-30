@@ -5,35 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Hunger across Africa</title>
+	<title>{$slides[0].title} :: {$slides[0].title_tagline}</title>
 
 
-    <link rel="canonical" href="http://projects.voanews.com/hunger-across-africa/" />
+    <link rel="canonical" href="http://projects.voanews.com/africa-drought/" />
     <link type="image/x-icon" rel="icon" href="http://www.voanews.com/img/voa/favicon.ico" />
     <link rel="image_src" href="https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg" />
 
 
 	<!-- for Google -->
-	<meta name="description" content="How drought and conflict have put millions on the verge of famine."/>
+	<meta name="description" content="{$slides[0].title_tagline}"/>
 	<meta name="keywords" content="Africa, drought, famine, Somalia, Sudan, Zimbabwe," />
-	<meta name="author" content="Salem Fedaku" />
+	<meta name="author" content="Salem Solomon" />
 
 	<!-- for Facebook -->
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Hunger across Africa" />
-	<meta property="og:description" content="How drought and conflict have put millions on the verge of famine." />
+	<meta property="og:title" content="{$slides[0].title}" />
+	<meta property="og:description" content="{$slides[0].title_tagline}" />
 	<meta property="og:image" content="https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg" />
-	<meta property="og:url" content="http://projects.voanews.com/hunger-across-africa/" />
+	<meta property="og:url" content="http://projects.voanews.com/africa-drought/" />
 
 	<!-- for Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@voanews">
 	<meta name="twitter:creator" content="@salem_solomon">
-	<meta property="twitter:title" content="Hunger across Africa">
-	<meta property="twitter:description" content="How drought and conflict have put millions on the verge of famine.">
+	<meta property="twitter:title" content="{$slides[0].title}">
+	<meta property="twitter:description" content="{$slides[0].title_tagline}">
 	<meta property="twitter:image" content="https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg">
-    <meta name="twitter:url" content="http://projects.voanews.com/famine/" />
+    <meta name="twitter:url" content="http://projects.voanews.com/africa-drought/" />
 
 
     <meta name="DISPLAYDATE" content="April 6, 2017" />
@@ -49,10 +49,9 @@
 	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/tabletop.js'></script>
 	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/js/leaflet.js'></script>
 	<link rel="stylesheet" type="text/css" href="http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/css/leaflet.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
-	<script src="js/scripts.js?v1d"></script>
-	<link rel="stylesheet" type="text/css" href="css/all.css?v1d">
+	<script src="http://tools.voanews.com/utilities/timeline-editor/renderers/2017/js/scripts__timeline-editor.js"></script>
+	<link rel="stylesheet" type="text/css" href="//projects.voanews.com/africa-drought/css/all.css?v1e">
 	<!-- <link rel="stylesheet" type="text/css" href="css/bengali.css"> -->
 
 
@@ -83,60 +82,21 @@
 	-->
 </head>
 <body>
-<!--
-<script type="text/javascript">
-    var utag_data = {
-    entity:"VOA",
-    language:"English",
-    language_service:"VOA English",
-    short_language_service:"ENG",
-    property_id:"600",
-    platform:"Responsive",
-    platform_short:"R",
-    runs_js:"Yes",
-    section:"Special Projects",
-    english_section:"special-projects",
-    page_title:"<INSERT TITLE>",
-    page_type:"interactive",
-    page_name:"<INSERT TITLE>",
-    short_headline:"<INSERT HEADLINE>",
-    long_headline:"<INSERT HEADLINE>",
-    headline:"<INSERT HEADLINE>",
-    content_type:"interactive",
-    pub_year:"<INSERT YEAR – FORMAT: YYYY>",
-    pub_month:"<INSERT MONTH – FORMAT: MM>",
-    pub_day:"<INSERT DAY – FORMAT: DD>",
-    pub_weekday:"<INSERT WEEKDAY>",
-    byline:"<INSERT BYLINE – FORMAT: Last Name, First Name of Byline1; Last Name, First Name of Byline2>",
-    slug:"<INSERT SLUG – FORMAT: this-is-the-slug>"
-}
-</script>
- 
- 
-<script type="text/javascript">
-(function(a,b,c,d){
-a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
-b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-})();
-</script>
--->
+{include file="2017/metrics.tpl"}
+
 	<div class="voa__project english">
 
 		<div class="voa__navbar clear">
 			<div class="voa__grid__full">
 				<div class="voa__grid">
-					<a href="project2.html" class="voa__navbar__link"><div class="voa__navbar__logo"></div></a><!--<a href="#" class="voa__navbar__title">Hunger Across Africa</a>-->
+					<a href="//www.voanews.com/" class="voa__navbar__link"><div class="voa__navbar__logo"></div></a>
 
 					<div id="menuButton" class="voa__navbar__toggle"></div>
 
 					<nav id="main-nav" role="navigation" class="main-menu-nav">
 						<ul id="main-menu" class="sm sm-clean" data-smartmenus-id="14762810590939192">
-							<!--
-							<li id="navSection1"><a href="#section1">Section</a></li>
-							<li id="navSection2"><a href="#section2">Section</a></li>
-							-->
-							<li><a href="javascript:void(0);" class="has-submenu" id="sm-14762810590939192-1" aria-haspopup="true" aria-controls="sm-14762810590939192-2" aria-expanded="false"><span class="sub-arrow">+</span>Countries</a>
+
+							<li><a href="javascript:void(0);" class="has-submenu" id="sm-14762810590939192-1" aria-haspopup="true" aria-controls="sm-14762810590939192-2" aria-expanded="false"><span class="sub-arrow">+</span>{$slides[0].title_label_countries}</a>
 								<ul id="sm-14762810590939192-2" role="group" aria-hidden="true" aria-labelledby="sm-14762810590939192-1" aria-expanded="false">
 									<li><a href="#somalia">Somalia</a></li>
 									<li><a href="#southsudan">South Sudan</a></li>
@@ -144,7 +104,7 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 								</ul>
 							</li>
 
-							<li><a href="javascript:void(0);" class="has-submenu voa__navbar__language" id="" aria-haspopup="true" aria-controls="" aria-expanded="false"><div class="translation-icon"></div><span class="sub-arrow">+</span><span class="voa__no-tablet social-share-text ">Coverage</span></a>
+							<li><a href="javascript:void(0);" class="has-submenu voa__navbar__language" id="" aria-haspopup="true" aria-controls="" aria-expanded="false"><div class="translation-icon"></div><span class="sub-arrow">+</span><span class="voa__no-tablet social-share-text ">{$slides[0].title_label_coverage}</span></a>
 								<ul id="" role="group" aria-hidden="true" aria-labelledby="" aria-expanded="false">
 									<li><a href="http://voaafaanoromoo.com">Afaan Oromoo</a></li>
 									<li><a href="http://amharic.voanews.com/p/5573.html">አማርኛ</a></li>
@@ -171,49 +131,41 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 		<div class="voa__navbar" style="z-index: 9997; height: 42px; background-color: #000;">
 			<div class="voa__grid__full">
 				<div class="voa__grid">
-					<a href="#" class="voa__navbar__title" style="margin-left: 5%;">Hunger Across Africa</a>
+					<a href="#" class="voa__navbar__title" style="margin-left: 5%;">{$slides[0].title_label_nav}</a>
 				</div>
 			</div>
 		</div>
 
-		<section class="voa__section__full-width voa__section__title" style="background-image: url('https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg'); z-index: 9998; position: relative; min-height: auto; max-height: 300px; height: 300px; background-position: center 80%;">
+		<section class="voa__section__full-width voa__section__title" style="background-image: url('{$slides[0].title_image}'); z-index: 9998; position: relative; min-height: auto; max-height: 300px; height: 300px; background-position: center 80%;">
 			<div class="voa__title-card__shadow" style="z-index: 9994;"></div>
-
-			<!--
-			<div class="voa__grid__full" style="margin: 0; padding: 0; ">
-				<div class="voa__grid">
-					<div class="voa__title-card" style="text-align: center; width: 90%; top: 60px; bottom: auto;">
-						<h2 class="voa__kicker">Hunger Across Africa</h2>
-					</div>
-				</div>
-			</div>
-			-->
-
 
 			<div class="voa__grid__full" style="margin: 0; padding: 0;">
 				<div class="voa__grid">
 					<div class="voa__title-card" style="text-align: center; width: 90%; z-index: 9995;">
-						<h1 class="voa__title">Hunger Across Africa</h1>
-						<h3 style="font-weight: normal; color: #FFF;">This could be standing intro and photo, or it could change based on the current featured story<!--How drought and conflict have put millions on the verge of famine--></h3>
+						<h1 class="voa__title">{$slides[0].title}</h1>
+						<h3 style="font-weight: normal; color: #FFF;">{$slides[0].title_tagline}</h3>
 					</div>
 				</div>
 			</div>
 		</section>
 
 
-		<section class="voa__section" style="/*background-color: #333;*/">
+		<section class="voa__section">
 			<div class="voa__grid">
 				<div class="voa__project-title" style="margin: 40px 0;">
-					<h3 class="voa__graphic__readin" style="/*color: #CCC;*/">Millions of people across Africa lack access to enough food. A drought in Kenya has prompted a state of emergency. Northeast Nigeria faces acute malnutrition. Famine has been declared in parts of South Sudan, and Somalia is on the brink of famine. Tens of millions of people across the continent ― many of whom are children ― grapple with food insecurity day-to-day. Here, VOA provides ongoing coverage of this critical story.</h3>
+					<h3 class="voa__graphic__readin">{$slides[0].content|strip_tags}</h3>
 				</div>
 			</div>
 		</section>
 
+
+
 		<div class="voa__publish-warning">
 			<h3 id="closeWarning" class="voa__publish-warning__close-button">[X]</h3>
-			<h3>WORK IN PROGRESS (english)</h3>
+			<h3>WORK IN PROGRESS</h3>
 			<p>This project is still under development. Please do not share outside of the project team.</p>
 		</div>
+
 
 
 		<section class="voa__section" style="margin-bottom: 0;">
@@ -221,14 +173,11 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 
 				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
 
-					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">Recent headlines</h3>
-					<div class="" id="recentHeadlines">
-						<!--
-						<script id="hr-template" type="text/x-handlebars-template">
-							<p><a href='http://www.voanews.com{{Link}}'>{{Title}}</a><span class='pubdate'>{{Date}}</span>
-							</p>
-						</script>
-						-->
+					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">{$slides[0].title_label_recent_headlines}</h3>
+
+
+					<div id="recentHeadlines" class="">
+						<!--This is where you'd loop over some recent headlines from the spreadsheet data-->
 					</div>
 
 				</div>
@@ -280,57 +229,31 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 				</div>
 
 				<div class="voa__grid">
+
+{foreach from=$slides item=slide }
+	{if $slide.series == "country"}
 					<div class="voa__grid__one-third voa__country-profile">
-						<h3 class="voa__kicker">Nigeria</h3>
+						<h3 class="voa__kicker">{$slide.title}</h3>
 
 						<ul class="voa__stats">
-							<li><span class="voa__paragraph-label" style="">Status:</span> High risk of famine</li>							
-							<li><span class="voa__paragraph-label" style="">Population:</span> 1,000,000</li>
-							<li><span class="voa__paragraph-label" style="">At risk:</span> 1,000,000</li>
+							<li><span class="voa__paragraph-label" style="">Status:</span> {$slide.country_risk_level}</li>							
+							<li><span class="voa__paragraph-label" style="">Population:</span> {$slide.country_population}</li>
+							<li><span class="voa__paragraph-label" style="">At risk:</span> XX%</li>
 						</ul>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt. </p>
+						<p>{$slide.content}</p>
 
 						<div class="voa__related-links">
-							<h4>Recent headlines</h4>
+							<h4>{$slides[0].title_label_recent_headlines}</h4>
+
 							<p><a href="#">This is a headline that goes here</a></p>
 							<p><a href="#">This is also a headline that's' here</a></p>
+
 						</div>
 					</div>
-					<div class="voa__grid__one-third voa__country-profile">
-						<h3 class="voa__kicker">Somalia</h3>
 
-						<ul class="voa__stats">
-							<li><span class="voa__paragraph-label" style="">Status:</span> High risk of famine</li>							
-							<li><span class="voa__paragraph-label" style="">Population:</span> 1,000,000</li>
-							<li><span class="voa__paragraph-label" style="">At risk:</span> 1,000,000</li>
-						</ul>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt. </p>
-
-						<div class="voa__related-links">
-							<h4>Recent headlines</h4>
-							<p><a href="#">This is a headline that goes here</a></p>
-							<p><a href="#">This is also a headline that's' here</a></p>
-						</div>
-					</div>
-					<div class="voa__grid__one-third voa__country-profile">
-						<h3 class="voa__kicker">South Sudan</h3>
-
-						<ul class="voa__stats">
-							<li><span class="voa__paragraph-label" style="">Status:</span> High risk of famine</li>							
-							<li><span class="voa__paragraph-label" style="">Population:</span> 1,000,000</li>
-							<li><span class="voa__paragraph-label" style="">At risk:</span> 1,000,000</li>
-						</ul>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt. </p>
-
-						<div class="voa__related-links">
-							<h4>Recent headlines</h4>
-							<p><a href="#">This is a headline that goes here</a></p>
-							<p><a href="#">This is also a headline that's' here</a></p>
-						</div>
-					</div>
+	{/if}
+{/foreach}
 				</div>
 			</div>
 		</section>
@@ -344,18 +267,16 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 
 					<div class="voa__grid__one-third voa__rule wide-right">
 
-						<h3>About the editor</h3>
-						<img src="img/mugshot__salem-fekadu.jpg" class="voa__mugshot" />
-						<p><a href="https://twitter.com/salem_solomon">Salem Solomon</a> is a journalist and web producer at Voice of America’s Africa Division, where she reports in English, Amharic and Tigrigna. Her work has appeared in The New York Times, Poynter.org, Reuters and The Tampa Bay Times. Salem researches trends in analytics and digital journalism, and her data-driven work has been featured in VOA’s special projects collection.</p>
+						<h3>{$slides[1].title}</h3>
+						{$slides[1].content}
 
 					</div><!-- .voa__credits -->
 
 					<div class="voa__grid__one-third voa__rule wide-right">
-						<h3>Project credits</h3>
-								
-						<p>Edited and curated by <a href="https://twitter.com/salem_solomon">Salem Solomon</a></p>
-						<p>Web design and development by <a href="https://twitter.com/pp19dd" target="_blank">Dino Beslagic</a>, <a href="https://twitter.com/smekosh" target="_blank">Stephen Mekosh</a> and Brian Williamson</p>
+						<h3>{$slides[2].title}</h3>
+						{$slides[2].content}
 					</div>
+
 					<div class="voa__grid__one-third">
 						<h3 style="margin-bottom: 15px;">On Twitter</h3>
 						<div class="voa__twitter">
