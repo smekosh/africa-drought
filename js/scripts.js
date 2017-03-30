@@ -47,7 +47,7 @@ function showInfo(data, tabletop) {
 
 
 	var stringHeadlines = "";
-	var numberOfStories = 5;
+	var numberOfStories = 4;
 
 	stringHeadlines += '<img src="http://placehold.it/640x360" />';
 	stringHeadlines += '<h3 style="margin-bottom: 20px;"><a href="' + data[0].Link + '">' + data[0].Title + '</a></h3>';
@@ -214,7 +214,7 @@ $(document).ready(function(){
 	*/
 
 
-	var myGeoJSONPath = './data/custom.geo.json';//custom.geo--low.json';
+	var myGeoJSONPath = './data/custom.geo.small.json';//custom.geo--low.json';
 
 //var myGeoJSONPath = 'path/to/mymap.geo.json';
     var myCustomStyle = {
