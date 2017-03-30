@@ -14,11 +14,11 @@
 	@media only screen and (min-width: 640px) {
 		&.wide-right {
 			border-right: $border__solid-light;
-			padding-right: 30px; 
+			padding-right: 2.5%;//30px; 
 		}
 		&.wide-left {
 			border-left: $border__solid-light;
-			padding-left: 30px; 
+			padding-left: 2.5%;//30px; 
 		}
 	}
 }
@@ -28,11 +28,11 @@
 		@media only screen and (min-width: 640px) {
 			&.wide-right {
 				border-right: $border__solid-medium;
-				padding-right: 30px; 
+				padding-right: 2.5%;//30px; 
 			}
 			&.wide-left {
 				border-left: $border__solid-medium;
-				padding-left: 30px; 
+				padding-left: 2.5%;//30px; 
 			}
 		}
 	}

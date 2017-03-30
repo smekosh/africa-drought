@@ -217,17 +217,16 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 		</div>
 
 
-		<section class="voa__section" style="margin-bottom: 50px; padding-top: 40px;">
-			<div class="voa__grid">
+		<section class="voa__section" style="margin-bottom: 0;">
+			<div class="voa__grid" style="margin-bottom: 0;">
 				<div class="voa__grid__two-thirds voa__rule wide-right">
 					<div id="map" class="map__container"></div>
 				</div>
-				<div class="voa__grid__one-third" style="padding-left: 30px;">
+				<div class="voa__grid__one-third" style="padding-left: 2.5%;/*30px;*/">
 
-					<h3 class="voa__kicker">Recent headlines</h3>
-                    <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
+					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">Recent headlines</h3>
 
-					<div class='stories' id="hr">
+					<div class="" id="recentHeadlines">
 						<script id="hr-template" type="text/x-handlebars-template">
 							<p><a href='http://www.voanews.com{{Link}}'>{{Title}}</a><span class='pubdate'>{{Date}}</span>
 							</p>
@@ -238,33 +237,37 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 			</div>
 		</section>
 
-
-
-
-		<!-- Adding Facebook comments -->
-		<!-- https://developers.facebook.com/docs/plugins/comments -->
-		<!-- edit the data-href="" !!!! -->
-		<!--
-		<div class="voa__grid__full">
+		<section class="voa__section" style="margin-bottom: 50px;">
 			<div class="voa__grid">
+				<div class="voa__grid__two-thirds voa__rule wide-right" style="padding-top: 40px;">
+					<div class="voa__featured-story" style="margin-bottom: 40px;">
+						<h3 class="voa__label" style="font-size: 16px; margin-bottom: 5px;">Featured Story</h3>
+						<h2 style="margin-bottom: 10px;">Headline goes here and here and herg</h2>
+						<p class="voa__graphic__readin" style="line-height: 1.5; font-size: 16px;">This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href="">Read more</a></p>
+					</div>
 
-				<h3>Comments</h3>
-				<div class="fb-comments" data-href="http://projects.voanews.com/adrift-african-diaspora/" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
-
+					<div class="voa__grid__full">
+						<div class="voa__grid__one-half">
+							<h3 class="voa__label" style="font-size: 16px; margin-bottom: 0;">Root causes</h3>
+							<p><a href="">Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a></p>
+							<p><a href="">Somali Cabinet to Include Drought Disaster Pos</a></p>
+						</div>
+						<div class="voa__grid__one-half">
+							<h3 class="voa__label" style="font-size: 16px; margin-bottom: 0;">Responses and Solutions</h3>
+							<p><a href="">Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a></p>
+							<p><a href="">Somali Cabinet to Include Drought Disaster Pos</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="voa__grid__one-third" style="padding-left: 2.5%;/*30px;*/">
+					<div class="video-container">
+						<div class="embed-container"><iframe src="https://www.youtube.com/embed/dXYLMaJ8P0c" frameborder="0" allowfullscreen=""></iframe></div>
+					</div>
+					<h3>Headline goes here and here</h3>
+					<p>This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine.</p>
+				</div>
 			</div>
-		</div>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		</script>
-		-->
-
-
+		</section>
 
 
 		<section class="voa__section__full-width voa__footer dark">
@@ -278,60 +281,12 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 				<div class="voa__grid">
 					<!--<script type="text/javascript" src="http://tools.voanews2.com/fidget/view.php?id=224&js"></script>-->
 
-					<!--
-					<div class="voa__grid__one-third" >
-						<a href="#">
-						<img src="http://placehold.it/600x400"/>
-						<h3>Lorem ipsum dolor headline goes here and here and also goes here an dhereg</h3>
-						</a>
-					</div>
-					<div class="voa__grid__one-third voa__rule wide-right">
-						<ul class="voa__rss">
-							<li><a href="http://www.voanews.com/a/google-reviewing-request-to-blur-map-of-disputed-south-china-sea-islet/3520833.html">Google Reviewing Request to Blur Map of Disputed South China Sea Islet</a></li>
-							<li><a href="http://www.voanews.com/a/asia-pacific-rebalance-will-unlock-regions-potential-carter-says/3530797.html">Asia-Pacific Rebalance Will Unlock Region's Potential, Carter Says</a></li>
-							<li><a href="http://www.voanews.com/a/east-timor-takes-maritime-dispute-with-australia-in-un-court/3528236.html">East Timor Takes Maritime Dispute With Australia to UN Court</a></li>
-							<li><a href="http://www.voanews.com/a/japanese-naval-chief-rules-out-joint-us-freedom-of-navigation-patrol/3528783.html">Japan's Naval Chief Rules Out Joint-US Freedom of Navigation Patrols</a></li>
-							<li><a href="http://www.voanews.com/a/asia-pacific-rebalance-will-unlock-regions-potential-carter-says/3530797.html">Asia-Pacific Rebalance Will Unlock Region's Potential, Carter Says</a></li>
-						</ul>
-					</div>
-					-->
 					<div class="voa__grid__one-half voa__rule wide-right">
 
 						<h3>About the author</h3>
 						<img src="img/mugshot__salem-fekadu.jpg" class="voa__mugshot" />
 						<p><a href="https://twitter.com/salem_solomon">Salem Fekadu</a>  is a journalist and web producer at Voice of America’s Africa Division, where she reports in English, Amharic and Tigrigna. Her work has appeared in The New York Times, Poynter.org, Reuters and The Tampa Bay Times. Salem researches trends in analytics and digital journalism, and her data-driven work has been featured in VOA’s special projects collection.</p>
 
-
-
-						<!--
-						<h3>Project credits</h3>
-								
-						<p>Reported by <a href="https://twitter.com/abdulazizosman">Abdulaziz Osman</a> and <a href="https://twitter.com/PinaultNicolas">Nicolas Pinault.</a></p>
-						<p>Edited by Peter Cobus.</p>
-						<p>Web design and development by <a href="https://twitter.com/smekosh" target="_blank">Stephen Mekosh</a> and <a href="https://twitter.com/pp19dd" target="_blank">Dino Beslagic</a>.</p>
-						<p>Project management by <a title="Steven Ferri" href="https://twitter.com/ferrimedia">Steven Ferri</a>.</p>
-						<p>Content production by <a href="https://twitter.com/teff_times_two">Teffera G. Teffera</a> and Ezra Fessahaye.</p>
-						-->
-
-
-						<!--
-						<h3 class="voa__label"><a href="#">On Twitter</a></h3>
-						<div class="voa__twitter">
-							<div class="voa__twitter__tweet">
-								Loremx ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. <a href="#">#SouthChinaSea</a>
-							</div>
-							<div class="voa__twitter__attribution">
-								<img class="voa__mugshot--round" src="http://placehold.it/60x60" alt="Twitter image" style="float: left; max-width: 60px;"/>
-								<div style="text-align: left; padding-left: 65px;">
-									<h3 class="voa__twitter__name">Voice of America</h3>
-									<h5 class="voa__twitter__handle"><a href="https://twitter.com/voanews">@VOANews</a></h5>
-									<h5 class="voa__twitter__timestamp">Timestamp Sept 20XX</h5>
-								</div>
-							</div>
-						</div>
-
-						-->
 					</div><!-- .voa__credits -->
 
 					<div class="voa__grid__one-half ">

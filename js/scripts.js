@@ -24,14 +24,15 @@ function logger(logString){
 // ============================
 function loadSpreadsheet() {
 	if ( mode == "editing") {
-	/*	Tabletop.init( { key: public_spreadsheet_url,
+		Tabletop.init( { key: public_spreadsheet_url,
 			callback: showInfo,
 			simpleSheet: true } )
-*/
+	/*
 		//multisheet version: 
 		Tabletop.init( { key: public_spreadsheet_url,
 		 	callback: showInfo,
 		 	wanted: [ "Sheet1" ] } )
+		*/
 	} else if ( mode == "production") {
 		//buildPresidents(d3target);
 		showInfo(bakedData);
@@ -44,14 +45,26 @@ function showInfo(data, tabletop) {
 	logger("loaded spreadsheet data: ");
 	logger(data);
 
+
+	var stringHeadlines = "";
+	var numberOfStories = 5;
+
+	stringHeadlines += '<img src="http://placehold.it/640x360" />';
+	stringHeadlines += '<h3 style="margin-bottom: 20px;"><a href="' + data[0].Link + '">' + data[0].Title + '</a></h3>';
+
+	for (var i = 1; i < numberOfStories; i++ ){
+		stringHeadlines += '<p><a href="//voanews.com' + data[i].Link + '">' + data[i].Title + '</a></p>';
+	}
+
+	$("#recentHeadlines").html(stringHeadlines)
+	/*
+	//Handlebar templating
 	var HRTemplate = Handlebars.compile($('#hr-template').html());
-
-
-
 	$.each( data.Sheet1.elements, function(i, content) {
           var html = HRTemplate(content);
           $("#hr").append(html);
     })
+    */
 
 
 	/*
@@ -172,7 +185,13 @@ $(document).ready(function(){
 		maxZoom: 18
 	});
 
+
+
+
+
+
 	//Create the leaflet map and restrict zoom/boundaries
+	/*
 	map = L.map('map', {
 		maxZoom: 10,
 		minZoom: 2,
@@ -186,11 +205,51 @@ $(document).ready(function(){
 	});
 
 	map.setView([8, 39], 4);
+	*/
 	//starts map so that the continental US is centered on the screen.
 	/*map.fitBounds([
 		[35, 54],
 		[-43, -26]
 	]);
 	*/
+
+
+	var myGeoJSONPath = './data/custom.geo.json';//custom.geo--low.json';
+
+//var myGeoJSONPath = 'path/to/mymap.geo.json';
+    var myCustomStyle = {
+        stroke: false,
+        fill: true,
+        fillColor: '#900',
+        fillOpacity: .8
+    }
+    $.getJSON(myGeoJSONPath,function(data){
+		map = L.map('map', {
+			maxZoom: 10,
+			minZoom: 2,
+			maxBounds:[
+				[35, 54],
+				[-43, -26]
+			],
+			attributionControl: false,
+			scrollWheelZoom: false,
+			layers: [tiles]
+		});
+
+        L.geoJson(data, {
+            clickable: false,
+            style: myCustomStyle
+        }).addTo(map);
+		
+		map.setView([8, 39], 4);
+
+        /*
+		map.fitBounds([
+			[70, 155],
+			[13, -78]
+		]);
+		*/
+
+    })
 
 });
