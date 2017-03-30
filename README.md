@@ -22,4 +22,4 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 
 ### Resources ###
 
-* 
+* [Early warning data portal](https://earlywarning.usgs.gov/fews/search/Africa/East%20Africa)(USGS, USAID and FEWSnet)

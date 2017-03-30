@@ -219,13 +219,10 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 
 		<section class="voa__section" style="margin-bottom: 0;">
 			<div class="voa__grid" style="margin-bottom: 0;">
-				<div class="voa__grid__two-thirds voa__rule wide-right">
-					<div id="map" class="map__container"></div>
-				</div>
-				<div class="voa__grid__one-third" style="padding-left: 2.5%;/*30px;*/">
+
+				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
 
 					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">Recent headlines</h3>
-
 					<div class="" id="recentHeadlines">
 						<script id="hr-template" type="text/x-handlebars-template">
 							<p><a href='http://www.voanews.com{{Link}}'>{{Title}}</a><span class='pubdate'>{{Date}}</span>
@@ -234,6 +231,11 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 					</div>
 
 				</div>
+
+				<div class="voa__grid__two-thirds voa__rule wide-right voa__grid__float">
+					<div id="map" class="map__container"></div>
+				</div>
+
 			</div>
 		</section>
 
@@ -259,7 +261,7 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 						</div>
 					</div>
 				</div>
-				<div class="voa__grid__one-third" style="padding-left: 2.5%;/*30px;*/">
+				<div class="voa__grid__one-third voa__hang-right">
 					<div class="video-container">
 						<div class="embed-container"><iframe src="https://www.youtube.com/embed/dXYLMaJ8P0c" frameborder="0" allowfullscreen=""></iframe></div>
 					</div>
@@ -270,32 +272,84 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 		</section>
 
 
+		<section class="voa__section__full-width" style="background-color: #f1f1f1; padding: 30px 0; margin: 0;">
+			<div class="voa__grid__full">
+				<div class="voa__grid">
+					<h3 class="voa__label">Country profiles</h3>
+				</div>
+
+				<div class="voa__grid">
+					<div class="voa__grid__one-third">
+						<h3 class="voa__kicker">Nigeria</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse./p>
+
+						<div class="voa__related-links">
+							<p><a href="#">This is a headline that goes here</a></p>
+							<p><a href="#">This is also a headline that's' here</a></p>
+						</div>
+					</div>
+					<div class="voa__grid__one-third">
+						<h3 class="voa__kicker">Somalia</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.. </p>
+
+						<div class="voa__related-links">
+							<p><a href="#">This is a headline that goes here</a></p>
+							<p><a href="#">This is also a headline that's' here</a></p>
+						</div>
+					</div>
+					<div class="voa__grid__one-third">
+						<h3 class="voa__kicker">South Sudan</h3>
+						<p>Lorem ipsum dolor. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<div class="voa__related-links">
+							<p><a href="#">This is a headline that goes here</a></p>
+							<p><a href="#">This is also a headline that's' here</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
 		<section class="voa__section__full-width voa__footer dark">
 			<div class="voa__grid__full">
-				<!--
-				<div class="voa__grid">
-					<h3 class="voa__kicker">Recent headlines</h3>
-				</div>
-				-->
 
 				<div class="voa__grid">
 					<!--<script type="text/javascript" src="http://tools.voanews2.com/fidget/view.php?id=224&js"></script>-->
 
-					<div class="voa__grid__one-half voa__rule wide-right">
+					<div class="voa__grid__one-third voa__rule wide-right">
 
-						<h3>About the author</h3>
+						<h3>About the editor</h3>
 						<img src="img/mugshot__salem-fekadu.jpg" class="voa__mugshot" />
 						<p><a href="https://twitter.com/salem_solomon">Salem Fekadu</a>  is a journalist and web producer at Voice of America’s Africa Division, where she reports in English, Amharic and Tigrigna. Her work has appeared in The New York Times, Poynter.org, Reuters and The Tampa Bay Times. Salem researches trends in analytics and digital journalism, and her data-driven work has been featured in VOA’s special projects collection.</p>
 
 					</div><!-- .voa__credits -->
 
-					<div class="voa__grid__one-half ">
+					<div class="voa__grid__one-third voa__rule wide-right">
 						<h3>Project credits</h3>
 								
 						<p>Edited and curated by <a href="https://twitter.com/salem_solomon">Salem Fekadu</a></p>
 						<p>Web design and development by <a href="https://twitter.com/pp19dd" target="_blank">Dino Beslagic</a>, <a href="https://twitter.com/smekosh" target="_blank">Stephen Mekosh</a> and Brian Williamson</p>
 						<p>Project management by <a title="Steven Ferri" href="https://twitter.com/ferrimedia">Steven Ferri</a></p>
 					</div>
+					<div class="voa__grid__one-third">
+						<h3 style="margin-bottom: 15px;">On Twitter</h3>
+						<div class="voa__twitter">
+							<div class="voa__twitter__tweet">
+								Loremx ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. <a href="#">#FamineWatch</a>
+							</div>
+							<div class="voa__twitter__attribution">
+								<img class="voa__mugshot--round" src="http://placehold.it/60x60" alt="Twitter image" style="float: left; max-width: 60px;"/>
+								<div style="text-align: left; padding-left: 65px;">
+									<h3 class="voa__twitter__name">Voice of America</h3>
+									<h5 class="voa__twitter__handle"><a href="https://twitter.com/voanews">@VOANews</a></h5>
+									<h5 class="voa__twitter__timestamp">Timestamp Sept 20XX</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+
 
 				</div>
 			</div>
