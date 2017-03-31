@@ -1,0 +1,14 @@
+# Dependency directory
+node_modules
+
+# Exclude raw video/photos folders
+
+*.mp4
+*.mov
+*.psd
+
+# JSON data (ignoring files with a specific extension)
+# *.json
+
+# old data (ignoring files in a folder)
+# data/*.json
