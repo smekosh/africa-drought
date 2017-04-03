@@ -13,9 +13,9 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 
 ### To do list ###
 
+* Display current time period for map 
 * Fix nav bar title position on mobile.
 * Convert footer column to flexbox (for columns with equal heights)
-* Add map key
 
 
 ### Done (from the to-do list ###
@@ -24,6 +24,7 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 * Fix link colors
 * Footer columns have border on mobile
 * Add twitter embed code
+* Add map key
 
 
 ### Resources ###

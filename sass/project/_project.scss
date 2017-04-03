@@ -92,11 +92,11 @@
 			}
 		}
 
-		@media only screen and (min-width: $media__medium-large) {
+		@media only screen and (min-width: $media__medium) {
 			border-radius: 4px;
 			position: absolute;
 				right: 44px;
-				bottom: 20px;
+				bottom: 60px;
 			width: auto;
 			z-index: 9999;
 		}
