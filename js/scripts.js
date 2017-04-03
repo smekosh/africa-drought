@@ -185,10 +185,31 @@ $(document).ready(function(){
 		maxZoom: 18
 	});
 
+var Stamen_Toner = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	ext: 'png'
+});
+// https: also suppported.
+var Esri_WorldTopoMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+});
 
+var Esri_WorldTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS',
+	maxZoom: 13
+});
 
-
-
+// https: also suppported.
+var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	ext: 'png'
+});
 
 	//Create the leaflet map and restrict zoom/boundaries
 	/*
@@ -214,8 +235,59 @@ $(document).ready(function(){
 	*/
 
 
-	var myGeoJSONPath = './data/custom.geo.small.json';//custom.geo--low.json';
 
+//Choropleth map example: http://leafletjs.com/examples/choropleth.html
+// color scales: http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=5
+	//Adding styles based on values (choropleth)
+	function setColorBasedOnValue (x) {
+		return  x > 4 ? '#b30000' :
+				x > 3 ? '#e34a33' :
+				x > 2 ? '#fc8d59' :
+				x > 1 ? '#fdcc8a' :
+				x > 0 ? '#fef0d9' : '#990';
+	}
+
+
+	
+	function styleBasedOnValue(feature){
+		console.log("feature.properties.ML1: " + feature.properties.ML1)
+		return {
+			stroke: true,
+			fillColor: setColorBasedOnValue(feature.properties.ML1),
+			//fillColor: '#999',
+			weight: 1,
+			opactity: .3,
+			color: setColorBasedOnValue(feature.properties.ML1),
+			fillOpacity: 1
+		}
+	}
+
+
+	function zoomToFeature(e) {
+		if (this.options.url != ""){
+			logger("clicked: "+ this.options.url)
+			window.open(this.options.url,"_self");
+		} else {
+			logger("no url specified")
+		}
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			click: zoomToFeature
+		});
+	}
+
+
+
+
+
+
+
+
+
+	//var myGeoJSONPath = './data/custom.geo.small.json';//custom.geo--low.json';
+	var myGeoJSONPath = './data/fews__east-africa__ML1__2017--simplified.json';//
 //var myGeoJSONPath = 'path/to/mymap.geo.json';
     var myCustomStyle = {
         stroke: false,
@@ -233,13 +305,29 @@ $(document).ready(function(){
 			],
 			attributionControl: false,
 			scrollWheelZoom: false,
-			layers: [tiles]
+			layers: [Esri_WorldTerrain, Stamen_TonerHybrid]
 		});
 
+	//Create the vector map
+	/*
+	var vectorMap = L.geoJson(data, {
+		style: styleConditionallyClaimants,
+		onEachFeature: onEachFeature
+	}).addTo(map); //Could also add/remove this layer this on scroll.
+	*/
+	//Create the vector map
+	var vectorMap = L.geoJson(data, {
+		style: styleBasedOnValue,
+		onEachFeature: onEachFeature
+	}).addTo(map); //Could also add/remove this layer this on scroll.
+
+
+	/*
         L.geoJson(data, {
             clickable: false,
             style: myCustomStyle
         }).addTo(map);
+        */
 		
 		map.setView([8, 39], 4);
 

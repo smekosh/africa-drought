@@ -24,3 +24,5 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 
 * [Early warning data portal](https://earlywarning.usgs.gov/fews/search/Africa/East%20Africa)(USGS, USAID and FEWSnet)
 * https://www.fews.net/shapefiles
+* [Converting .shp files to geojson](https://gist.github.com/YKCzoli/b7f5ff0e0f641faba0f47fa5d16c4d8d)
+* [Simplifying geojson and/or exporting to topojson](http://mapshaper.org/)
