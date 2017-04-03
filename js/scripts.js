@@ -297,4 +297,28 @@ $(document).ready(function(){
 
     })
 
+
+
+
+
+
+
+	function showTweet(){
+		$( ".tweet" ).each(function( index ) {
+			var tweet = $(this)[0];
+			var id = $(this).data("tweet");
+
+			twttr.widgets.createTweet(
+			  id, tweet, 
+				{
+					conversation : 'none',    // or all
+					cards        : 'visible',  // or visible 
+					//linkColor    : '#900', // default is blue
+					theme        : 'light'    // or dark
+				})
+
+		});
+	}
+	showTweet();
+
 });

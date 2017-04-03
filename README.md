@@ -15,13 +15,15 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 
 * Fix nav bar title position on mobile.
 * Convert footer column to flexbox (for columns with equal heights)
-* Add twitter embed code
+
+
 
 ### Done (from the to-do list ###
 
 * White hamburger button on mobile
 * Fix link colors
 * Footer columns have border on mobile
+* Add twitter embed code
 
 
 ### Resources ###

@@ -49,6 +49,11 @@
 	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/tabletop.js'></script>
 	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/js/leaflet.js'></script>
 	<link rel="stylesheet" type="text/css" href="http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/css/leaflet.css">
+
+
+
+	<script sync src="https://platform.twitter.com/widgets.js"></script>
+
 	<!--
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	-->
@@ -60,7 +65,7 @@
 
 
 	<style type="text/css">
-
+	iframe {margin-top: 0 !important;}
 	</style>
 
 
@@ -246,7 +251,7 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 				<div class="voa__grid__two-thirds voa__rule wide-right voa__grid__float" style="padding-top: 40px;">
 					<div class="voa__featured-story" style="margin-bottom: 40px;">
 						<h3 class="voa__label" style="font-size: 16px; margin-bottom: 5px;">Featured Story</h3>
-						<h2 style="margin-bottom: 10px;"><a href="">Headline goes here and here and herg</a></h2>
+						<h2 class="voa__featured-headline" style="margin-bottom: 10px;"><a href="">Headline goes here and here and herg</a></h2>
 						<p class="voa__graphic__readin" style="line-height: 1.5; font-size: 16px;">This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href="">Read more</a></p>
 					</div>
 
@@ -255,24 +260,43 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 							<h3 class="voa__label" style="font-size: 16px; margin-bottom: 0;">Root causes</h3>
 							<p><a href="">Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a></p>
 							<p><a href="">Somali Cabinet to Include Drought Disaster Pos</a></p>
+							<p><a href="#">This is also a headline that's' here</a></p>
 						</div>
 						<div class="voa__grid__one-half">
 							<h3 class="voa__label" style="font-size: 16px; margin-bottom: 0;">Responses and Solutions</h3>
 							<p><a href="">Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a></p>
 							<p><a href="">Somali Cabinet to Include Drought Disaster Pos</a></p>
+							<p><a href="#">This is also a headline that's' here</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
+				<!--
 					<div class="video-container">
 						<div class="embed-container"><iframe src="https://www.youtube.com/embed/dXYLMaJ8P0c" frameborder="0" allowfullscreen=""></iframe></div>
 					</div>
 					<h3>Headline goes here and here</h3>
-					<p>This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine.</p>
+					<p>This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine.</p>-->
+					<div class="issue__update tweet">
+						<h3 class="voa__kicker" style="margin-bottom: 0;">From Twitter</h3>
+						<div class="tweet" data-tweet="847832304462565376"></div>
+					</div>
+
 				</div>
+
 			</div>
 		</section>
 
+
+		<section class="voa__section__full-width voa__headlines" style="padding: 0 0 20px 0; margin: 0;">
+				<div class="embed-container"><iframe src="https://www.youtube.com/embed/dXYLMaJ8P0c" frameborder="0" allowfullscreen=""></iframe></div>
+				<div class="voa__grid__full">
+					<div class="voa__grid">
+						<h2 style="margin-top: 20px;">Headline goes here and here</h2>
+						<p>This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died.</p>
+					</div>
+				</div>
+		</section>
 
 		<section class="voa__section__full-width voa__headlines" style="background-color: #f1f1f1; padding: 30px 0; margin: 0;">
 			<div class="voa__grid__full">
@@ -343,7 +367,7 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 				<div class="voa__grid">
 					<!--<script type="text/javascript" src="http://tools.voanews2.com/fidget/view.php?id=224&js"></script>-->
 
-					<div class="voa__grid__one-third voa__rule wide-right">
+					<div class="voa__grid__two-thirds voa__rule wide-right">
 						<h3>About the project</h3>
 						<p>Millions of people across Africa lack access to enough food. A drought in Kenya has prompted a state of emergency. Northeast Nigeria faces acute malnutrition. Famine has been declared in parts of South Sudan, and Somalia is on the brink of famine. Tens of millions of people across the continent ― many of whom are children ― grapple with food insecurity day-to-day. Here, VOA provides ongoing coverage of this critical story.</p>
 					<!--
@@ -354,14 +378,16 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 
 					</div><!-- .voa__credits -->
 
-					<div class="voa__grid__one-third voa__rule wide-right">
+					<div class="voa__grid__one-third voa__rule  voa__hang-right">
 						<h3>Project credits</h3>
 								
 						<p>Edited and curated by <a href="https://twitter.com/salem_solomon">Salem Solomon</a></p>
 						<p>Web design and development by <a href="https://twitter.com/pp19dd" target="_blank">Dino Beslagic</a>, <a href="https://twitter.com/smekosh" target="_blank">Stephen Mekosh</a> and Brian Williamson</p>
 					</div>
+					<!--
 					<div class="voa__grid__one-third">
-						<h3 style="margin-bottom: 15px;">On Twitter</h3>
+						<h3 style="margin-bottom: 15px;">On Twitter</h3>-->
+						<!--
 						<div class="voa__twitter">
 							<div class="voa__twitter__tweet">
 								Loremx ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -376,7 +402,12 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 								</div>
 							</div>
 						</div>
-					</div>
+						-->
+						<!-- 
+						https://twitter.com/W7VOA/status/848968163870076928
+						https://twitter.com/DMiliband/status/847832304462565376
+						 -->
+					<!--</div>-->
 
 
 				</div>

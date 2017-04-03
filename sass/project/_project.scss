@@ -22,13 +22,22 @@
 
 	.voa__headlines {
 		a {
-			color: #293c98;//#2a68a0;
+			color: #232e63;//#293c98;//#2a68a0;
 			text-decoration: none;
 
 			&:hover {
 				color: $color__voa-blue;//#337ab7;
 				text-decoration: underline;
 			}
+		}
+	}
+
+	.voa__featured-headline {
+		@media only screen and (min-width: 640px) {
+			font-size: 36px;
+		}
+		@media only screen and (min-width: $media__large) {
+			font-size: 54px;
 		}
 	}
 }
