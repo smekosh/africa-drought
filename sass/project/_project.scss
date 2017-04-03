@@ -41,6 +41,13 @@
 		}
 	}
 
+	.voa__kicker.voa__kicker--map {
+		margin-top: 30px;
+		@media only screen and (min-width: $media__medium) {
+			margin-top: 0;
+		}
+	}
+
 	.voa__map-key {
 		background-color: #FFF;
 		border: 1px solid #CCC;
@@ -86,8 +93,7 @@
 				li{
 					display: inline-block;
 					margin-right: 10px;
-
-					width: 47%;
+					width: 45%;
 				}
 			}
 		}
@@ -96,7 +102,7 @@
 			border-radius: 4px;
 			position: absolute;
 				right: 44px;
-				bottom: 60px;
+				bottom: 44px;
 			width: auto;
 			z-index: 9999;
 		}

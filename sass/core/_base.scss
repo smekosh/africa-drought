@@ -63,12 +63,26 @@
 		}
 	}
 
-	.voa__cutline {
+	.voa__cutline,
+	.voa__caption,
+	.voa__headlines .voa__credit,
+	.voa__headlines .voa__cutline {
 		color: $color__voa-gray-light;
 		font-family: $font__sans;
 		font-size: 90%;
 		//font-weight: bold;
 		margin: 5px 0 20px 0;
+
+		a {
+			color: $color__voa-gray-light;
+			text-decoration: underline;
+		}
+	}
+	.voa__headlines .voa__credit,
+	.voa__credit {
+		font-size: 12px;
+		margin-bottom: 0;
+		text-align: right;
 	}
 
 	.voa__section {
@@ -80,11 +94,6 @@
 	}
 
 	.voa__section__full-width {
-		/*
-		background-color: $color__voa-gray-lightest;
-		border-bottom: 1px solid $color__voa-gray-lighter; 
-		border-top: 1px solid $color__voa-gray-lightest;
-		*/
 		padding: 0;
 		position: relative;
 		z-index: 9995; 
