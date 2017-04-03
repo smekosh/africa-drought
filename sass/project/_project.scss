@@ -19,4 +19,16 @@
 	.voa__paragraph-label {
 		font-weight: bold;
 	}
+
+	.voa__headlines {
+		a {
+			color: #293c98;//#2a68a0;
+			text-decoration: none;
+
+			&:hover {
+				color: $color__voa-blue;//#337ab7;
+				text-decoration: underline;
+			}
+		}
+	}
 }

@@ -13,11 +13,15 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 
 ### To do list ###
 
-* 
+* Fix nav bar title position on mobile.
+* Convert footer column to flexbox (for columns with equal heights)
+* Add twitter embed code
 
 ### Done (from the to-do list ###
 
-* 
+* White hamburger button on mobile
+* Fix link colors
+* Footer columns have border on mobile
 
 
 ### Resources ###
@@ -26,3 +30,6 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 * https://www.fews.net/shapefiles
 * [Converting .shp files to geojson](https://gist.github.com/YKCzoli/b7f5ff0e0f641faba0f47fa5d16c4d8d)
 * [Simplifying geojson and/or exporting to topojson](http://mapshaper.org/)
+* Using [panes to adjust leaflet stacking](http://leafletjs.com/examples/map-panes/) for tile background, vector map and label layers
+* Armed conflict maps and data [ACLED](http://www.acleddata.com/data/)
+* ACLED [API Documentation](http://www.acleddata.com/wp-content/uploads/2017/03/API-User-Guide_March-2017.pdf)

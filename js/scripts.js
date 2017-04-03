@@ -205,7 +205,7 @@ $(document).ready(function(){
 
 	
 	function styleBasedOnValue(feature){
-		console.log("feature.properties.ML1: " + feature.properties.ML1)
+		logger("feature.properties.ML1: " + feature.properties.ML1)
 		return {
 			stroke: true,
 			fillColor: setColorBasedOnValue(feature.properties.ML1),
@@ -220,8 +220,8 @@ $(document).ready(function(){
 
 	function zoomToFeature(e) {
 		/*
-		console.log('zoomToFeature')
-		console.log(e.target.feature.properties.ML1)
+		logger('zoomToFeature')
+		logger(e.target.feature.properties.ML1)
 		*/
 		e.target.bindPopup("IPC status: " + scaleValues(this.feature.properties.ML1) );
 	}
@@ -242,7 +242,6 @@ $(document).ready(function(){
 
 	//var myGeoJSONPath = './data/custom.geo.small.json';//custom.geo--low.json';
 	var myGeoJSONPath = './data/fews__east-africa__ML1__2017--simplified.json';//
-	//var myGeoJSONPath = 'path/to/mymap.geo.json';
 
 
     $.getJSON(myGeoJSONPath,function(data){
@@ -253,6 +252,7 @@ $(document).ready(function(){
 				[35, 70],
 				[-43, -26]
 			],
+			attributionControl: false,
 			scrollWheelZoom: false/*,
 			layers: [Esri_WorldTerrain, Stamen_TonerHybrid]*/
 		});
