@@ -197,9 +197,9 @@ $(document).ready(function(){
 	//Defining popup labels based on values
 	function scaleValues(x) {
 		return  x > 4 ? 'Famine' :
-				x > 3 ? 'Stressed' :
+				x > 3 ? 'Emergency' :
 				x > 2 ? 'Crisis' :
-				x > 1 ? 'Emergency' :
+				x > 1 ? 'Stressed' :
 				x > 0 ? 'Minimal' : 'error';
 	}
 

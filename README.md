@@ -15,7 +15,7 @@ If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) install
 
 * Fix nav bar title position on mobile.
 * Convert footer column to flexbox (for columns with equal heights)
-
+* Add map key
 
 
 ### Done (from the to-do list ###
