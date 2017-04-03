@@ -103,6 +103,7 @@ function showInfo(data, tabletop) {
 $(document).ready(function(){
 	logger("Ready");
 
+	//var map = L.map('map');
 	// ===================
 	// |  Dropdown menu  |
 	// ===================
@@ -178,68 +179,117 @@ $(document).ready(function(){
 	var marker;
 	var myLayerGroup;
 
-	//Define tileset using Mapbox
-	var mbToken = 'pk.eyJ1IjoiYndpbGxpYW1zb24iLCJhIjoiY2l0NjU5YWZhMDB0MjJ6cGd5bGU2dDd1cSJ9.4Bv8jg7AH5ksTrEvZyyjoQ';
-	var tilesetUrl = 'https://a.tiles.mapbox.com/v4/mapbox.outdoors/{z}/{x}/{y}@2x.png?access_token='+mbToken;
-	var tiles = L.tileLayer(tilesetUrl, {
-		maxZoom: 18
-	});
+
+
+
+	//Choropleth map example: http://leafletjs.com/examples/choropleth.html
+	// color scales: http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=5
+
+	//Adding styles based on values (choropleth)
+	function setColorBasedOnValue (x) {
+		return  x > 4 ? '#b30000' :
+				x > 3 ? '#e34a33' :
+				x > 2 ? '#fc8d59' :
+				x > 1 ? '#fdcc8a' :
+				x > 0 ? '#fef0d9' : '#990';
+	}
+
+	//Defining popup labels based on values
+	function scaleValues(x) {
+		return  x > 4 ? 'Famine' :
+				x > 3 ? 'Stressed' :
+				x > 2 ? 'Crisis' :
+				x > 1 ? 'Emergency' :
+				x > 0 ? 'Minimal' : 'error';
+	}
+
+	
+	function styleBasedOnValue(feature){
+		console.log("feature.properties.ML1: " + feature.properties.ML1)
+		return {
+			stroke: true,
+			fillColor: setColorBasedOnValue(feature.properties.ML1),
+			//fillColor: '#999',
+			weight: 1,
+			opactity: .3,
+			color: setColorBasedOnValue(feature.properties.ML1),
+			fillOpacity: 1
+		}
+	}
+
+
+	function zoomToFeature(e) {
+		/*
+		console.log('zoomToFeature')
+		console.log(e.target.feature.properties.ML1)
+		*/
+		e.target.bindPopup("IPC status: " + scaleValues(this.feature.properties.ML1) );
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			click: zoomToFeature
+		});
+	}
 
 
 
 
+	
 
 
-	//Create the leaflet map and restrict zoom/boundaries
-	/*
-	map = L.map('map', {
-		maxZoom: 10,
-		minZoom: 2,
-		maxBounds:[
-			[35, 54],
-			[-43, -26]
-		],
-		attributionControl: false,
-		scrollWheelZoom: false,
-		layers: [tiles]
-	});
-
-	map.setView([8, 39], 4);
-	*/
-	//starts map so that the continental US is centered on the screen.
-	/*map.fitBounds([
-		[35, 54],
-		[-43, -26]
-	]);
-	*/
 
 
-	var myGeoJSONPath = './renderers/2017/data/custom.geo.small.json';//custom.geo--low.json';
+	//var myGeoJSONPath = './data/custom.geo.small.json';//custom.geo--low.json';
+	//var myGeoJSONPath = './data/fews__east-africa__ML1__2017--simplified.json';//
+	//var myGeoJSONPath = './renderers/2017/data/custom.geo.small.json';//custom.geo--low.json';
+	var myGeoJSONPath = './renderers/2017/data/fews__east-africa__ML1__2017--simplified.json';//custom.geo--low.json';
 
-//var myGeoJSONPath = 'path/to/mymap.geo.json';
-    var myCustomStyle = {
-        stroke: false,
-        fill: true,
-        fillColor: '#900',
-        fillOpacity: .8
-    }
+
+
+	//var myGeoJSONPath = 'path/to/mymap.geo.json';
+
+
     $.getJSON(myGeoJSONPath,function(data){
 		map = L.map('map', {
 			maxZoom: 10,
 			minZoom: 2,
 			maxBounds:[
-				[35, 54],
+				[35, 70],
 				[-43, -26]
 			],
-			attributionControl: false,
-			scrollWheelZoom: false,
-			layers: [tiles]
+			scrollWheelZoom: false/*,
+			layers: [Esri_WorldTerrain, Stamen_TonerHybrid]*/
 		});
 
-        L.geoJson(data, {
-            clickable: false,
-            style: myCustomStyle
-        }).addTo(map);
+		map.createPane('labels');
+		map.getPane('labels').style.zIndex = 650;
+		map.getPane('labels').style.pointerEvents = 'none';
+
+
+		var Esri_WorldTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS',
+			maxZoom: 13
+		}).addTo(map);
+
+		// https: also suppported.
+		var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 0,
+			maxZoom: 20,
+			ext: 'png',
+		    pane: 'labels'
+		}).addTo(map);
+
+
+		//Create the vector map
+		var vectorMap = L.geoJson(data, {
+			style: styleBasedOnValue,
+			onEachFeature: onEachFeature
+		}).addTo(map); //Could also add/remove this layer this on scroll.
+
+
 		
 		map.setView([8, 39], 4);
 

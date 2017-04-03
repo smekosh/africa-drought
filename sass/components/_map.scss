@@ -2,6 +2,10 @@
 	border: 1px solid #CCC;
 	min-height: 300px;
 	width: 100%;
+
+	img {
+		max-width: none;
+	}
 }
 
 .voa__map__popup-image {

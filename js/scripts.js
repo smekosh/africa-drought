@@ -103,6 +103,7 @@ function showInfo(data, tabletop) {
 $(document).ready(function(){
 	logger("Ready");
 
+	//var map = L.map('map');
 	// ===================
 	// |  Dropdown menu  |
 	// ===================
@@ -178,66 +179,12 @@ $(document).ready(function(){
 	var marker;
 	var myLayerGroup;
 
-	//Define tileset using Mapbox
-	var mbToken = 'pk.eyJ1IjoiYndpbGxpYW1zb24iLCJhIjoiY2l0NjU5YWZhMDB0MjJ6cGd5bGU2dDd1cSJ9.4Bv8jg7AH5ksTrEvZyyjoQ';
-	var tilesetUrl = 'https://a.tiles.mapbox.com/v4/mapbox.outdoors/{z}/{x}/{y}@2x.png?access_token='+mbToken;
-	var tiles = L.tileLayer(tilesetUrl, {
-		maxZoom: 18
-	});
-
-var Stamen_Toner = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-	subdomains: 'abcd',
-	minZoom: 0,
-	maxZoom: 20,
-	ext: 'png'
-});
-// https: also suppported.
-var Esri_WorldTopoMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-});
-
-var Esri_WorldTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS',
-	maxZoom: 13
-});
-
-// https: also suppported.
-var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-	subdomains: 'abcd',
-	minZoom: 0,
-	maxZoom: 20,
-	ext: 'png'
-});
-
-	//Create the leaflet map and restrict zoom/boundaries
-	/*
-	map = L.map('map', {
-		maxZoom: 10,
-		minZoom: 2,
-		maxBounds:[
-			[35, 54],
-			[-43, -26]
-		],
-		attributionControl: false,
-		scrollWheelZoom: false,
-		layers: [tiles]
-	});
-
-	map.setView([8, 39], 4);
-	*/
-	//starts map so that the continental US is centered on the screen.
-	/*map.fitBounds([
-		[35, 54],
-		[-43, -26]
-	]);
-	*/
 
 
 
-//Choropleth map example: http://leafletjs.com/examples/choropleth.html
-// color scales: http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=5
+	//Choropleth map example: http://leafletjs.com/examples/choropleth.html
+	// color scales: http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=5
+
 	//Adding styles based on values (choropleth)
 	function setColorBasedOnValue (x) {
 		return  x > 4 ? '#b30000' :
@@ -247,6 +194,14 @@ var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/t
 				x > 0 ? '#fef0d9' : '#990';
 	}
 
+	//Defining popup labels based on values
+	function scaleValues(x) {
+		return  x > 4 ? 'Famine' :
+				x > 3 ? 'Stressed' :
+				x > 2 ? 'Crisis' :
+				x > 1 ? 'Emergency' :
+				x > 0 ? 'Minimal' : 'error';
+	}
 
 	
 	function styleBasedOnValue(feature){
@@ -264,12 +219,11 @@ var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/t
 
 
 	function zoomToFeature(e) {
-		if (this.options.url != ""){
-			logger("clicked: "+ this.options.url)
-			window.open(this.options.url,"_self");
-		} else {
-			logger("no url specified")
-		}
+		/*
+		console.log('zoomToFeature')
+		console.log(e.target.feature.properties.ML1)
+		*/
+		e.target.bindPopup("IPC status: " + scaleValues(this.feature.properties.ML1) );
 	}
 
 	function onEachFeature(feature, layer) {
@@ -281,53 +235,56 @@ var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/t
 
 
 
-
+	
 
 
 
 
 	//var myGeoJSONPath = './data/custom.geo.small.json';//custom.geo--low.json';
 	var myGeoJSONPath = './data/fews__east-africa__ML1__2017--simplified.json';//
-//var myGeoJSONPath = 'path/to/mymap.geo.json';
-    var myCustomStyle = {
-        stroke: false,
-        fill: true,
-        fillColor: '#900',
-        fillOpacity: .8
-    }
+	//var myGeoJSONPath = 'path/to/mymap.geo.json';
+
+
     $.getJSON(myGeoJSONPath,function(data){
 		map = L.map('map', {
 			maxZoom: 10,
 			minZoom: 2,
 			maxBounds:[
-				[35, 54],
+				[35, 70],
 				[-43, -26]
 			],
-			attributionControl: false,
-			scrollWheelZoom: false,
-			layers: [Esri_WorldTerrain, Stamen_TonerHybrid]
+			scrollWheelZoom: false/*,
+			layers: [Esri_WorldTerrain, Stamen_TonerHybrid]*/
 		});
 
-	//Create the vector map
-	/*
-	var vectorMap = L.geoJson(data, {
-		style: styleConditionallyClaimants,
-		onEachFeature: onEachFeature
-	}).addTo(map); //Could also add/remove this layer this on scroll.
-	*/
-	//Create the vector map
-	var vectorMap = L.geoJson(data, {
-		style: styleBasedOnValue,
-		onEachFeature: onEachFeature
-	}).addTo(map); //Could also add/remove this layer this on scroll.
+		map.createPane('labels');
+		map.getPane('labels').style.zIndex = 650;
+		map.getPane('labels').style.pointerEvents = 'none';
 
 
-	/*
-        L.geoJson(data, {
-            clickable: false,
-            style: myCustomStyle
-        }).addTo(map);
-        */
+		var Esri_WorldTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS',
+			maxZoom: 13
+		}).addTo(map);
+
+		// https: also suppported.
+		var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 0,
+			maxZoom: 20,
+			ext: 'png',
+		    pane: 'labels'
+		}).addTo(map);
+
+
+		//Create the vector map
+		var vectorMap = L.geoJson(data, {
+			style: styleBasedOnValue,
+			onEachFeature: onEachFeature
+		}).addTo(map); //Could also add/remove this layer this on scroll.
+
+
 		
 		map.setView([8, 39], 4);
 
