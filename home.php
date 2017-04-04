@@ -1,24 +1,9 @@
 <?php
 require( "vendor/autoload.php" );
+require( "smarty_xpath.php" );
+
 $smarty = new Smarty();
-
-function smarty_function_parsexpath($params, Smarty_Internal_Template &$template) {
-
-    $html = mb_convert_encoding($params["input"], "HTML-ENTITIES", "UTF-8");
-    $doc = new DOMDocument();
-    @$doc->loadHTML($html);
-    $xpath = new DOMXPath($doc);
-    @$elements = $xpath->query($params["query"]);
-
-    $ret = array();
-    if( !$elements ) return(false);
-
-    foreach( $elements as $element ) {
-        $ret[] = $element->textContent;
-    }
-
-    $template->assign( $params["output"], $ret );
-}
+$smarty->setTemplateDir("./_timeline-editor/");
 
 // data source 1: timeline editor
 $data = json_decode(file_get_contents("data/slides.json"), true);
@@ -31,4 +16,4 @@ foreach( $data as $key => $value ) {
 $entries = json_decode(file_get_contents("data/spreadsheet.json"), true);
 $smarty->assign( "entries", $entries );
 
-$smarty->display( '_timeline-editor/04-africa-drought.tpl' );
+$smarty->display( '04-africa-drought.tpl' );
