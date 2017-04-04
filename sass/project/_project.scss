@@ -4,18 +4,45 @@
 	.voa__country-profile {
 		background-color: #FFF;
 		border-radius: 3px;
-		//box-shadow: 2px 2px 4px rgba(20,20,20,.4);
 		padding: 20px 15px 10px 15px;
 	}
 
 	.voa__country-profile {
 		margin-bottom: 15px;
 
+		.voa__kicker {
+			max-width: 49%;
+		}
+
 		.voa__stats {
 			padding-left: 0;
 			list-style: none;
 		}
+
+		.voa__country-profile__detail-map {
+			width: 100%;
+
+			@media only screen and (min-width: $media__small) {
+				float: right;
+				margin-left: 5%;
+				width: 45%;
+			}
+
+			@media only screen and (min-width: $media__medium) {
+				float: none;
+				margin-left: 0;
+				width: 100%;
+			}
+
+
+			@media only screen and (min-width: $media__medium-large) {
+				float: right;
+				margin-left: 5%;
+				width: 45%;
+			}
+		}
 	}
+
 	.voa__paragraph-label {
 		font-weight: bold;
 	}
