@@ -57,8 +57,8 @@
 	<!--
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	-->
-	<script src="js/scripts_v2.js?v1o"></script>
-	<link rel="stylesheet" type="text/css" href="css/all.css?v1o">
+	<script src="js/scripts.js?v1n"></script>
+	<link rel="stylesheet" type="text/css" href="css/all.css?v1n">
 
 
 
@@ -160,7 +160,7 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 									<li><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>
 									<li><a href="http://www.voashona.com/p/6510.html">Shona</a></li>
 									<li><a href="http://www.voasomali.com/p/6506.html">Soomaaliga</a></li>
-									<li><a href="http://www.voaswahili.com/p/6518.html">Kiswahili (LINK???)</a></li>
+									<li><a href="http://voaswahili.com">Kiswahili (LINK???)</a></li>
 									<li><a href="http://tigrigna.voanews.com/p/6516.html">ትግርኛ</a></li>
 									<li><a href="http://www.voazimbabwe.com/p/6509.html">Zimbabwe</a></li>
 								</ul>
@@ -174,26 +174,39 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 			</div>
 		</div>
 
+		<section class="voa__section__full-width voa__headlines" style="padding: 0 0 20px 0; margin: 0;">
+				<div class="embed-container"><iframe src="https://www.youtube.com/embed/8rQ5bMwQONQ" frameborder="0" allowfullscreen=""></iframe></div>
+				<div class="voa__grid__full" style="margin-bottom: 0;">
 
-		<section class="voa__section__full-width voa__headlines" style="padding: 40px 0 20px 0; margin: 0;">
-			<div class="embed-container"><iframe src="https://www.youtube.com/embed/8rQ5bMwQONQ" frameborder="0" allowfullscreen=""></iframe></div>
-			<div class="voa__grid__full" style="margin-bottom: 0;">
-
-				<div class="voa__grid">
-					<div class="voa__title-card" style="">
-						<h1 class="voa__title" style="">Hunger Across Africa</h1>
-						<h3 style="font-weight: normal; color: #999; text-transform: uppercase;">How drought and conflict have put millions on the verge of famine</h3>
+					<div class="voa__grid">
+						<div class="voa__title-card" style="text-align: center; width: 90%;">
+							<h1 class="voa__title" style="">Hunger Across Africa</h1>
+							<h3 style="font-weight: normal; color: #999; text-transform: uppercase;">How drought and conflict have put millions on the verge of famine</h3>
+						</div>
 					</div>
-				</div>
 
-			</div>
+				</div>
 		</section>
 
+
+		<!--
+		<section class="voa__section__full-width voa__section__title" style="background-image: url('https://gdb.voanews.com/3DA57897-6EF7-4119-856E-AE0C22C5202C_w1280_h600_s.jpg'); z-index: 9998; position: relative; min-height: auto; max-height: 300px; height: 300px; background-position: center 80%;">
+			<div class="voa__title-card__shadow" style="z-index: 9994;"></div>
+			<div class="voa__grid__full" style="margin: 0; padding: 0;">
+				<div class="voa__grid">
+					<div class="voa__title-card" style="text-align: center; width: 90%; z-index: 9995; bottom: 30px;">
+						<h1 class="voa__title" style="margin-bottom: 0;">Hunger Across Africa</h1>
+						<h3 style="font-weight: normal; color: #FFF;">This could be standing intro and photo, or it could change based on the current featured story</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+		-->
 
 
 		<section class="voa__section" style="/*background-color: #333;*/">
 			<div class="voa__grid">
-				<div class="voa__project-title">
+				<div class="voa__project-title" style="margin: 0 0 40px 0;">
 					<h3 class="voa__graphic__readin" style="/*color: #CCC;*/">Millions of people across Africa lack access to enough food. A drought in Kenya has prompted a state of emergency. Northeast Nigeria faces acute malnutrition. Famine has been declared in parts of South Sudan, and Somalia is on the brink of famine. Tens of millions of people across the continent ― many of whom are children ― grapple with food insecurity day-to-day. Here, VOA provides ongoing coverage of this critical story.</h3>
 				</div>
 			</div>
@@ -206,39 +219,46 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 		</div>
 
 
-
-
-
-
-
-
 		<section class="voa__section voa__headlines" style="margin-bottom: 0;">
 			<div class="voa__grid" style="margin-bottom: 0;">
 
+				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
+
+					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">Recent headlines</h3>
+					<div class="" id="recentHeadlines">
+
+					</div>
+
+				</div>
 
 				<div class="voa__grid__two-thirds voa__rule wide-right voa__grid__float" style="position: relative;">
 					<h3 class="voa__kicker voa__kicker--map">2017 famine risk</h3>
-					<div style="position: relative;">
-						<div id="map" class="map__container"></div>
-						<div class="voa__map-key" style="">
-							<h3>Famine threat</h3>
-							<ul>
-								<li><span class="voa__map-key__swatch value-5"></span>Famine</li>
-								<li><span class="voa__map-key__swatch value-4"></span>Emergency</li>
-								<li><span class="voa__map-key__swatch value-3"></span>Crisis</li>
-								<li><span class="voa__map-key__swatch value-2"></span>Stressed</li>
-								<li><span class="voa__map-key__swatch value-1"></span>Minimal</li>
-							</ul>
-						</div>
-						<p class="voa__credit" style="">SOURCE: <a href="https://www.fews.net/">FEWS NET</a></p>
+					<div id="map" class="map__container"></div>
+					<div class="voa__map-key" style="">
+						<h3>Famine threat</h3>
+						<ul>
+							<li><span class="voa__map-key__swatch value-5"></span>Famine</li>
+							<li><span class="voa__map-key__swatch value-4"></span>Emergency</li>
+							<li><span class="voa__map-key__swatch value-3"></span>Crisis</li>
+							<li><span class="voa__map-key__swatch value-2"></span>Stressed</li>
+							<li><span class="voa__map-key__swatch value-1"></span>Minimal</li>
+						</ul>
 					</div>
+					<p class="voa__credit" style="">SOURCE: <a href="https://www.fews.net/">FEWS NET</a></p>
+				</div>
 
+			</div>
+		</section>
+
+		<section class="voa__section voa__headlines" style="margin-bottom: 50px;">
+			<div class="voa__grid">
+				<div class="voa__grid__two-thirds voa__rule wide-right voa__grid__float" style="padding-top: 40px;">
 					<div class="voa__featured-story" style="margin-bottom: 40px;">
 						<h3 class="voa__label" style="font-size: 16px; margin-bottom: 5px;">Featured Story</h3>
 						<a href="">
-							<h2 class="voa__featured-headline" style="margin-bottom: 10px;">Conflict in Somalia Impacts Future Drought Resistance</h2>
+							<h2 class="voa__featured-headline" style="margin-bottom: 10px;">Headline goes here and here and herg</h2>
 
-							<img src="https://gdb.voanews.com/AD1416BA-7661-428F-B015-34A6BBC83B6C_w640_h400_s.jpg" class="voa__feature-thumbnail">
+							<img src="http://placehold.it/640x400" class="voa__feature-thumbnail">
 							<p class="voa__graphic__readin" style="line-height: 1.5; font-size: 16px;">This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <span class="">Read more</span></p>
 						</a>
 					</div>
@@ -258,34 +278,17 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 						</div>
 					</div>
 				</div>
-
-
-
 				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
 
-					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">Recent headlines</h3>
-					<div class="" id="recentHeadlines">
-
-					</div>
-
-					<!--
 					<div class="issue__update tweet">
 						<h3 class="voa__kicker" style="margin-bottom: 0;">From Twitter</h3>
 						<div class="tweet" data-tweet="847832304462565376"></div>
 					</div>
-					-->
 
 				</div>
 
 			</div>
 		</section>
-
-
-
-
-
-
-
 
 
 		<section class="voa__section__full-width voa__headlines" style="background-color: #f1f1f1; padding: 30px 0; margin: 0;">

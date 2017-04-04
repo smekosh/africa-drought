@@ -43,8 +43,6 @@ function loadSpreadsheet() {
 function showInfo(data, tabletop) {
 //function showInfo(data) {
 	logger("loaded spreadsheet data: ");
-	
-	/*
 	logger(data);
 
 
@@ -66,8 +64,15 @@ function showInfo(data, tabletop) {
 
 
 	$("#recentHeadlines").html(stringHeadlines)
+	/*
+	//Handlebar templating
+	var HRTemplate = Handlebars.compile($('#hr-template').html());
+	$.each( data.Sheet1.elements, function(i, content) {
+          var html = HRTemplate(content);
+          $("#hr").append(html);
+    })
+    */
 
-	*/
 
 	/*
 	// =====================================================
@@ -220,6 +225,10 @@ $(document).ready(function(){
 
 
 	function zoomToFeature(e) {
+		/*
+		logger('zoomToFeature')
+		logger(e.target.feature.properties.ML1)
+		*/
 		e.target.bindPopup("IPC status (ML1): " + scaleValues(this.feature.properties.ML1) + "<br/>Humanitarian Aid (HA1): " + this.feature.properties.HA1 );
 	}
 
@@ -259,7 +268,8 @@ $(document).ready(function(){
 				[-43, -26]
 			],
 			attributionControl: false,
-			scrollWheelZoom: false/
+			scrollWheelZoom: false/*,
+			layers: [Esri_WorldTerrain, Stamen_TonerHybrid]*/
 		});
 
 		map.createPane('labels');
@@ -272,6 +282,25 @@ $(document).ready(function(){
 		//====================================
 		// |  Define map tiles and overlays  |
 		//====================================
+
+		/*
+		var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 1,
+			maxZoom: 16,
+			ext: 'png'
+		}).addTo(map);
+
+		var Stamen_TonerLines = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lines/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 0,
+			maxZoom: 20,
+			ext: 'png',
+			pane: 'labels'
+		}).addTo(map);
+		*/
 
 		var Esri_WorldTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
 			attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS',

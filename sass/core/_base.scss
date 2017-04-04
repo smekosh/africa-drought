@@ -45,7 +45,8 @@
 
 	.voa__label {
 		color: $color__voa-red--dark;
-		margin-bottom: 20px;
+		font-size: 16px;
+		margin-bottom: 15px;
 		text-transform: uppercase;
 
 		a {
@@ -122,14 +123,23 @@
 			width: 100%;
 		}
 		.voa__title-card {
-			position: absolute;
+			/*position: absolute;
 				bottom: 5%;
+			z-index: 9995;
+				*/
+			text-align: center;
+			width: 100%;
+
 		}
 
 		.voa__title {
 			@extend .voa__graphic__title--large;
+
+			margin: 20px auto 10px auto !important;
+			/*
 			color: #FFF;
 			text-shadow: 1px 1px 3px #333;
+			*/
 		}
 	}
 
@@ -235,7 +245,7 @@
 
 	@media only screen and (min-width: $media__large) {
 		.voa__graphic__title--large {
-			font-size: 4rem;
+			font-size: 84px;
 		}
 
 		.voa__graphic__title--section {

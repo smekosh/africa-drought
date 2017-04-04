@@ -157,7 +157,7 @@
 		@media only screen and (min-width: $media__medium) {
 			border-radius: 4px;
 			position: absolute;
-				right: 44px;
+				left: 30px;
 				bottom: 44px;
 			width: auto;
 			z-index: 9999;
@@ -198,4 +198,9 @@
 	}
 
 
+	.voa__project-title {
+		@media only screen and (min-width: $media__large) {
+			margin-bottom: 40px;
+		}
+	}
 }
