@@ -12,3 +12,7 @@ node_modules
 
 # old data (ignoring files in a folder)
 # data/*.json
+
+vendor/*
+templates_c/*
+cache/*
