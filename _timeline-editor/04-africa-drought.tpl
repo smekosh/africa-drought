@@ -82,7 +82,7 @@
 	-->
 </head>
 <body>
-{include file="2017/metrics.tpl"}
+{include file="metrics.tpl"}
 
 	<div class="voa__project english">
 
@@ -236,7 +236,7 @@
 						<h3 class="voa__kicker">{$slide.title}</h3>
 
 						<ul class="voa__stats">
-							<li><span class="voa__paragraph-label" style="">Status:</span> {$slide.country_risk_level}</li>							
+							<li><span class="voa__paragraph-label" style="">Status:</span> {$slide.country_risk_level}</li>
 							<li><span class="voa__paragraph-label" style="">Population:</span> {$slide.country_population}</li>
 							<li><span class="voa__paragraph-label" style="">At risk:</span> XX%</li>
 						</ul>
