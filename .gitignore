@@ -21,3 +21,6 @@ cache/*
 # data sources loaded by external script
 data/spreadsheet.json
 data/slides.json
+
+# ignore utility scripts
+*.sh
