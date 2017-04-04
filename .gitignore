@@ -13,6 +13,11 @@ node_modules
 # old data (ignoring files in a folder)
 # data/*.json
 
+# overhead / smarty
 vendor/*
 templates_c/*
 cache/*
+
+# data sources loaded by external script
+data/spreadsheet.json
+data/slides.json
