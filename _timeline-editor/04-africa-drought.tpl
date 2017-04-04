@@ -179,10 +179,13 @@
 					<div id="recentHeadlines" class="">
 						<!--This is where you'd loop over some recent headlines from the spreadsheet data-->
 {foreach from=$entries.Sheet1 item=entry }
-	{if entry@index < 5}
-		{entry.Title}
+	{if $entry@index < 5}
+		{$entry.Title}
 	{/if}
+
+
 {/foreach}
+<pre>{*$entry|print_r *}</pre>
 
 					</div>
 
