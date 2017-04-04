@@ -50,7 +50,7 @@
 	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/js/leaflet.js'></script>
 	<link rel="stylesheet" type="text/css" href="http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/css/leaflet.css">
 
-	<script src="http://tools.voanews.com/utilities/timeline-editor/renderers/2017/js/scripts__timeline-editor.js"></script>
+	<script src="js/scripts__timeline-editor.js"></script>
 	<link rel="stylesheet" type="text/css" href="//projects.voanews.com/africa-drought/css/all.css?v1e">
 	<!-- <link rel="stylesheet" type="text/css" href="css/bengali.css"> -->
 
@@ -82,7 +82,7 @@
 	-->
 </head>
 <body>
-{include file="metrics.tpl"}
+{*{include file="metrics.tpl"}*}
 
 	<div class="voa__project english">
 

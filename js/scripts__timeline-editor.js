@@ -28,7 +28,7 @@ function loadSpreadsheet() {
 			callback: showInfo,
 			simpleSheet: true } )
 	/*
-		//multisheet version: 
+		//multisheet version:
 		Tabletop.init( { key: public_spreadsheet_url,
 		 	callback: showInfo,
 		 	wanted: [ "Sheet1" ] } )
@@ -43,7 +43,7 @@ function loadSpreadsheet() {
 function showInfo(data, tabletop) {
 //function showInfo(data) {
 	logger("loaded spreadsheet data: ");
-	
+
 	/*
 	logger(data);
 
@@ -205,7 +205,7 @@ $(document).ready(function(){
 				x == 1 ? 'Minimal' : x;
 	}
 
-	
+
 	function styleBasedOnValue(feature){
 		logger("feature.properties.ML1: " + feature.properties.ML1)
 		return {
@@ -232,7 +232,7 @@ $(document).ready(function(){
 
 
 
-	
+
 
 
 
@@ -259,7 +259,7 @@ $(document).ready(function(){
 				[-43, -26]
 			],
 			attributionControl: false,
-			scrollWheelZoom: false/
+			scrollWheelZoom: false
 		});
 
 		map.createPane('labels');
@@ -305,7 +305,7 @@ $(document).ready(function(){
 			[-5, 4]
 		]);
 
-    })
+    });
 
 
 
@@ -322,10 +322,10 @@ $(document).ready(function(){
 			var id = $(this).data("tweet");
 
 			twttr.widgets.createTweet(
-			  id, tweet, 
+			  id, tweet,
 				{
 					conversation : 'none',    // or all
-					cards        : 'visible',  // or visible 
+					cards        : 'visible',  // or visible
 					//linkColor    : '#900', // default is blue
 					theme        : 'light'    // or dark
 				})
