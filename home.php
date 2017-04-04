@@ -1,5 +1,6 @@
 <?php
 require( "vendor/autoload.php" );
+$smarty = new Smarty();
 
 function smarty_function_parsexpath($params, Smarty_Internal_Template &$template) {
 
