@@ -198,7 +198,7 @@ $(document).ready(function(){
 				x == 4 ? '#e34a33' :
 				x == 3 ? '#fc8d59' :
 				x == 2 ? '#fdcc8a' :
-				x == 1 ? '#fef0d9' : '#a8cab2';
+				x == 1 ? '#fef0d9' : '#CCC';
 	}
 
 	//Defining popup labels based on values
