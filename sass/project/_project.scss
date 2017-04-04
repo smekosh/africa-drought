@@ -199,8 +199,9 @@
 
 
 	.voa__project-title {
+		margin: 30px 0 0 0;
 		@media only screen and (min-width: $media__large) {
-			margin-bottom: 40px;
+			margin: 30px 0 0 0;
 		}
 	}
 }

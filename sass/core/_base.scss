@@ -130,6 +130,12 @@
 			text-align: center;
 			width: 100%;
 
+			&.drought {
+				.voa__title {
+					color: #FFF;
+					text-shadow: 1px 1px 3px #333;
+				}
+			}
 		}
 
 		.voa__title {
@@ -140,6 +146,7 @@
 			color: #FFF;
 			text-shadow: 1px 1px 3px #333;
 			*/
+
 		}
 	}
 
