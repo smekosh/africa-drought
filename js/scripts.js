@@ -187,20 +187,20 @@ $(document).ready(function(){
 
 	//Adding styles based on values (choropleth)
 	function setColorBasedOnValue (x) {
-		return  x > 4 ? '#b30000' :
-				x > 3 ? '#e34a33' :
-				x > 2 ? '#fc8d59' :
-				x > 1 ? '#fdcc8a' :
-				x > 0 ? '#fef0d9' : '#990';
+		return  x == 5 ? '#b30000' :
+				x == 4 ? '#e34a33' :
+				x == 3 ? '#fc8d59' :
+				x == 2 ? '#fdcc8a' :
+				x == 1 ? '#fef0d9' : 'blue';
 	}
 
 	//Defining popup labels based on values
 	function scaleValues(x) {
-		return  x > 4 ? 'Famine' :
-				x > 3 ? 'Emergency' :
-				x > 2 ? 'Crisis' :
-				x > 1 ? 'Stressed' :
-				x > 0 ? 'Minimal' : 'error';
+		return  x == 5 ? 'Famine' :
+				x == 4 ? 'Emergency' :
+				x == 3 ? 'Crisis' :
+				x == 2 ? 'Stressed' :
+				x == 1 ? 'Minimal' : x;
 	}
 
 	
@@ -223,7 +223,7 @@ $(document).ready(function(){
 		logger('zoomToFeature')
 		logger(e.target.feature.properties.ML1)
 		*/
-		e.target.bindPopup("IPC status: " + scaleValues(this.feature.properties.ML1) );
+		e.target.bindPopup("IPC status (ML1): " + scaleValues(this.feature.properties.ML1) + "<br/>Humanitarian Aid (HA1): " + this.feature.properties.HA1 );
 	}
 
 	function onEachFeature(feature, layer) {

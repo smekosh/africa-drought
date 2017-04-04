@@ -135,4 +135,38 @@
 		}
 
 	}
+
+
+
+
+	.voa__flex-grid {
+		display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: stretch; 
+		min-height: 100%;
+		width: 100%;
+
+		.voa__flex-grid__one-third {
+			margin-bottom: 10px;
+			width: 100%;
+
+			@media only screen and (min-width: $media__medium) {
+				width: 32%; 
+				min-height: 100%; 
+			}
+		}
+
+		.voa__flex-grid__two-thirds {
+			margin-bottom: 10px;
+			width: 100%;
+
+			@media only screen and (min-width: $media__medium) {
+				width: 65%; 
+				min-height: 100%; 
+			}
+		}
+	}
+
+
 }
