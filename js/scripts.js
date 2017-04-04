@@ -322,8 +322,8 @@ $(document).ready(function(){
 
         /*
 		map.fitBounds([
-			[70, 155],
-			[13, -78]
+			[21, 52],
+			[-5, 4]
 		]);
 		*/
 
