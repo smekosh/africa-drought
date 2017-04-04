@@ -245,6 +245,12 @@ $(document).ready(function(){
 
 
     $.getJSON(myGeoJSONPath,function(data){
+
+
+		//==================
+		// |  Define map   |
+		//==================
+
 		map = L.map('map', {
 			maxZoom: 10,
 			minZoom: 2,
@@ -262,12 +268,36 @@ $(document).ready(function(){
 		map.getPane('labels').style.pointerEvents = 'none';
 
 
+
+
+		//====================================
+		// |  Define map tiles and overlays  |
+		//====================================
+
+		/*
+		var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 1,
+			maxZoom: 16,
+			ext: 'png'
+		}).addTo(map);
+
+		var Stamen_TonerLines = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lines/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 0,
+			maxZoom: 20,
+			ext: 'png',
+			pane: 'labels'
+		}).addTo(map);
+		*/
+
 		var Esri_WorldTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
 			attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS',
 			maxZoom: 13
 		}).addTo(map);
 
-		// https: also suppported.
 		var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
 			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 			subdomains: 'abcd',
@@ -276,6 +306,8 @@ $(document).ready(function(){
 			ext: 'png',
 		    pane: 'labels'
 		}).addTo(map);
+
+
 
 
 		//Create the vector map
@@ -302,6 +334,9 @@ $(document).ready(function(){
 
 
 
+	//======================
+	// |  Display tweets   |
+	//======================
 
 	function showTweet(){
 		$( ".tweet" ).each(function( index ) {
