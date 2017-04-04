@@ -209,7 +209,6 @@ $(document).ready(function(){
 		return {
 			stroke: true,
 			fillColor: setColorBasedOnValue(feature.properties.ML1),
-			//fillColor: '#999',
 			weight: 1,
 			opactity: .3,
 			color: setColorBasedOnValue(feature.properties.ML1),
