@@ -1,6 +1,6 @@
 {strip}
 
-{$fb_app_id = 490219017808002}
+{$fb_app_id = '490219017808002'}
 
 {$canonical_url = 'http://projects.voanews.com/africa-drought/'}
 {$voa_homepage_url = 'http://www.voanews.com/'}
