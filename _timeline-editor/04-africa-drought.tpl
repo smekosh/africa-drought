@@ -270,11 +270,8 @@
                             <span class='byline'>By {$entry.Byline}</span>
                             </li>
 
-<!--<pre>{*$entry|print_r *}</pre>-->
-
 	{/if}
 {/foreach}
-{debug}
 
                     </ol>
 
