@@ -60,7 +60,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?ts={$smarty.now}" />
 
     <style type="text/css">
     .share-fb { background-image: url(img/fa-fb_50_333333.png); }
@@ -70,9 +70,9 @@
     </head>
     <body>
 {*{include file="metrics.tpl"}*}
-        
+
         <nav class="voa-masthead">
-            <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div 
+            <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
             class="share-options">
                 <ul>
                     <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
@@ -82,7 +82,7 @@
         </nav>
 
         <div id="parallax-window-1" class="parallax">
-        
+
         <header>
             <h1>{$slides[0].title}</h1>
             <h2>{$slides[0].title_tagline}</h2>
@@ -127,7 +127,7 @@
 
 
         <div class='wrapper'>
- 
+
          <div class='container'>
 
             <div class='row'>
@@ -177,7 +177,7 @@
                 <div class='col-sm-12'>
 
 	                <h3>Featured Story</h3>
-	        
+
 	                <img class='img-responsive' src='{$entry.Photo}'>
 
                     <h1 class='featured-story'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
@@ -199,7 +199,7 @@
                 <div class='col-sm-6'>
 
                 <h3>Root Causes</h3>
-        
+
                     <p class='note'>Explore the root causes and contributing factors behind Africa&#8217;s deadliest food shortages in years.</p>
                 <ol class='stories'>
 
@@ -270,7 +270,7 @@
 {/if}
                     <h3>Recent News</h3>
                     <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
-                
+
 
 
 
@@ -278,7 +278,7 @@
 
 {foreach from=$entries.Sheet1 item=entry }
 	{if $entry@index < 5}
-		
+
                             <li><span class='pubdate'>{$entry.Date}</span>
                             {if $entry@index == 0 && $entry.Photo != ""}
                             <img class='img-responsive' src='{$entry.Photo}'>
@@ -304,7 +304,7 @@
 
 
         <div class='wrapper-footer'>
- 
+
          <div class='container'>
 
             <div class='row'>
@@ -378,7 +378,7 @@
               jQuery(this).attr('data-topic', jQuery(this).data('topic').toUpperCase());
               jQuery(this).attr('data-country', jQuery(this).data('country').toUpperCase());
               jQuery(this).attr('data-contributors', jQuery(this).data('contributors').toUpperCase());
-    
+
             });
         }
         */
@@ -392,9 +392,9 @@
 
 
 
-        });       
+        });
 
-       </script> 
+       </script>
 
 
 
