@@ -249,7 +249,7 @@ The government announced Saturday that 110 people had died in a two-day period d
                             {if $entry@index == 0 && $entry.Photo != ""}
                             <img class='img-responsive' src='{$entry.Photo}'>
                             {/if}
-                            <a href='http://www.voanews.com{{cells.Link}}'>{$entry.Title}</a>
+                            <a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
                             <span class='byline'>By {$entry.Byline}</span>
                             </li>
 
@@ -261,29 +261,8 @@ The government announced Saturday that 110 people had died in a two-day period d
 {/foreach}
 
 
-                    <!--
-                        <script id="hr-template1" type="text/x-handlebars-template">
-                            <li><span class='pubdate'>{{cells.Date}}</span>
-                            <img class='img-responsive' src='images/story2.jpg'>
-                            <a href='http://www.voanews.com{{cells.Link}}'>{{cells.Title}}</a>
-                            <span class='byline'>By {{cells.Byline}}</span>
-                            </li>
-                        </script>
-                    -->
-
                     </ol>
 
-
-                    <ol class='stories' id="hr2">
-
-                        <script id="hr-template2" type="text/x-handlebars-template">
-                            <li><span class='pubdate'>{{cells.Date}}</span>
-                            <a href='http://www.voanews.com{{cells.Link}}'>{{cells.Title}}</a>
-                            <span class='byline'>By {{cells.Byline}}</span>
-                            </li>
-                        </script>
-
-                    </ol>
 
                 </div>
 
