@@ -1,11 +1,21 @@
+{strip}
 
+{$fb_app_id = 490219017808002}
 
-<!doctype html>
+{$canonical_url = 'http://projects.voanews.com/africa-drought/'}
+{$voa_homepage_url = 'http://www.voanews.com/'}
+{$twitter_share_text = 'Millions in Africa lack access to enough food. VOA provides ongoing coverage of this critical story.'}
+{$twitter_username = '@VOANews'}
+{$twitter_related = ''}
+
+{assign var="fb_action_properties" value=['object'=>$canonical_url]}
+
+{/strip}<!doctype html>
 <html>
     <head>
         <title>{$slides[0].title} :: {$slides[0].title_tagline}</title>
         <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <link rel="canonical" href="http://projects.voanews.com/africa-drought/" />
@@ -62,11 +72,11 @@
 {*{include file="metrics.tpl"}*}
         
         <nav class="voa-masthead">
-            <div class="voa-masthead-inner"><div class="voa-logo"><a href="http://www.voanews.com/" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div 
+            <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div 
             class="share-options">
                 <ul>
-                    <li><a title="Share on Facebook" href="" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
-                    <li><a title="Share on Twitter" href="" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
+                    <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
+                    <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
                 </ul>
             </div></div>
         </nav>
