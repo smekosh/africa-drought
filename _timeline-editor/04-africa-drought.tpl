@@ -48,11 +48,14 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
 
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-    
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
+    <style type="text/css">
+    .share-fb { background-image: url(img/fa-fb_50_333333.png); }
+    .share-tw { background-image: url(img/fa-tw_50_333333.png); }
+    </style>
 
     </head>
     <body>
