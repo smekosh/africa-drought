@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>{$slides[0].title} :: {$slides[0].title_tagline}</title>
+
+<!doctype html>
+<html>
+    <head>
+        <title>{$slides[0].title} :: {$slides[0].title_tagline}</title>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <link rel="canonical" href="http://projects.voanews.com/africa-drought/" />
@@ -42,280 +42,393 @@
 
 
 
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script type="text/javascript" src="http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/jquery.smartmenus.min.js"></script>
-	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/tabletop.js'></script>
-	<script type="text/javascript" src='http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/js/leaflet.js'></script>
-	<link rel="stylesheet" type="text/css" href="http://www.voanews.com/MediaAssets2/projects/voa_graphics/resources/leaflet/css/leaflet.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-	<script src="js/scripts__timeline-editor.js"></script>
-	<link rel="stylesheet" type="text/css" href="//projects.voanews.com/africa-drought/css/all.css?v1e">
-	<!-- <link rel="stylesheet" type="text/css" href="css/bengali.css"> -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
 
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+    
 
 
-
-	<style type="text/css">
-
-	</style>
-
-
-	<script type="text/javascript">
-		var language = "english";//This may reference spreadsheet worksheets and translations.
-
-		$(document).ready(function(){
-			$("#closeWarning").click(function(){
-				console.log("close the warning box");
-				$(".voa__publish-warning").toggle();
-			})
-		})
-	</script>
-
-	<!-- https://support.google.com/webmasters/answer/189077?hl=en -->
-	<!--
-	<link hreflang="en" rel="alternate" href="http://projects.voanews.com/adrift-african-diaspora/" />
-	<link hreflang="om" rel="alternate" href="http://projects.voanews.com/adrift-african-diaspora/afaan-oromoo/" />
-	<link hreflang="am" rel="alternate" href="http://projects.voanews.com/adrift-african-diaspora/amharic/" />
-	<link hreflang="fr" rel="alternate" href="http://projects.voanews.com/adrift-african-diaspora/french/" />
-	-->
-</head>
-<body>
+    </head>
+    <body>
 {*{include file="metrics.tpl"}*}
-
-	<div class="voa__project english">
-
-		<div class="voa__navbar clear">
-			<div class="voa__grid__full">
-				<div class="voa__grid">
-					<a href="//www.voanews.com/" class="voa__navbar__link"><div class="voa__navbar__logo"></div></a>
-
-					<div id="menuButton" class="voa__navbar__toggle"></div>
-
-					<nav id="main-nav" role="navigation" class="main-menu-nav">
-						<ul id="main-menu" class="sm sm-clean" data-smartmenus-id="14762810590939192">
-
-							<li><a href="javascript:void(0);" class="has-submenu" id="sm-14762810590939192-1" aria-haspopup="true" aria-controls="sm-14762810590939192-2" aria-expanded="false"><span class="sub-arrow">+</span>{$slides[0].title_label_countries}</a>
-								<ul id="sm-14762810590939192-2" role="group" aria-hidden="true" aria-labelledby="sm-14762810590939192-1" aria-expanded="false">
-									<li><a href="#somalia">Somalia</a></li>
-									<li><a href="#southsudan">South Sudan</a></li>
-									<li><a href="#zimbabwe">Zimbabwe</a></li>
-								</ul>
-							</li>
-
-							<li><a href="javascript:void(0);" class="has-submenu voa__navbar__language" id="" aria-haspopup="true" aria-controls="" aria-expanded="false"><div class="translation-icon"></div><span class="sub-arrow">+</span><span class="voa__no-tablet social-share-text ">{$slides[0].title_label_coverage}</span></a>
-								<ul id="" role="group" aria-hidden="true" aria-labelledby="" aria-expanded="false">
-									<li><a href="http://voaafaanoromoo.com">Afaan Oromoo</a></li>
-									<li><a href="http://amharic.voanews.com/p/5573.html">አማርኛ</a></li>
-									<li><a href="http://voaafrique.com">Français</a></li>
-									<li><a href="http://voahausa.com">Hausa</a></li>
-									<li><a href="http://radiyoyacuvoa.com">Kinyarwanda / Kirundi</a></li>
-									<li><a href="http://voandebele.com">Ndebele</a></li>
-									<li><a href="http://voaportugues.com">Português</a></li>
-									<li><a href="http://voashona.com">Shona</a></li>
-									<li><a href="http://voasomali.com">Soomaaliga</a></li>
-									<li><a href="http://voaswahili.com">Kiswahili</a></li>
-									<li><a href="http://tigrigna.voanews.com">ትግርኛ</a></li>
-									<li><a href="http://voazimbabwe.com">Zimbabwe</a></li>
-								</ul>
-							</li>
-
-							<li><a id="shareTwitter" class="social-share-link twitter" href="javascript:void(0);"><div class="social-icon"></div><span class="social-share-text">Share on Twitter</span></a></li>
-							<li><a id="shareFacebook" class="social-share-link facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.voanews.com%2F"><div class="social-icon"></div><span class="social-share-text">Share on Facebook</span></a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-		<div class="voa__navbar" style="z-index: 9997; height: 42px; background-color: #000;">
-			<div class="voa__grid__full">
-				<div class="voa__grid">
-					<a href="#" class="voa__navbar__title" style="margin-left: 5%;">{$slides[0].title_label_nav}</a>
-				</div>
-			</div>
-		</div>
-
-		<section class="voa__section__full-width voa__section__title" style="background-image: url('{$slides[0].title_image}'); z-index: 9998; position: relative; min-height: auto; max-height: 300px; height: 300px; background-position: center 80%;">
-			<div class="voa__title-card__shadow" style="z-index: 9994;"></div>
-
-			<div class="voa__grid__full" style="margin: 0; padding: 0;">
-				<div class="voa__grid">
-					<div class="voa__title-card" style="text-align: center; width: 90%; z-index: 9995;">
-						<h1 class="voa__title">{$slides[0].title}</h1>
-						<h3 style="font-weight: normal; color: #FFF;">{$slides[0].title_tagline}</h3>
-					</div>
-				</div>
-			</div>
-		</section>
+        
 
 
-		<section class="voa__section">
-			<div class="voa__grid">
-				<div class="voa__project-title" style="margin: 40px 0;">
-					<h3 class="voa__graphic__readin">{$slides[0].content|strip_tags}</h3>
-				</div>
-			</div>
-		</section>
+        <div id="parallax-window-1" class="parallax">
+            
+        <header>
+            <h1>{$slides[0].title}</h1>
+            <h2>{$slides[0].title_tagline}</h2>
+        </header>
+
+        </div>
+
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-12'>
+
+                <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href='#'>Overview</a>
+                        </li>
+                        <li>
+                            <a href='#'>Latest News</a>
+                        </li>
+                        <li>
+                            <a href='#'>Data</a>
+                        </li>
+                        <li>
+                            <a href='#'>Agencies</a>
+                        </li>
+                        <li>
+                            <a href='#'>The Team</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                    </header>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
 
-		<div class="voa__publish-warning">
-			<h3 id="closeWarning" class="voa__publish-warning__close-button">[X]</h3>
-			<h3>WORK IN PROGRESS</h3>
-			<p>This project is still under development. Please do not share outside of the project team.</p>
-		</div>
 
 
 
-		<section class="voa__section" style="margin-bottom: 0;">
-			<div class="voa__grid" style="margin-bottom: 0;">
 
-				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
+        <div class='wrapper'>
+ 
+         <div class='container'>
 
-					<h3 class="voa__label" style="margin-bottom: 10px; font-size: 16px;">{$slides[0].title_label_recent_headlines}</h3>
+            <div class='row'>
+                <div class='col-sm-10 col-sm-offset-1'>
+                    <p class='lead'>{$slides[0].content|strip_tags}</p>
+
+        </div>
+        </div>
+        </div>
+        </div>
 
 
-					<div id="recentHeadlines" class="">
-						<!--This is where you'd loop over some recent headlines from the spreadsheet data-->
+        <div class='container'>
+            <div class='row'>
+
+                <div class='col-md-4'>
+                    <h3>Featured Video</h3>
+                    <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
+                    <span class='byline'>By Abdulaziz Osman</span>
+                    <p class='lead-video'>
+As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
+                    </p>
+                </div>
+
+                <div class='col-md-8'>
+        <div class="video-container"><iframe src='https://www.youtube.com/embed/4TDYtqbz4II' frameborder='0' allowfullscreen></iframe></div>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+        <div class='container'>
+
+            <div class='row'>
+                <div class='col-sm-8'>
+
+            <div class='row'>
+                <div class='col-sm-12'>
+
+                <h3>Featured Story</h3>
+        
+                <img class='img-responsive' src='images/story.jpg'>
+
+                    <h1 class='featured-story'><a href='http://www.voanews.com/a/conflict-somalia-impacts-future-drought-resistance/3751638.html#'>Conflict in Somalia Impacts Future Drought Resistance</a></h1>
+                    <span class='byline'>By Jill Craig</span>
+
+                    <p class='intro'>This is not Somalia's first drought and it likely won't be its last.
+
+The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href='#'>Read more</a>.</p>
+
+
+                </ol>
+
+
+
+
+                </div>
+
+
+
+                </div>
+
+
+
+
+
+            <div class='row'>
+                <div class='col-sm-6'>
+
+                <h3>Root Causes</h3>
+        
+                    <p class='note'>Explore the root causes and contributing factors behind Africa&#8217;s deadliest food shortages in years.</p>
+                <ol class='stories'>
+
+                <li><span class='pubdate'>March 21, 2017</span><a href=''>Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a>
+                <span class='byline'>By Sebastian Mhofu</span>
+                </li>
+
+                <li><span class='pubdate'>March 21, 2017</span><a href=''>Somali Cabinet to Include Drought Disaster Post</a><span class='byline'>By Mohamed Olad</span></li>
+
+
+
+                </ol>
+
+
+
+                </div>
+
+                <div class='col-sm-6'>
+
+
+                <h3>Responses & Solutions</h3>
+                    <p class='note'>Track emergency interventions and long-term remedies designed to save lives.</p>
+
+                <ol class='stories'>
+
+                <li><span class='pubdate'>March 21, 2017</span><a href=''>Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a>
+                <span class='byline'>By Sebastian Mhofu</span>
+                </li>
+
+                <li><span class='pubdate'>March 21, 2017</span><a href=''>Somali Cabinet to Include Drought Disaster Post</a><span class='byline'>By Mohamed Olad</span></li>
+
+                </ol>
+
+
+                </div>
+
+                </div>
+
+
+
+
+
+                </div>
+
+                <div class='col-sm-4'>
+
+
+                <a href='https://www.fews.net/'><img class='img-responsive africa-map' src='images/map.png'></a>
+
+                    <h3>Recent News</h3>
+                    <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
+                
+
+
+
+                    <ol class='stories' id="hr1">
+
 {foreach from=$entries.Sheet1 item=entry }
 	{if $entry@index < 5}
-		{$entry.Title}
+		
+                            <li><span class='pubdate'>{$entry.Date}</span>
+                            {if $entry@index == 0 && $entry.Photo != ""}
+                            <img class='img-responsive' src='{$entry.Photo}'>
+                            {/if}
+                            <a href='http://www.voanews.com{{cells.Link}}'>{$entry.Title}</a>
+                            <span class='byline'>By {$entry.Byline}</span>
+                            </li>
+
+
 	{/if}
 
-
-{/foreach}
 <pre>{*$entry|print_r *}</pre>
 
-					</div>
-
-				</div>
-
-				<div class="voa__grid__two-thirds voa__rule wide-right voa__grid__float">
-					<div id="map" class="map__container"></div>
-				</div>
-
-			</div>
-		</section>
-
-		<section class="voa__section" style="margin-bottom: 50px;">
-			<div class="voa__grid">
-				<div class="voa__grid__two-thirds voa__rule wide-right voa__grid__float" style="padding-top: 40px;">
-					<div class="voa__featured-story" style="margin-bottom: 40px;">
-						<h3 class="voa__label" style="font-size: 16px; margin-bottom: 5px;">Featured Story</h3>
-						<h2 style="margin-bottom: 10px;">Headline goes here and here and herg</h2>
-						<p class="voa__graphic__readin" style="line-height: 1.5; font-size: 16px;">This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href="">Read more</a></p>
-					</div>
-
-					<div class="voa__grid__full">
-						<div class="voa__grid__one-half">
-							<h3 class="voa__label" style="font-size: 16px; margin-bottom: 0;">Root causes</h3>
-							<p><a href="">Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a></p>
-							<p><a href="">Somali Cabinet to Include Drought Disaster Pos</a></p>
-						</div>
-						<div class="voa__grid__one-half">
-							<h3 class="voa__label" style="font-size: 16px; margin-bottom: 0;">Responses and Solutions</h3>
-							<p><a href="">Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a></p>
-							<p><a href="">Somali Cabinet to Include Drought Disaster Pos</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="voa__grid__one-third voa__hang-right voa__grid__float">
-					<div class="video-container">
-						<div class="embed-container"><iframe src="https://www.youtube.com/embed/dXYLMaJ8P0c" frameborder="0" allowfullscreen=""></iframe></div>
-					</div>
-					<h3>Headline goes here and here</h3>
-					<p>This is not Somalia's first drought and it likely won't be its last. The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine.</p>
-				</div>
-			</div>
-		</section>
-
-
-		<section class="voa__section__full-width" style="background-color: #f1f1f1; padding: 30px 0; margin: 0;">
-			<div class="voa__grid__full">
-				<div class="voa__grid">
-					<h3 class="voa__label">Country profiles</h3>
-				</div>
-
-				<div class="voa__grid">
-
-{foreach from=$slides item=slide }
-	{if $slide.series == "country"}
-					<div class="voa__grid__one-third voa__country-profile">
-						<h3 class="voa__kicker">{$slide.title}</h3>
-
-						<ul class="voa__stats">
-							<li><span class="voa__paragraph-label" style="">Status:</span> {$slide.country_risk_level}</li>
-							<li><span class="voa__paragraph-label" style="">Population:</span> {$slide.country_population}</li>
-							<li><span class="voa__paragraph-label" style="">At risk:</span> XX%</li>
-						</ul>
-
-						<p>{$slide.content}</p>
-
-						<div class="voa__related-links">
-							<h4>{$slides[0].title_label_recent_headlines}</h4>
-
-							<p><a href="#">This is a headline that goes here</a></p>
-							<p><a href="#">This is also a headline that's' here</a></p>
-
-						</div>
-					</div>
-
-	{/if}
 {/foreach}
-				</div>
-			</div>
-		</section>
 
 
-		<section class="voa__section__full-width voa__footer dark">
-			<div class="voa__grid__full">
+                    <!--
+                        <script id="hr-template1" type="text/x-handlebars-template">
+                            <li><span class='pubdate'>{{cells.Date}}</span>
+                            <img class='img-responsive' src='images/story2.jpg'>
+                            <a href='http://www.voanews.com{{cells.Link}}'>{{cells.Title}}</a>
+                            <span class='byline'>By {{cells.Byline}}</span>
+                            </li>
+                        </script>
+                    -->
 
-				<div class="voa__grid">
-					<!--<script type="text/javascript" src="http://tools.voanews2.com/fidget/view.php?id=224&js"></script>-->
-
-					<div class="voa__grid__one-third voa__rule wide-right">
-
-						<h3>{$slides[1].title}</h3>
-						{$slides[1].content}
-
-					</div><!-- .voa__credits -->
-
-					<div class="voa__grid__one-third voa__rule wide-right">
-						<h3>{$slides[2].title}</h3>
-						{$slides[2].content}
-					</div>
-
-					<div class="voa__grid__one-third">
-						<h3 style="margin-bottom: 15px;">On Twitter</h3>
-						<div class="voa__twitter">
-							<div class="voa__twitter__tweet">
-								Loremx ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. <a href="#">#FamineWatch</a>
-							</div>
-							<div class="voa__twitter__attribution">
-								<img class="voa__mugshot--round" src="http://placehold.it/60x60" alt="Twitter image" style="float: left; max-width: 60px;"/>
-								<div style="text-align: left; padding-left: 65px;">
-									<h3 class="voa__twitter__name">Voice of America</h3>
-									<h5 class="voa__twitter__handle"><a href="https://twitter.com/voanews">@VOANews</a></h5>
-									<h5 class="voa__twitter__timestamp">Timestamp Sept 20XX</h5>
-								</div>
-							</div>
-						</div>
-					</div>
+                    </ol>
 
 
-				</div>
-			</div>
-		</section><!-- .voa__footer -->
+                    <ol class='stories' id="hr2">
+
+                        <script id="hr-template2" type="text/x-handlebars-template">
+                            <li><span class='pubdate'>{{cells.Date}}</span>
+                            <a href='http://www.voanews.com{{cells.Link}}'>{{cells.Title}}</a>
+                            <span class='byline'>By {{cells.Byline}}</span>
+                            </li>
+                        </script>
+
+                    </ol>
+
+                </div>
 
 
-	</div><!-- .voa__project -->
-<script type="text/javascript">
-	//var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ONYDSbWz57kIRUEoe-rIsQjq69JelwayZdZ_eaZW2ZA/pubhtml';//This can also be defined in the JS.
-	var mode = "editing";//"editing"; //"production";
-	var dictionary = {};
-</script>
 
-</body>
+            </div>
+
+
+        </div>
+
+
+        <div class='wrapper-footer'>
+ 
+         <div class='container'>
+
+            <div class='row'>
+                <div class='col-sm-7'>
+
+                    <h3>{$slides[1].title}</h3>
+
+                    {$slides[1].content}
+
+                </div>
+
+
+
+                <div class='col-sm-5'>
+
+                    <h3>{$slides[2].title}</h3>
+
+                    {$slides[2].content}
+
+
+                </div>
+
+
+
+        </div>
+        </div>
+        </div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+<script src="js/parallax.js"></script>
+
+       <script>
+
+    jQuery(document).ready(function () {
+
+        //var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/15ZbLDUzXS0vC9pZiDu2q9jATS_Drt1cZr_W-w1DrrkA/edit#gid=0';
+
+        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qsNCNKe39w6Q-rfFUxZyuDFimQklkUy-qIUUpEGKr6A/edit#gid=0';
+
+        // Compile the Handlebars template for HR leaders.
+        var HRTemplate1 = Handlebars.compile(jQuery('#hr-template1').html());
+
+        var HRTemplate2 = Handlebars.compile(jQuery('#hr-template2').html());
+
+
+
+        // Load top five HR leaders.
+        jQuery('#hr1').sheetrock({
+          url: mySpreadsheet,
+          query: "select A,B,C,D,E,F,G,H,I order by F desc LIMIT 1",
+          rowTemplate: HRTemplate1,
+          callback: myCallback
+        });
+
+        // Load top five HR leaders.
+        jQuery('#hr2').sheetrock({
+          url: mySpreadsheet,
+          query: "select A,B,C,D,E,F,G,H,I order by F desc LIMIT 4 OFFSET 1",
+          rowTemplate: HRTemplate2,
+          callback: myCallback
+        });
+
+        function myCallback () {
+            jQuery('#search li').each(function(index) {
+              jQuery(this).attr('data-headline', jQuery(this).data('headline').toUpperCase());
+              jQuery(this).attr('data-topic', jQuery(this).data('topic').toUpperCase());
+              jQuery(this).attr('data-country', jQuery(this).data('country').toUpperCase());
+              jQuery(this).attr('data-contributors', jQuery(this).data('contributors').toUpperCase());
+    
+            });
+
+        }
+
+
+
+        /*
+
+            $('#Angola1').css({'fill':'#FFFE00', 'opacity':'.55'});
+            $('#Ethiopia').css({'fill':'#FFFE00', 'opacity':'.55'});
+            $('#Eritrea').css({'fill':'#FFFE00', 'opacity':'.55'});
+            $('#SouthAfrica').css({'fill':'#FFFE00', 'opacity':'.55'});
+
+$('#Burundi').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Djibouti').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Kenya').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Lesotho').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Madagascar').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Malawi').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Mozambique').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Rwanda').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Somalia').css({'fill':'#FFFE00', 'opacity':'.55'});
+$('#Sudan').css({'fill':'#FFFE00', 'opacity':'.5'});
+$('#Swaziland').css({'fill':'#FFFE00', 'opacity':'.5'});
+$('#Tanzania').css({'fill':'#FFFE00', 'opacity':'.5'});
+$('#Uganda').css({'fill':'#FFFE00', 'opacity':'.5'});
+$('#Zimbabwe').css({'fill':'#FFFE00', 'opacity':'.5'});
+
+*/
+
+
+                $('#parallax-window-1').parallax({
+                    imageSrc: 'images/top.jpg',
+                    speed: .75
+                });
+
+
+            /*
+            $('#Egypt').mouseover(function () {
+                $(this).css({'fill':'#ff0000'});
+            });
+            $('#Egypt').mouseout(function () {
+                $(this).css({'fill':'#FFFE00'});
+            });
+
+
+            $('#Egypt').click(function () {
+                document.location.href = 'http://www.voanews.com';
+            });
+            */
+
+
+
+        });       
+
+       </script> 
+
+
+
+
+
+    </body>
 </html>
