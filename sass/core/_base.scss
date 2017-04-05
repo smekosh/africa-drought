@@ -55,9 +55,10 @@
 	}
 
 	.voa__byline {
+		color: $color__voa-gray-light;
 		font-family: $font__sans;
-		font-weight: bold;
-		margin-bottom: 20px;
+		font-weight: normal;// bold;
+		margin: 5px 0 0 0;
 
 		.voa__agency {
 			font-weight: normal;

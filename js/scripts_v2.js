@@ -47,7 +47,7 @@ function showInfo(data, tabletop) {
 
 
 	var stringHeadlines = "";
-	var numberOfStories = 7;
+	var numberOfStories = 6;
 
 	stringHeadlines += '<a href="http://www.voanews.com' + data[0].Link + '"><img src="https://gdb.voanews.com/09889DDD-F6AE-4D94-9363-AE21B6643ECB_w640_h360_s.jpg" />';
 	stringHeadlines += '<h3 style="margin-bottom: 20px;">' + data[0].Title + '</h3></a>';
@@ -56,7 +56,9 @@ function showInfo(data, tabletop) {
 		stringHeadlines += '<p><a href="//www.voanews.com' + data[i].Link + '">' + data[i].Title + '</a></p>';
 	}
 
-	stringHeadlines += '<h3 class="voa__label" style="margin-top: 40px;">Secondary label hereg</h3>'
+	stringHeadlines += '<h3 class="voa__label" style="margin-top: 40px;">Secondary label here</h3>'
+	stringHeadlines += '<a href="http://www.voanews.com' + data[0].Link + '"><img src="http://placehold.it/640x360" />';
+	stringHeadlines += '<h3 style="margin-bottom: 20px;">' + data[0].Title + '</h3></a>';
 
 	for (var i = 1; i < numberOfStories; i++ ){
 		stringHeadlines += '<p><a href="//www.voanews.com' + data[i].Link + '">' + data[i].Title + '</a></p>';
