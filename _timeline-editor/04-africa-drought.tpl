@@ -129,7 +129,7 @@
                 <div class='col-md-4'>
                     <h3>Featured Video</h3>
                     <h1 class='featured-video'><a href='{$slides[3].link}'>{$slides[3].title}</a></h1>
-                    <span class='byline'>{$slides[3].video_byline}</span>
+                    <span class='byline'>By {$slides[3].video_byline}</span>
                     <p class='lead-video'>{$slides[3].content|strip_tags} <a href='{$slides[3].link}'>Read more.</a>
                     </p>
                 </div>
@@ -230,9 +230,9 @@ The government announced Saturday that 110 people had died in a two-day period d
 
                 <div class='col-sm-4'>
 
-
-                <a href='https://www.fews.net/'><img class='img-responsive africa-map' src='images/map.png'></a>
-
+{if $slides[4].content!=""}
+				{$slides[4].content}
+{/if}
                     <h3>Recent News</h3>
                     <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
                 

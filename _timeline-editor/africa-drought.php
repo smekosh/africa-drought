@@ -41,6 +41,7 @@ class timeline_renderer_africa_drought extends timeline_renderer {
             "No" => "no"
         );
 
+/*
         $status_array = array(
             "Catastrophe/Famine" => "Catastrophe/Famine",
             "Emergency" => "Emergency",
@@ -48,7 +49,7 @@ class timeline_renderer_africa_drought extends timeline_renderer {
             "Stressed" => "Stressed",
             "None or minimal" => "None or minimal"
         );
-
+*/
 
         $this->add_custom_field( "title", "title_label_nav", "Navbar label (may be the same as the title)" )->type_textarea();
         $this->add_custom_field( "title", "title_label_countries", "Navbar label: Countries" )->type_textarea();
@@ -74,10 +75,10 @@ class timeline_renderer_africa_drought extends timeline_renderer {
         $this->add_custom_field( "video", "video_byline", "Byline" )->type_textarea();
 
 
-
+/*
         $this->add_custom_field( "country", "country_risk_level", "Current risk for famine status" )->type_radio($status_array);
         $this->add_custom_field( "country", "country_population", "Country population" )->type_textarea();
-
+*/
        
 
 
