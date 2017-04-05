@@ -55,10 +55,13 @@ class timeline_renderer_africa_drought extends timeline_renderer {
         $this->add_custom_field( "title", "title_label_coverage", "Navbar label: Coverage" )->type_textarea();
         $this->add_custom_field( "title", "title_tagline", "Tagline: How drought and conflict have put millions on the verge of famine" )->type_textarea();
         $this->add_custom_field( "title", "title_image", "Banner image url (via Pangea)" )->type_textarea();
+
+        /*
         $this->add_custom_field( "title", "title_label_recent_headlines", "Label: Recent headlines" )->type_textarea();
         $this->add_custom_field( "title", "title_label_featured_video", "Label: Featured video" )->type_textarea();
         $this->add_custom_field( "title", "title_label_featured_story", "Label: Featured story" )->type_textarea();
         $this->add_custom_field( "title", "title_label_country_profiles", "Label: Country profiles" )->type_textarea();
+        */
 
         $this->add_custom_field( "title", "title_metrics_year", "Metrics: Year" )->type_textarea();
         $this->add_custom_field( "title", "title_metrics_month", "Metrics: Month" )->type_textarea();
@@ -67,7 +70,7 @@ class timeline_renderer_africa_drought extends timeline_renderer {
         $this->add_custom_field( "title", "title_metrics_byline", "Metrics: Byline" )->type_textarea();
         $this->add_custom_field( "title", "title_metrics_slug", "Metrics: Slug" )->type_textarea();
 
-        $this->add_custom_field( "video", "video_url", "YouTube url" )->type_textarea();
+        $this->add_custom_field( "video", "video_url", "YouTube video id (e.g. 4TDYtqbz4II)" )->type_textarea();
         $this->add_custom_field( "video", "video_byline", "Byline" )->type_textarea();
 
 

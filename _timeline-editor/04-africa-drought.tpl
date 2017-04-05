@@ -122,25 +122,24 @@
         </div>
         </div>
 
-
+{if $slides[3].video_url!=""}
         <div class='container'>
             <div class='row'>
 
                 <div class='col-md-4'>
                     <h3>Featured Video</h3>
-                    <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
-                    <span class='byline'>By Abdulaziz Osman</span>
-                    <p class='lead-video'>
-As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
+                    <h1 class='featured-video'><a href='{$slides[3].link}'>{$slides[3].title}</a></h1>
+                    <span class='byline'>{$slides[3].video_byline}</span>
+                    <p class='lead-video'>{$slides[3].content|strip_tags} <a href='{$slides[3].link}'>Read more.</a>
                     </p>
                 </div>
 
                 <div class='col-md-8'>
-        <div class="video-container"><iframe src='https://www.youtube.com/embed/4TDYtqbz4II' frameborder='0' allowfullscreen></iframe></div>
+        <div class="video-container"><iframe src='https://www.youtube.com/embed/{$slides[3].video_url}' frameborder='0' allowfullscreen></iframe></div>
         </div>
         </div>
         </div>
-
+{/if}
 
 
 
