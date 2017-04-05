@@ -149,32 +149,31 @@
             <div class='row'>
                 <div class='col-sm-8'>
 
+
+
+
+
+{foreach from=$entries.Sheet1 item=entry }
+	{if $entry.Featured=="TRUE"}
+
             <div class='row'>
                 <div class='col-sm-12'>
 
-                <h3>Featured Story</h3>
-        
-                <img class='img-responsive' src='images/story.jpg'>
+	                <h3>Featured Story</h3>
+	        
+	                <img class='img-responsive' src='{$entry.Photo}'>
 
-                    <h1 class='featured-story'><a href='http://www.voanews.com/a/conflict-somalia-impacts-future-drought-resistance/3751638.html#'>Conflict in Somalia Impacts Future Drought Resistance</a></h1>
-                    <span class='byline'>By Jill Craig</span>
+                    <h1 class='featured-story'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
+                    <span class='byline'>By {$entry.Byline}</span>
 
-                    <p class='intro'>This is not Somalia's first drought and it likely won't be its last.
-
-The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href='#'>Read more</a>.</p>
-
-
-                </ol>
-
-
-
+                    <p class='intro'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more</a>.</p>
 
                 </div>
 
-
-
-                </div>
-
+            </div>
+            {break}
+    {/if}
+{/foreach}
 
 
 
@@ -187,13 +186,22 @@ The government announced Saturday that 110 people had died in a two-day period d
                     <p class='note'>Explore the root causes and contributing factors behind Africa&#8217;s deadliest food shortages in years.</p>
                 <ol class='stories'>
 
+{foreach from=$entries.Sheet1 item=entry }
+	{if $entry.Dimensions=="Cause"}
+
+                <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+                <span class='byline'>By {$entry.Byline}</span>
+                </li>
+
+	{/if}
+{/foreach}
+<!--
                 <li><span class='pubdate'>March 21, 2017</span><a href=''>Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a>
                 <span class='byline'>By Sebastian Mhofu</span>
                 </li>
 
                 <li><span class='pubdate'>March 21, 2017</span><a href=''>Somali Cabinet to Include Drought Disaster Post</a><span class='byline'>By Mohamed Olad</span></li>
-
-
+-->
 
                 </ol>
 
@@ -209,12 +217,22 @@ The government announced Saturday that 110 people had died in a two-day period d
 
                 <ol class='stories'>
 
+{foreach from=$entries.Sheet1 item=entry }
+	{if $entry.Dimensions=="Response" && $entry@index < 3}
+
+                <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+                <span class='byline'>By {$entry.Byline}</span>
+                </li>
+
+	{/if}
+{/foreach}
+<!--
                 <li><span class='pubdate'>March 21, 2017</span><a href=''>Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a>
                 <span class='byline'>By Sebastian Mhofu</span>
                 </li>
 
                 <li><span class='pubdate'>March 21, 2017</span><a href=''>Somali Cabinet to Include Drought Disaster Post</a><span class='byline'>By Mohamed Olad</span></li>
-
+-->
                 </ol>
 
 
@@ -231,7 +249,7 @@ The government announced Saturday that 110 people had died in a two-day period d
                 <div class='col-sm-4'>
 
 {if $slides[4].content!=""}
-				{$slides[4].content}
+					{$slides[4].content}
 {/if}
                     <h3>Recent News</h3>
                     <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
