@@ -10,7 +10,7 @@
 
     <link rel="canonical" href="http://projects.voanews.com/africa-drought/" />
     <link type="image/x-icon" rel="icon" href="http://www.voanews.com/img/voa/favicon.ico" />
-    <link rel="image_src" href="https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg" />
+    <link rel="image_src" href="{$slides[0].title_image}" />
 
 
 	<!-- for Google -->
@@ -23,7 +23,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{$slides[0].title}" />
 	<meta property="og:description" content="{$slides[0].title_tagline}" />
-	<meta property="og:image" content="https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg" />
+	<meta property="og:image" content="{$slides[0].title_image}" />
 	<meta property="og:url" content="http://projects.voanews.com/africa-drought/" />
 
 	<!-- for Twitter -->
@@ -32,7 +32,7 @@
 	<meta name="twitter:creator" content="@salem_solomon">
 	<meta property="twitter:title" content="{$slides[0].title}">
 	<meta property="twitter:description" content="{$slides[0].title_tagline}">
-	<meta property="twitter:image" content="https://gdb.voanews.com/B07F11DB-482D-4A23-8DCF-2494D309DCFC_w1280_h600_s.jpg">
+	<meta property="twitter:image" content="{$slides[0].title_image}">
     <meta name="twitter:url" content="http://projects.voanews.com/africa-drought/" />
 
 
