@@ -58,17 +58,25 @@
     <body>
 {*{include file="metrics.tpl"}*}
         
-
+        <nav class="voa-masthead">
+            <div class="voa-masthead-inner"><div class="voa-logo"><a href="http://www.voanews.com/" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div 
+            class="share-options">
+                <ul>
+                    <li><a title="Share on Facebook" href="" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
+                    <li><a title="Share on Twitter" href="" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
+                </ul>
+            </div></div>
+        </nav>
 
         <div id="parallax-window-1" class="parallax">
-            
+        
         <header>
             <h1>{$slides[0].title}</h1>
             <h2>{$slides[0].title_tagline}</h2>
         </header>
 
         </div>
-<!--
+{*<!--
         <div class='container'>
             <div class='row'>
                 <div class='col-md-12'>
@@ -102,11 +110,7 @@
             </div>
 
         </div>
--->
-
-
-
-
+-->*}
 
 
         <div class='wrapper'>
