@@ -256,10 +256,8 @@ The government announced Saturday that 110 people had died in a two-day period d
 <!--<pre>{*$entry|print_r *}</pre>-->
 
 	{/if}
-
-
 {/foreach}
-
+{debug}
 
                     </ol>
 
