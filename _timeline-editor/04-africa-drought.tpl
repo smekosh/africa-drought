@@ -354,50 +354,10 @@ The government announced Saturday that 110 people had died in a two-day period d
 
 
 
-        /*
-
-            $('#Angola1').css({'fill':'#FFFE00', 'opacity':'.55'});
-            $('#Ethiopia').css({'fill':'#FFFE00', 'opacity':'.55'});
-            $('#Eritrea').css({'fill':'#FFFE00', 'opacity':'.55'});
-            $('#SouthAfrica').css({'fill':'#FFFE00', 'opacity':'.55'});
-
-$('#Burundi').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Djibouti').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Kenya').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Lesotho').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Madagascar').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Malawi').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Mozambique').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Rwanda').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Somalia').css({'fill':'#FFFE00', 'opacity':'.55'});
-$('#Sudan').css({'fill':'#FFFE00', 'opacity':'.5'});
-$('#Swaziland').css({'fill':'#FFFE00', 'opacity':'.5'});
-$('#Tanzania').css({'fill':'#FFFE00', 'opacity':'.5'});
-$('#Uganda').css({'fill':'#FFFE00', 'opacity':'.5'});
-$('#Zimbabwe').css({'fill':'#FFFE00', 'opacity':'.5'});
-
-*/
-
-
                 $('#parallax-window-1').parallax({
                     imageSrc: 'images/top.jpg',
                     speed: .75
                 });
-
-
-            /*
-            $('#Egypt').mouseover(function () {
-                $(this).css({'fill':'#ff0000'});
-            });
-            $('#Egypt').mouseout(function () {
-                $(this).css({'fill':'#FFFE00'});
-            });
-
-
-            $('#Egypt').click(function () {
-                document.location.href = 'http://www.voanews.com';
-            });
-            */
 
 
 
