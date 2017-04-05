@@ -68,7 +68,7 @@
         </header>
 
         </div>
-
+<!--
         <div class='container'>
             <div class='row'>
                 <div class='col-md-12'>
@@ -102,7 +102,7 @@
             </div>
 
         </div>
-
+-->
 
 
 
@@ -253,10 +253,10 @@ The government announced Saturday that 110 people had died in a two-day period d
                             <span class='byline'>By {$entry.Byline}</span>
                             </li>
 
+<!--<pre>{*$entry|print_r *}</pre>-->
 
 	{/if}
 
-<pre>{*$entry|print_r *}</pre>
 
 {/foreach}
 
@@ -315,7 +315,7 @@ The government announced Saturday that 110 people had died in a two-day period d
     jQuery(document).ready(function () {
 
         //var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/15ZbLDUzXS0vC9pZiDu2q9jATS_Drt1cZr_W-w1DrrkA/edit#gid=0';
-
+        /*
         var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qsNCNKe39w6Q-rfFUxZyuDFimQklkUy-qIUUpEGKr6A/edit#gid=0';
 
         // Compile the Handlebars template for HR leaders.
@@ -349,8 +349,8 @@ The government announced Saturday that 110 people had died in a two-day period d
               jQuery(this).attr('data-contributors', jQuery(this).data('contributors').toUpperCase());
     
             });
-
         }
+        */
 
 
 

@@ -6,6 +6,8 @@ Millions of people across Africa lack access to enough food. A drought in Kenya 
 
 If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) installed (or another way to compile SASS to CSS), you can run `sudo npm install -g node-sass`
 
+You can update the slides for local dev with: `./fetch_data.sh`
+
 
 ### What is this repository for? ###
 
