@@ -1,9 +1,0 @@
-/* VOA language CSS */
-@import 'translations/translationFonts';
-@import 'mixins/mixins';
-
-$font__display:      $font__primary--persian;
-$font__primary:      $font__primary--persian;
-$font__secondary:    $font__secondary--persian;
-
-@include language(persian);

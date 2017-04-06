@@ -220,14 +220,6 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 
 	{/if}
 {/foreach}
-<!--
-                <li><span class='pubdate'>March 21, 2017</span><a href=''>Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a>
-                <span class='byline'>By Sebastian Mhofu</span>
-                </li>
-
-                <li><span class='pubdate'>March 21, 2017</span><a href=''>Somali Cabinet to Include Drought Disaster Post</a><span class='byline'>By Mohamed Olad</span></li>
--->
-
                 </ol>
 
 
@@ -251,13 +243,6 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
 
 	{/if}
 {/foreach}
-<!--
-                <li><span class='pubdate'>March 21, 2017</span><a href=''>Civic Group: Above Normal Rainfall in Zimbabwe Not Worth Cheering</a>
-                <span class='byline'>By Sebastian Mhofu</span>
-                </li>
-
-                <li><span class='pubdate'>March 21, 2017</span><a href=''>Somali Cabinet to Include Drought Disaster Post</a><span class='byline'>By Mohamed Olad</span></li>
--->
                 </ol>
 
 
@@ -342,55 +327,12 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
         </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
--->
 
 <script src="js/parallax.js"></script>
 
        <script>
 
     jQuery(document).ready(function () {
-
-        //var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/15ZbLDUzXS0vC9pZiDu2q9jATS_Drt1cZr_W-w1DrrkA/edit#gid=0';
-        /*
-        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qsNCNKe39w6Q-rfFUxZyuDFimQklkUy-qIUUpEGKr6A/edit#gid=0';
-
-        // Compile the Handlebars template for HR leaders.
-        var HRTemplate1 = Handlebars.compile(jQuery('#hr-template1').html());
-
-        var HRTemplate2 = Handlebars.compile(jQuery('#hr-template2').html());
-
-
-
-        // Load top five HR leaders.
-        jQuery('#hr1').sheetrock({
-          url: mySpreadsheet,
-          query: "select A,B,C,D,E,F,G,H,I order by F desc LIMIT 1",
-          rowTemplate: HRTemplate1,
-          callback: myCallback
-        });
-
-        // Load top five HR leaders.
-        jQuery('#hr2').sheetrock({
-          url: mySpreadsheet,
-          query: "select A,B,C,D,E,F,G,H,I order by F desc LIMIT 4 OFFSET 1",
-          rowTemplate: HRTemplate2,
-          callback: myCallback
-        });
-
-        function myCallback () {
-            jQuery('#search li').each(function(index) {
-              jQuery(this).attr('data-headline', jQuery(this).data('headline').toUpperCase());
-              jQuery(this).attr('data-topic', jQuery(this).data('topic').toUpperCase());
-              jQuery(this).attr('data-country', jQuery(this).data('country').toUpperCase());
-              jQuery(this).attr('data-contributors', jQuery(this).data('contributors').toUpperCase());
-
-            });
-        }
-        */
-
 
 
                 $('#parallax-window-1').parallax({

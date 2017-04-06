@@ -1,9 +1,0 @@
-/* VOA language CSS */
-@import 'translations/translationFonts';
-@import 'mixins/mixins';
-
-$font__display:      $font__primary--tibetan;
-$font__primary:      $font__primary--tibetan;
-$font__secondary:    $font__secondary--tibetan;
-
-@include language(tibetan);

@@ -4,8 +4,6 @@ Millions of people across Africa lack access to enough food. A drought in Kenya 
 
 ### Getting started ###
 
-If you don't have [`node-sass`](https://www.npmjs.com/package/node-sass) installed (or another way to compile SASS to CSS), you can run `sudo npm install -g node-sass`
-
 You can update the slides for local dev with: `./fetch_data.sh`
 
 
@@ -15,18 +13,12 @@ You can update the slides for local dev with: `./fetch_data.sh`
 
 ### To do list ###
 
-* Display current time period for map 
-* Convert footer column to flexbox (for columns with equal heights)
+* 
 
 
 ### Done (from the to-do list ###
 
-* ~~White hamburger button on mobile~~
-* ~~Fix link colors~~
-* ~~Footer columns have border on mobile~~
-* ~~Add twitter embed code~~
-* ~~Add map key~~
-* ~~Fix nav bar title position on mobile.~~
+* 
 
 
 ### Resources ###
