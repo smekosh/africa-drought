@@ -11,6 +11,29 @@
 }
 
 
+.mini-section {
+    background-color: #eee;
+    margin: 0 0 20px 0;
+}
+.mini-section p {
+    padding: 5px 20px 20px 15px;
+
+}
+
+ol {
+    margin-bottom: 40px
+}
+
+.wrapper ol#ipc-phases li {
+    font-size: 1em;
+}
+
+.top-story, .more-top {
+    margin-bottom: 40px;
+}
+.more-top img {
+    margin-bottom: 20px;
+}
 
 .video-container {
     position:relative;
@@ -18,7 +41,11 @@
     padding-top:30px;
     height:0;
     overflow:hidden;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+}
+
+.description {
+    padding-bottom: 20px
 }
 
 .video-container iframe, .video-container object, .video-container embed {
@@ -30,72 +57,17 @@
 }
 
 
-.voa-masthead {
-    background: rgba(255, 255, 255, .4);
-    border-bottom: 1px solid #ccc;
-    margin: 0;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
+.country {
+    border-radius: 50%;
 }
 
-.voa-masthead-inner {
-    margin: 0 auto;
-    max-width: 1170px;
-    padding: .5em 1em;
-    width: 100%;
+div.new-section {
+    margin-top: 20px;
 }
-
-.voa-masthead .voa-logo {
-    display: inline-block;
-    line-height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    width: 40%;
-}
-
-.voa-masthead .voa-logo img { display: block; }
-
-.voa-masthead .share-options {
-    display: inline-block;
-    text-align: right;
-    width: 60%;
-}
-
-.voa-masthead ul, .voa-masthead li {
-    line-height: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-
-.voa-masthead .scr {
-    display: none;
-    visibility: hidden;
-}
-
-.voa-masthead ul li a {
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    display: block;
-    height: 25px;
-    line-height: 100%;
-    margin: 0 0 0 1em;
-    overflow: auto;
-    padding: 0 .5em;
-    width: 25px;
-}
-
-
-
 
 
         a {
-            color: #23527c;
+            color: #337ab7;
         }
         h1, h2 {
            text-align: center;
@@ -140,8 +112,14 @@
 
         }  
 
+        .wrapper-region-reports h2 {
+            text-align: left;
+        }
+
         h3 {
-            background-color: #eee;
+            background-color: #45b29d;
+            border-radius: 2px;
+            color: #fff;
             display: inline-block;
             font-family: 'Noto Sans';
             font-size:1.1em;
@@ -149,6 +127,17 @@
             text-transform: uppercase;
             margin: 0 0 10px 0;
             font-weight: bold;
+        }
+
+        .mini-section h3 {
+            border-radius: 0px;
+            border-bottom-right-radius: 2px;
+        }
+
+        h3.country-label {
+            background-color: #e27a3f;
+            font-size:.9em;
+            font-weight: normal;
         }
 
 
@@ -213,17 +202,19 @@
         }
         ol.stories a {
             display: block;
+            font-family: 'noto sans';
             font-size: 1.1em;
             margin: 5px 0;
         }
 
         span.pubdate {
-            background-color: #666;
-            color: #fff;
+            background-color: #efc94c;
+            border-radius: 2px;
+            color: #111;
             display: inline-block;
              font-family: 'Noto Sans';
              font-weight: bold;
-            font-size: .8em;           
+            font-size: .75em;           
             padding: 3px 6px;
         }
         span.byline {
@@ -268,9 +259,9 @@
         }
 
         p.note {
-            font-size: 1em;
+            font-size: 1.1em;
             font-style: italic;
-            color: #888;
+            color: #333;
             margin-bottom: 20px;
         }
 
@@ -279,12 +270,60 @@
         }
 
 .wrapper {
-    background-color: rgb(241, 241, 241);
+    background-color: rgba(51, 77, 92, .10);
     margin-bottom: 40px;
 }
+
+.wrapper-region-reports {
+    background-color: rgba(51, 77, 92, .10);
+    padding-bottom: 40px;
+}
+
+
+.wrapper li {
+    font-family: Georgia;
+    font-size: 1.1em;
+    list-style-type: none;
+    margin-left: -40px;
+    margin-bottom: 10px;
+}
+
+#phase1 {
+    border-left: 40px solid #334d5c;
+    padding-left: 20px;
+}
+#phase2 {
+    border-left: 40px solid #45b29d;
+    padding-left: 20px;
+}
+#phase3 {
+    border-left: 40px solid #efc94c;
+    padding-left: 20px;
+}
+#phase4 {
+    border-left: 40px solid #e27a3f;
+    padding-left: 20px;
+}
+#phase5 {
+    border-left: 40px solid #df5a49;
+    padding-left: 20px;
+}
+
+.wrapper h2 {
+    text-align: left;
+}
+.wrapper h3,
+.wrapper-region-reports h3 {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 10px;
+}
+.wrapper-region-reports p {
+    margin-bottom: 30px;
+}
+
 .wrapper-footer {
     background-color: #333;
-    margin-top:20px;
     padding-bottom: 40px;
 }
 .wrapper-footer p {
@@ -298,6 +337,9 @@
     font-weight: bold;
     margin-top: 30px;
     padding: 0;
+    border-bottom: 4px solid #df5a49;
+    padding-bottom: 5px;
+    margin-bottom: 15px;    
 }
 .wrapper-footer h6 {
     color: #fff;
@@ -313,6 +355,11 @@
     margin-bottom: 20px;
 }
 
+
+.africa-map {
+margin-bottom: 40px;
+}
+
 .at-a-glance {
 border-left: 20px solid #ddd;
 }
@@ -326,7 +373,7 @@ h1.featured-story {
 
 h1.featured-video {
     font-size: 1.8em;
-    margin: 0px 0 10px 0;
+    margin: 10px 0 10px 0;
     text-align: left;
 }
 
@@ -338,4 +385,5 @@ p.intro {
             line-height: 24px;
             margin: 15px 0 20px 0;
 }
+
 

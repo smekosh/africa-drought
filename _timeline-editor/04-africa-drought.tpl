@@ -69,209 +69,158 @@
 
     </head>
     <body>
-{include file="metrics.tpl"}
+    
+    {include file="metrics.tpl"}
 
-<script type="text/javascript">
-(function(a,b,c,d){
-a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
-b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-})();
-</script>
+    <script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+    </script>
 
-        <nav class="voa-masthead">
-            <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
-            class="share-options">
-                <ul>
-                    <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
-                    <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
-                </ul>
-            </div></div>
-        </nav>
-
-        <div id="parallax-window-1" class="parallax">
-
-        <header>
-            <h1>{$slides[0].title}</h1>
-            <h2>{$slides[0].title_tagline}</h2>
-        </header>
-
-        </div>
-{*<!--
-        <div class='container'>
-            <div class='row'>
-                <div class='col-md-12'>
-
-                <header>
-                <nav>
+            <nav class="voa-masthead">
+                <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
+                class="share-options">
                     <ul>
-                        <li>
-                            <a href='#'>Overview</a>
-                        </li>
-                        <li>
-                            <a href='#'>Latest News</a>
-                        </li>
-                        <li>
-                            <a href='#'>Data</a>
-                        </li>
-                        <li>
-                            <a href='#'>Agencies</a>
-                        </li>
-                        <li>
-                            <a href='#'>The Team</a>
-                        </li>
+                        <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
+                        <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
                     </ul>
-                </nav>
+                </div></div>
+            </nav>
+
+            <div id="parallax-window-1" class="parallax">
+
+            <header>
+                <h1>{$slides[0].title}</h1>
+                <h2>{$slides[0].title_tagline}</h2>
+            </header>
+
+            </div>
+    {*<!--
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-md-12'>
+
+                    <header>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href='#'>Overview</a>
+                            </li>
+                            <li>
+                                <a href='#'>Latest News</a>
+                            </li>
+                            <li>
+                                <a href='#'>Data</a>
+                            </li>
+                            <li>
+                                <a href='#'>Agencies</a>
+                            </li>
+                            <li>
+                                <a href='#'>The Team</a>
+                            </li>
+                        </ul>
+                    </nav>
 
 
-                    </header>
+                        </header>
+
+                    </div>
 
                 </div>
 
             </div>
-
-        </div>
--->*}
-
+    -->*}
 
         <div class='wrapper'>
-
-         <div class='container'>
-
-            <div class='row'>
-                <div class='col-sm-10 col-sm-offset-1'>
-                    <p class='lead'>{$slides[0].content|strip_tags}</p>
-
-        </div>
-        </div>
-        </div>
-        </div>
-
-{if $slides[3].video_url!=""}
-        <div class='container'>
-            <div class='row'>
-
-                <div class='col-md-4'>
-                    <h3>Featured Video</h3>
-                    <h1 class='featured-video'><a href='{$slides[3].link}'>{$slides[3].title}</a></h1>
-                    <span class='byline'>By {$slides[3].video_byline}</span>
-                    <p class='lead-video'>{$slides[3].content|strip_tags} <a href='{$slides[3].link}'>Read more.</a>
-                    </p>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-10 col-sm-offset-1'>
+                        <p class='lead'>{$slides[0].content|strip_tags}</p>
+                    </div>
                 </div>
-
-                <div class='col-md-8'>
-        <div class="video-container"><iframe src='https://www.youtube.com/embed/{$slides[3].video_url}' frameborder='0' allowfullscreen></iframe></div>
-        </div>
-        </div>
-        </div>
-{/if}
-
-
-
-
-        <div class='container'>
-
-            <div class='row'>
-                <div class='col-sm-8'>
-
-
-
-
-
-{foreach from=$entries.Sheet1 item=entry }
-	{if $entry.Featured=="TRUE"}
-
-            <div class='row'>
-                <div class='col-sm-12'>
-
-	                <h3>Featured Story</h3>
-
-	                <img class='img-responsive' src='{$entry.Photo}'>
-
-                    <h1 class='featured-story'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
-                    <span class='byline'>By {$entry.Byline}</span>
-
-                    <p class='intro'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more</a>.</p>
-
-                </div>
-
             </div>
-            {break}
-    {/if}
-{/foreach}
+        </div>
 
+        {foreach from=$entries.Sheet1 item=entry }
+            {if $entry.Featured=="TRUE"}
+                <div class='container'>
+                    <div class='row top-story'>
+                        <div class='col-sm-6 col-sm-offset-1'>
+                            <img class='img-responsive' src='images/story.jpg'>
+                        </div>
+                        <div class='col-sm-4'>
+                            <span class='pubdate'>March 21, 2017</span> 
+                            <h1 class='featured-video'><a href='http://www.voanews.com/a/conflict-somalia-impacts-future-drought-resistance/3751638.html#'>Conflict in Somalia Impacts Future Drought Resistance</a></h1>
+                            <span class='byline'>By Jill Craig</span>
+                            <p class='lead-video'>The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href='#'>Read more</a>.</p>
+                        </div>
+                    </div>
+                    <div class='row more-top'>
+                        <div class='col-sm-5 col-sm-offset-1'>
+                            <div class="video-container"><iframe src='https://www.youtube.com/embed/4TDYtqbz4II' frameborder='0' allowfullscreen></iframe></div>
+                            <span class='pubdate'>March 21, 2017</span>
+                            <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
+                            <span class='byline'>By Abdulaziz Osman</span>
+                            <p class='lead-video'>As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
+                            </p>
+                        </div>
+                        <div class='col-sm-5'>
+                            <img class='img-responsive' src='images/story2.jpg'>
+                            <span class='pubdate'>March 21, 2017</span>
+                            <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
+                            <span class='byline'>By Abdulaziz Osman</span>
+                            <p class='lead-video'>As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {break}
+            {/if}
+        {/foreach}
 
+        <div class='wrapper'>
+            <div class='container'>
+                <div class="row">
+                    <div class='col-sm-12'>
+                        <h3>Mapping the Threat</h3>
+                    </div>
+                    <div class="col-sm-5">
+                        <h2>The IPC Phases</h2>
+                        <ol id='ipc-phases'>
+                            <li id='phase1'><strong>Phase 1.</strong> Up to 20 percent of households must use unsustainable methods to meet essential food and non-food needs. Longterm, new strategies are needed to avert malnutrition.</li>
+                            <li id='phase2'><strong>Phase 2.</strong> Despite humanitarian assistance, at least 20 percent of households cannot get enough food without meeting other non-food needs through unsustainable methods.</li>
+                            <li id='phase3'><strong>Phase 3.</strong> Despite humanitarian assistance, at least 20 percent of households either experience stretches of acute malnutrition or must deplete assets to meet food needs, leading to gaps in food consumption.</li>
+                            <li id='phase4'><strong>Phase 4.</strong> Despite humanitarian assistance, at least 20 percent of households either experience significant stretches of acute malnutrition and excess mortality or see the extreme loss of assets, leading to gaps in food consumption and acute malnutrition.</li>
+                            <li id='phase5'><strong>Phase 5.</strong> Despite humanitarian assistance, at least 20 percent of households experience an extreme lack of food, leading to starvation and death. Phase 5 of the IPC represents the minimum threshold for famine. There are degrees of famine characterized by an increasing death rate and more rampant starvation.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-7">
+                        <a href='https://www.fews.net/'><img class='img-responsive africa-map' src='images/full.gif'></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-12 description'>
+                        <h3>What the IPC Phases Mean</h3>
+                        <p class='lead-video'>The Integrated Phase Classification scale defines levels of food insecurity. Each phase of the scale represents more urgent nutritional needs. At the low end, members of a community are only able to meet their basic nutritional needs through unsustainable methods. Long term changes are needed to avoid starvation and death. At the high end of the scale, starvation and death have already occurred. Immediate humanitarian assistance is needed, and long term strategies for sustainable food production and consumption must also be achieved.</p>
+                        <p class='lead-video'>The IPC scale serves to both identify current humanitarian crises and call attention to crises likely to materialize in the absence of humanitarian assistance and/or better governance. The scale also shows that, once food insecurity reaches a certain level, suffering and loss of life cannot be prevented, even with humanitarian assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
+        <div class='container'>
             <div class='row'>
-                <div class='col-sm-6'>
-
-                <h3>Root Causes</h3>
-
-                    <p class='note'>Explore the root causes and contributing factors behind Africa&#8217;s deadliest food shortages in years.</p>
-                <ol class='stories'>
-
-{foreach from=$entries.Sheet1 item=entry }
-	{if $entry.Dimensions=="Cause"}
-
-                <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
-                <span class='byline'>By {$entry.Byline}</span>
-                </li>
-
-	{/if}
-{/foreach}
-                </ol>
-
-
-
-                </div>
-
-                <div class='col-sm-6'>
-
-
-                <h3>Responses & Solutions</h3>
-                    <p class='note'>Track emergency interventions and long-term remedies designed to save lives.</p>
-
-                <ol class='stories'>
-
-{foreach from=$entries.Sheet1 item=entry }
-	{if $entry.Dimensions=="Response" && $entry@index < 3}
-
-                <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
-                <span class='byline'>By {$entry.Byline}</span>
-                </li>
-
-	{/if}
-{/foreach}
-                </ol>
-
-
-                </div>
-
-                </div>
-
-
-
-
-
-                </div>
-
-                <div class='col-sm-4'>
-
-{if $slides[4].content!=""}
-					{$slides[4].content}
-{/if}
-                    <h3>Recent News</h3>
-                    <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
-
-
-
-
-                    <ol class='stories' id="hr1">
-
-{foreach from=$entries.Sheet1 item=entry }
-	{if $entry@index < 5}
-
+                <div class='col-sm-5 col-sm-offset-1'>
+                    <div class = 'mini-section'>
+                        <h3>Recent News</h3>
+                        <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
+                    </div>
+                    <ol class='stories'>
+                        {foreach from=$entries.Sheet1 item=entry }
+                            {if $entry@index < 5}
                             <li><span class='pubdate'>{$entry.Date}</span>
                             {if $entry@index == 0 && $entry.Photo != ""}
                             <img class='img-responsive' src='{$entry.Photo}'>
@@ -279,76 +228,65 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
                             <a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
                             <span class='byline'>By {$entry.Byline}</span>
                             </li>
-
-	{/if}
-{/foreach}
-
+                            {/if}
+                        {/foreach}
                     </ol>
-
-
                 </div>
-
-
-
+                <div class='col-sm-5'>
+                    <div class = 'mini-section'>
+                        <h3>Root Causes</h3>
+                        <p class='note'>Explore the root causes and contributing factors behind Africa&#8217;s deadliest food shortages in years.</p>
+                    </div>
+                    <ol class='stories'>
+                        {foreach from=$entries.Sheet1 item=entry }
+                            {if $entry.Dimensions=="Cause"}
+                        <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+                        <span class='byline'>By {$entry.Byline}</span>
+                        </li>
+                            {/if}
+                        {/foreach}
+                    </ol>
+                    <div class = 'mini-section new-section'>
+                        <h3>Responses & Solutions</h3>
+                        <p class='note'>Track emergency interventions and long-term remedies designed to save lives.</p>
+                    </div>
+                    <ol class='stories'>
+                    {foreach from=$entries.Sheet1 item=entry }
+                        {if $entry.Dimensions=="Response" && $entry@index < 3}
+                    <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+                    <span class='byline'>By {$entry.Byline}</span>
+                    </li>
+                        {/if}
+                    {/foreach}
+                    </ol>
+                </div>
             </div>
-
-
         </div>
-
 
         <div class='wrapper-footer'>
-
-         <div class='container'>
-
-            <div class='row'>
-                <div class='col-sm-7'>
-
-                    <h3>{$slides[1].title}</h3>
-
-                    {$slides[1].content}
-
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-7'>
+                        <h3>{$slides[1].title}</h3>
+                        <p>{$slides[1].content}</p>
+                    </div>
+                    <div class='col-sm-5'>
+                        <h3>{$slides[2].title}</h3>
+                        <p>{$slides[2].content}</p>
+                    </div>
                 </div>
-
-
-
-                <div class='col-sm-5'>
-
-                    <h3>{$slides[2].title}</h3>
-
-                    {$slides[2].content}
-
-
-                </div>
-
-
-
-        </div>
-        </div>
+            </div>
         </div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-<script src="js/parallax.js"></script>
-
-       <script>
-
-    jQuery(document).ready(function () {
-
-
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="js/parallax.js"></script>
+        <script>
+            jQuery(document).ready(function () {
                 $('#parallax-window-1').parallax({
                     imageSrc: '{$slides[0].title_image}',
                     speed: .75
                 });
-
-
-
-        });
-
-       </script>
-
-
-
-
-
+            });
+        </script>
     </body>
 </html>
