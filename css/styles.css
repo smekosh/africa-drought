@@ -19,7 +19,7 @@
 .voa-masthead .voa-logo {
     display: inline-block;
     line-height: 100%;
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 0;
     text-align: left;
     width: 40%;
@@ -118,8 +118,17 @@ ol {
 }
 
 
-.country {
+.wrapper-region-reports .country {
     border-radius: 50%;
+}
+@media only screen and (max-width : 768px) {
+    .wrapper-region-reports .container h2 {
+        text-align: center
+    }
+    .wrapper-region-reports .country {
+        margin: 0 auto 50px auto;
+        width: 75%
+    }
 }
 
 div.new-section {
@@ -254,9 +263,11 @@ div.new-section {
         ol.stories img {
             padding-top: 10px;
         }
+        /*
         ol.stories li:first-child img {
             display: none;
-        }        
+        }  
+        */      
         ol.stories li {
             list-style-type: none;
             margin-bottom: 20px;
@@ -418,7 +429,7 @@ div.new-section {
 
 
 .africa-map {
-margin-bottom: 40px;
+margin-bottom: 60px;
 }
 
 .at-a-glance {
@@ -447,4 +458,24 @@ p.intro {
             margin: 15px 0 20px 0;
 }
 
+#slider {
+    width: 80%;
+    margin: 50px auto;    
+}
 
+
+
+div.combined-map {
+    position: relative;
+    height: 100%;
+}
+div.combined-map img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div.combined-map img:first-child {
+    position: relative;
+    left: 0;
+    top: 0;
+}
