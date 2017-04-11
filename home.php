@@ -1,12 +1,12 @@
 <?php
 
- ini_set("display_startup_errors", 1); 
+ ini_set("display_startup_errors", 1);
  ini_set("display_errors", 1);
 
 
-require('smarty-3.1.30/libs/Smarty.class.php');
+// require('smarty-3.1.30/libs/Smarty.class.php');
 
-//require( "vendor/autoload.php" );
+require( "vendor/autoload.php" );
 require( "smarty_xpath.php" );
 
 $smarty = new Smarty();
