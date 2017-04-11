@@ -146,42 +146,44 @@
             </div>
         </div>
 
-        {foreach from=$entries.Sheet1 item=entry }
-            {if $entry.Featured=="TRUE"}
+        {$entry=$entries.featured[0]}
                 <div class='container'>
                     <div class='row top-story'>
                         <div class='col-sm-6 col-sm-offset-1'>
-                            <img class='img-responsive' src='https://gdb.voanews.com/D6FC8392-7E14-4DEE-B47D-BEECBE1BEB61_cx0_cy5_cw0_w1920_r1_s.jpg'>
+                            <img class='img-responsive' src='{$entry.Photo}'>
                         </div>
                         <div class='col-sm-4'>
-                            <span class='pubdate'>April 10, 2017</span> 
-                            <h1 class='featured-video'><a href='http://www.voanews.com/a/scientists-link-el-nino-increase-cholera-eastern-africa/3804433.html'>Scientists Link El Nino to Increase in Cholera in Eastern Africa</a></h1>
-                            <span class='byline'>By Jessica Berman</span>
-                            <p class='lead-video'>The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href='http://www.voanews.com/a/scientists-link-el-nino-increase-cholera-eastern-africa/3804433.html'>Read more</a>.</p>
+                            <span class='pubdate'>{$entry.Date}</span>
+                            <h1 class='featured-video'><a href='{$entry.Link}'>{$entry.Title}</a></h1>
+                            <span class='byline'>By {$entry.Byline}</span>
+                            <p class='lead-video'>{$entry.Description} <a href='{$entry.Link}'>Read more</a>.</p>
                         </div>
                     </div>
+
                     <div class='row more-top'>
-                        <div class='col-sm-5 col-sm-offset-1'>
+        {foreach from=$entries.featured item=$entry}
+            {if $entry@index > 0 }
+                        <div class='col-sm-5 {if $entry@index==1}col-sm-offset-1{/if}'>
+                            <img class='img-responsive' src='{$entry.Photo}'>
+                            <span class='pubdate'>{$entry.Date}</span>
+                            <h1 class='featured-video'><a href='{$entry.Link}'>{$entry.Title}</a></h1>
+                            <span class='byline'>By {$entry.Byline}</span>
+                            <p class='lead-video'>{$entry.Description} <a href='{$entry.Link}'>Read more.</a></p>
+                        </div>
+{*<!--
+    video content type?
+
                             <div class="video-container"><iframe src='https://www.youtube.com/embed/4TDYtqbz4II' frameborder='0' allowfullscreen></iframe></div>
                             <span class='pubdate'>March 21, 2017</span>
                             <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
                             <span class='byline'>By Abdulaziz Osman</span>
                             <p class='lead-video'>As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
                             </p>
-                        </div>
-                        <div class='col-sm-5'>
-                            <img class='img-responsive' src='img/story2.jpg'>
-                            <span class='pubdate'>March 21, 2017</span>
-                            <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
-                            <span class='byline'>By Abdulaziz Osman</span>
-                            <p class='lead-video'>As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {break}
+-->*}
             {/if}
         {/foreach}
+                    </div>
+                </div>
 
         <div class='wrapper'>
             <div class='container'>
@@ -233,7 +235,7 @@
                         <p class='note'>VOA reporters across the continent provide up-to-date coverage of the crisis.</p>
                     </div>
                     <ol class='stories'>
-                        {foreach from=$entries.Sheet1 item=entry }
+                        {foreach from=$entries.other item=entry }
                             {if $entry@index < 5}
                             <li><span class='pubdate'>{$entry.Date}</span>
                             {if $entry@index == 0 && $entry.Photo != ""}
@@ -252,12 +254,11 @@
                         <p class='note'>Explore the root causes and contributing factors behind Africa&#8217;s deadliest food shortages in years.</p>
                     </div>
                     <ol class='stories'>
-                        {foreach from=$entries.Sheet1 item=entry }
-                            {if $entry.Dimensions=="Cause"}
+                        {foreach from=$entries.causes item=entry }
+
                         <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
                         <span class='byline'>By {$entry.Byline}</span>
                         </li>
-                            {/if}
                         {/foreach}
                     </ol>
                     <div class = 'mini-section new-section'>
@@ -265,12 +266,12 @@
                         <p class='note'>Track emergency interventions and long-term remedies designed to save lives.</p>
                     </div>
                     <ol class='stories'>
-                    {foreach from=$entries.Sheet1 item=entry }
-                        {if $entry.Dimensions=="Response" && $entry@index < 3}
+                    {foreach from=$entries.solutions item=entry }
+
                     <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
                     <span class='byline'>By {$entry.Byline}</span>
                     </li>
-                        {/if}
+
                     {/foreach}
                     </ol>
                 </div>
@@ -322,7 +323,7 @@
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="js/parallax.js"></script>
         <script src="js/wNumb.js"></script>
-        <script src="js/nouislider.min.js"></script>        
+        <script src="js/nouislider.min.js"></script>
         <script>
             jQuery(document).ready(function () {
                 $('#parallax-window-1').parallax({
@@ -334,7 +335,7 @@
                     start: [1, 5],
                     connect: true,
                     tooltips: true,
-                    step: 1,  
+                    step: 1,
                     range: {
                         'min': 1,
                         'max': 5
@@ -365,7 +366,7 @@
                                 $(this).fadeOut();
                         }
                     });
-                });                
+                });
             });
         </script>
     </body>
