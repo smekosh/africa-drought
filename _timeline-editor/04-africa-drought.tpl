@@ -61,6 +61,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
 
     <link rel="stylesheet" type="text/css" href="css/styles.css?ts={$smarty.now}" />
+    <link rel="stylesheet" type="text/css" href="css/nouislider.min.css" />
+
 
     <style type="text/css">
     .share-fb { background-image: url(img/fa-fb_50_333333.png); }
@@ -69,7 +71,7 @@
 
     </head>
     <body>
-    
+
     {include file="metrics.tpl"}
 
     <script type="text/javascript">
@@ -149,13 +151,13 @@
                 <div class='container'>
                     <div class='row top-story'>
                         <div class='col-sm-6 col-sm-offset-1'>
-                            <img class='img-responsive' src='images/story.jpg'>
+                            <img class='img-responsive' src='https://gdb.voanews.com/D6FC8392-7E14-4DEE-B47D-BEECBE1BEB61_cx0_cy5_cw0_w1920_r1_s.jpg'>
                         </div>
                         <div class='col-sm-4'>
-                            <span class='pubdate'>March 21, 2017</span> 
-                            <h1 class='featured-video'><a href='http://www.voanews.com/a/conflict-somalia-impacts-future-drought-resistance/3751638.html#'>Conflict in Somalia Impacts Future Drought Resistance</a></h1>
-                            <span class='byline'>By Jill Craig</span>
-                            <p class='lead-video'>The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href='#'>Read more</a>.</p>
+                            <span class='pubdate'>April 10, 2017</span> 
+                            <h1 class='featured-video'><a href='http://www.voanews.com/a/scientists-link-el-nino-increase-cholera-eastern-africa/3804433.html'>Scientists Link El Nino to Increase in Cholera in Eastern Africa</a></h1>
+                            <span class='byline'>By Jessica Berman</span>
+                            <p class='lead-video'>The government announced Saturday that 110 people had died in a two-day period due to drought-induced famine, particularly in the Bay and Bakol regions, highlighting the need not just for rapid emergency response to this crisis, but also long-term solutions to prevent food insecurity. <a href='http://www.voanews.com/a/scientists-link-el-nino-increase-cholera-eastern-africa/3804433.html'>Read more</a>.</p>
                         </div>
                     </div>
                     <div class='row more-top'>
@@ -168,7 +170,7 @@
                             </p>
                         </div>
                         <div class='col-sm-5'>
-                            <img class='img-responsive' src='images/story2.jpg'>
+                            <img class='img-responsive' src='img/story2.jpg'>
                             <span class='pubdate'>March 21, 2017</span>
                             <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
                             <span class='byline'>By Abdulaziz Osman</span>
@@ -198,7 +200,19 @@
                         </ol>
                     </div>
                     <div class="col-sm-7">
-                        <a href='https://www.fews.net/'><img class='img-responsive africa-map' src='images/full.gif'></a>
+                        <div class = 'combined-map'>
+                            <a href='https://www.fews.net/'>
+                                <img class='img-responsive africa-map' src='img/africa.gif'>
+                                <img class='img-responsive africa-map country p1' src='img/region-1.gif'>
+                                <img class='img-responsive africa-map country p1 p2' src='img/region-2.gif'>
+                                <img class='img-responsive africa-map country p1 p2 p3' src='img/region-3.gif'>
+                                <img class='img-responsive africa-map country p2 p3' src='img/region-4.gif'>
+                                <img class='img-responsive africa-map country p1 p2 p3 p4' src='img/region-5.gif'>
+                                <img class='img-responsive africa-map country p2 p3 p4' src='img/region-6.gif'>
+                                <img class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-7.gif'>
+                            </a>
+                            <div id='slider'></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -263,6 +277,33 @@
             </div>
         </div>
 
+
+        <div class='wrapper-region-reports'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-12'>
+                        <h3>Country Reports</h3>
+                        <p class='lead-video'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class='col-sm-4'>
+                        <h2>Nigeria</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <img class='img-responsive country' src='img/nigeria.gif'>
+                    </div>
+                    <div class='col-sm-4'>
+                        <h2>Somalia</h2>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <img class='img-responsive country' src='img/somalia.gif'>
+                    </div>
+                    <div class='col-sm-4'>
+                        <h2>South Sudan</h2>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <img class='img-responsive country' src='img/south-sudan.gif'>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class='wrapper-footer'>
             <div class='container'>
                 <div class='row'>
@@ -280,12 +321,51 @@
 
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="js/parallax.js"></script>
+        <script src="js/wNumb.js"></script>
+        <script src="js/nouislider.min.js"></script>        
         <script>
             jQuery(document).ready(function () {
                 $('#parallax-window-1').parallax({
                     imageSrc: '{$slides[0].title_image}',
                     speed: .75
                 });
+                var slider = document.getElementById('slider');
+                noUiSlider.create(slider, {
+                    start: [1, 5],
+                    connect: true,
+                    tooltips: true,
+                    step: 1,  
+                    range: {
+                        'min': 1,
+                        'max': 5
+                    },
+                    format: wNumb({
+                        decimals: 0,
+                        prefix: 'Level ',
+                    })
+                });
+                slider.noUiSlider.on('change', function(){
+                    var start = slider.noUiSlider.get()[0];
+                    var start = start.substring(start.length-1);
+                    var end = slider.noUiSlider.get()[1];
+                    var end = end.substring(end.length-1);
+                    $('.combined-map img.country').each(function(index) {
+                        var show = false;
+                        for (var i = start; i <= end; i++) {
+                            if ($(this).hasClass('p'+i)) {
+                                show = true;
+                                break;
+                            }
+                        }
+                        if (show) {
+                            if ($(this).css('display') == 'none') {
+                                $(this).fadeIn();
+                            }
+                        } else if ($(this).css('display') != 'none') {
+                                $(this).fadeOut();
+                        }
+                    });
+                });                
             });
         </script>
     </body>
