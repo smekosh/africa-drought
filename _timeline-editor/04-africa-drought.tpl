@@ -213,8 +213,8 @@
                 </div>
                 <div class="row">
                     <div class='col-sm-12 description'>
-                        <h3>{$slides[1].title}</h3>
-                        {$slides[1].content}
+                        <h3>{$slides[7].title}</h3>
+                        {$slides[7].content}
                     </div>
                 </div>
             </div>
@@ -225,7 +225,7 @@
                 <div class='col-sm-5 col-sm-offset-1'>
                     <div class = 'mini-section'>
                         <h3>{$slides[8].title}</h3>
-                        <p class='note'>{$slides[8].title}</p>
+                        <p class='note'>{$slides[8].content|strip_tags}</p>
                     </div>
                     <ol class='stories'>
                         {foreach from=$entries.other item=entry }
@@ -244,7 +244,7 @@
                 <div class='col-sm-5'>
                     <div class = 'mini-section'>
                         <h3>{$slides[9].title}</h3>
-                        <p class='note'>{$slides[9].content}</p>
+                        <p class='note'>{$slides[9].content|strip_tags}</p>
                     </div>
                     <ol class='stories'>
                         {foreach from=$entries.causes item=entry }
@@ -256,7 +256,7 @@
                     </ol>
                     <div class = 'mini-section new-section'>
                         <h3>{$slides[10].title}</h3>
-                        <p class='note'>{$slides[10].content}</p>
+                        <p class='note'>{$slides[10].content|strip_tags}</p>
                     </div>
                     <ol class='stories'>
                     {foreach from=$entries.solutions item=entry }
@@ -270,7 +270,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class='wrapper-region-reports'>
             <div class='container'>
@@ -292,55 +291,10 @@
                 </div>
             </div>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="js/parallax.js"></script>
         <script src="js/wNumb.js"></script>
         <script src="js/nouislider.min.js"></script>
-        <script>
-            jQuery(document).ready(function () {
-                $('#parallax-window-1').parallax({
-                    imageSrc: '{$slides[0].title_image}',
-                    speed: .75
-                });
-                var slider = document.getElementById('slider');
-                noUiSlider.create(slider, {
-                    start: [1, 5],
-                    connect: true,
-                    tooltips: true,
-                    step: 1,
-                    range: {
-                        'min': 1,
-                        'max': 5
-                    },
-                    format: wNumb({
-                        decimals: 0,
-                        prefix: 'Level ',
-                    })
-                });
-                slider.noUiSlider.on('change', function(){
-                    var start = slider.noUiSlider.get()[0];
-                    var start = start.substring(start.length-1);
-                    var end = slider.noUiSlider.get()[1];
-                    var end = end.substring(end.length-1);
-                    $('.combined-map img.country').each(function(index) {
-                        var show = false;
-                        for (var i = start; i <= end; i++) {
-                            if ($(this).hasClass('p'+i)) {
-                                show = true;
-                                break;
-                            }
-                        }
-                        if (show) {
-                            if ($(this).css('display') == 'none') {
-                                $(this).fadeIn();
-                            }
-                        } else if ($(this).css('display') != 'none') {
-                                $(this).fadeOut();
-                        }
-                    });
-                });
-            });
-        </script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
