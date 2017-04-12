@@ -82,6 +82,10 @@
     })();
     </script>
 
+<script>
+// quickfix to provide parallax image to js/scripts.js as global var
+var px_title_image = {$slides[0].title_image|json_encode};
+</script>
             <nav class="voa-masthead">
                 <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
                 class="share-options">
@@ -295,6 +299,6 @@
         <script src="js/parallax.js"></script>
         <script src="js/wNumb.js"></script>
         <script src="js/nouislider.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js?ts={$smarty.now}"></script>
     </body>
 </html>

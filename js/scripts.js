@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
     $('#parallax-window-1').parallax({
-        imageSrc: '{$slides[0].title_image}',
+        imageSrc: px_title_image,
         speed: .75
     });
     var slider = document.getElementById('slider');
