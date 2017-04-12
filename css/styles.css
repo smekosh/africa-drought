@@ -382,7 +382,8 @@ div.new-section {
 }
 
 .wrapper h2 {
-    text-align: left;
+    margin-bottom: 15px;
+    text-align: left
 }
 .wrapper h3,
 .wrapper-region-reports h3 {
@@ -391,7 +392,8 @@ div.new-section {
     margin-bottom: 10px;
 }
 .wrapper-region-reports p {
-    margin-bottom: 30px;
+    line-height: 22px;
+    margin-bottom: 30px
 }
 
 .wrapper-footer {
