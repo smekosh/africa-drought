@@ -45,18 +45,15 @@
     <meta property="twitter:image" content="{$slides[0].title_image}">
     <meta name="twitter:url" content="http://projects.voanews.com/africa-drought/" />
 
-
     <meta name="DISPLAYDATE" content="April 6, 2017" />
     <meta itemprop="dateModified" content="2017-04-06" />
     <meta itemprop="datePublished" content="2017-04-06" />
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
 
@@ -82,33 +79,48 @@
     })();
     </script>
 
-<script>
-// quickfix to provide parallax image to js/scripts.js as global var
-var px_title_image = {$slides[0].title_image|json_encode};
-</script>
-            <nav class="voa-masthead">
-                <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
-                class="share-options">
-                    <ul>
-                        <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
-                        <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
+    <script>
+    // quickfix to provide parallax image to js/scripts.js as global var
+    var px_title_image = {$slides[0].title_image|json_encode};
+    </script>
+
+    <nav class="voa-masthead">
+        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
+        class="share-options">
+            <ul>
+                <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
+                <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
+                <li class="language-dropdown">
+                    <a class="language-toggle" title="Change Language" href="javascript:return(false);"><span class="scr">Languages</span></a>
+                    <ul class="submenu languages" style="display: block;">
+                        <li lang="en"><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>
+                        <li lang="fr"><a href="http://www.voaafrique.com/p/6511.htm">Français</a></li>
+                        <li lang="ha"><a href="http://www.voahausa.com/p/6512.html">Hausa</a></li>
+                        <li lang="so"><a href="http://www.voasomali.com/p/6506.html">Somali</a></li>
+                        <li lang="ti"><a href="http://tigrigna.voanews.com/p/5574.html">ትግርኛ</a></li>
+                        <li lang="om"><a href="http://www.voaafaanoromoo.com/p/5577.html">Afaan Oromoo</a></li> 
+                        <li lang="am"><a href="http://amharic.voanews.com/p/5573.html">አማርኛ</a></li>
+                        <li lang="rw"><a href="http://www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li> 
+                        <li lang="sn"><a href="http://www.voashona.com/p/6510.html">Shona</a></li> 
+                        <li lang="nr"><a href="http://www.voandebele.com/p/6508.html">Ndebele</a></li> 
+                        <li lang="en"><a href="http://www.voazimbabwe.com/p/6509.html">Zimbabwe (English)</a></li>
                     </ul>
-                </div></div>
-            </nav>
+                </li>
+            </ul>
+        </div></div>
+    </nav>
 
-            <div id="parallax-window-1" class="parallax">
+    <div id="parallax-window-1" class="parallax">
+        <header>
+            <h1>{$slides[0].title}</h1>
+            <h2>{$slides[0].title_tagline}</h2>
+        </header>
+    </div>
 
-            <header>
-                <h1>{$slides[0].title}</h1>
-                <h2>{$slides[0].title_tagline}</h2>
-            </header>
-
-            </div>
     {*<!--
             <div class='container'>
                 <div class='row'>
                     <div class='col-md-12'>
-
                     <header>
                     <nav>
                         <ul>
@@ -129,14 +141,9 @@ var px_title_image = {$slides[0].title_image|json_encode};
                             </li>
                         </ul>
                     </nav>
-
-
-                        </header>
-
+                    </header>
                     </div>
-
                 </div>
-
             </div>
     -->*}
 
@@ -158,7 +165,7 @@ var px_title_image = {$slides[0].title_image|json_encode};
                         </div>
                         <div class='col-sm-4'>
                             <span class='pubdate'>{$entry.Date}</span>
-                            <h1 class='featured-video'><a href='{$entry.Link}'>{$entry.Title}</a></h1>
+                            <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
                             <p class='lead-video'>{$entry.Description} <a href='{$entry.Link}'>Read more</a>.</p>
                         </div>
@@ -170,20 +177,10 @@ var px_title_image = {$slides[0].title_image|json_encode};
                         <div class='col-sm-5 {if $entry@index==1}col-sm-offset-1{/if}'>
                             <img class='img-responsive' src='{$entry.Photo}'>
                             <span class='pubdate'>{$entry.Date}</span>
-                            <h1 class='featured-video'><a href='{$entry.Link}'>{$entry.Title}</a></h1>
+                            <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
                             <p class='lead-video'>{$entry.Description} <a href='{$entry.Link}'>Read more.</a></p>
                         </div>
-{*<!--
-    video content type?
-
-                            <div class="video-container"><iframe src='https://www.youtube.com/embed/4TDYtqbz4II' frameborder='0' allowfullscreen></iframe></div>
-                            <span class='pubdate'>March 21, 2017</span>
-                            <h1 class='featured-video'><a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Somaliland Hospital Cares for Malnourished From Drought</a></h1>
-                            <span class='byline'>By Abdulaziz Osman</span>
-                            <p class='lead-video'>As the breakaway republic of Somaliland grapples with a severe drought, medical workers are struggling to aid people left weakened by malnourishment and hunger. <a href='http://www.voanews.com/a/somaliland-hospital-cares-for-malnourished-from-drought/3784721.html'>Read more.</a>
-                            </p>
--->*}
             {/if}
         {/foreach}
                     </div>
