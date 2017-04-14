@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
         $( '.slide' ).click(function() {
             $( '.languages' ).hide();
         });
-    })();    
+    })();
     (function() {
         // handle the intra-page navigation
         $( '.section-nav-toggle' ).click(function(e) {
@@ -24,9 +24,9 @@ jQuery(document).ready(function () {
         $( '.slide' ).click(function() {
             $( '.nav-sections' ).hide();
         });
-    })();    
+    })();
     $('#parallax-window-1').parallax({
-        imageSrc: '{$slides[0].title_image}',
+        imageSrc: px_title_image,
         speed: .75
     });
     var slider = document.getElementById('slider');
