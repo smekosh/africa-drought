@@ -1,6 +1,32 @@
 jQuery(document).ready(function () {
+    // scoped as anon for menu functions
+    (function() {
+        // handle the translation dropdown
+        $( '.language-toggle' ).click(function(e) {
+            $( '.languages' ).slideToggle( 800 );
+        });
+
+        $( '.slide' ).click(function() {
+            $( '.languages' ).hide();
+        });
+    })();    
+    (function() {
+        // handle the intra-page navigation
+        $( '.section-nav-toggle' ).click(function(e) {
+            $( '.nav-sections' ).slideToggle( 800 );
+            $( '.languages' ).hide();
+        });
+
+        $( '.language-toggle' ).click(function(e) {
+            $( '.nav-sections' ).hide();
+        });
+
+        $( '.slide' ).click(function() {
+            $( '.nav-sections' ).hide();
+        });
+    })();    
     $('#parallax-window-1').parallax({
-        imageSrc: px_title_image,
+        imageSrc: '{$slides[0].title_image}',
         speed: .75
     });
     var slider = document.getElementById('slider');

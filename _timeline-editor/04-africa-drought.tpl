@@ -92,9 +92,9 @@
                 <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
                 <li class="language-dropdown">
                     <a class="language-toggle" title="Change Language" href="javascript:return(false);"><span class="scr">Languages</span></a>
-                    <ul class="submenu languages" style="display: block;">
-                        <li lang="en"><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>
-                        <li lang="fr"><a href="http://www.voaafrique.com/p/6511.htm">Français</a></li>
+                    <ul class="submenu languages" style="display: none;">
+                        <li lang="pt"><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>
+                        <li lang="fr"><a href="http://www.voaafrique.com/p/6511.html">Français</a></li>
                         <li lang="ha"><a href="http://www.voahausa.com/p/6512.html">Hausa</a></li>
                         <li lang="so"><a href="http://www.voasomali.com/p/6506.html">Somali</a></li>
                         <li lang="ti"><a href="http://tigrigna.voanews.com/p/5574.html">ትግርኛ</a></li>

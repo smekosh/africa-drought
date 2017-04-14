@@ -59,6 +59,41 @@
 }
 
 
+.language-toggle { background-image: url('../img/language.png'); }
+
+.submenu {
+    clear: both;
+    display: none;
+    margin-top: 0;
+    position: absolute;
+    top: 100%;
+    text-align: left;
+    transform: translateX(-82%);
+    z-index: 110;
+}
+
+.submenu > li {
+    background-color: rgba(255,255,255,.8);
+    display: block;
+}
+
+.submenu > li:lastchild {
+    border-bottom: none;
+}
+
+.voa-masthead ul.submenu > li a {
+    display: block;
+    font-size: .9em;
+    padding: 1em 1.5em;
+    height: auto;
+    width: auto;
+}
+
+.submenu > li a:hover {
+    color: #45b29d;
+}
+
+
 .parallax {
     min-height: 375px;
     background: transparent;
