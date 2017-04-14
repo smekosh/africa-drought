@@ -209,6 +209,7 @@
                                 <img class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-7.gif'>
                             </a>
                             <div id='slider'></div>
+                            {$slides[11].content}
                         </div>
                     </div>
                 </div>
