@@ -93,17 +93,17 @@
                 <li class="language-dropdown">
                     <a class="language-toggle" title="Change Language" href="javascript:return(false);"><span class="scr">Languages</span></a>
                     <ul class="submenu languages" style="display: none;">
-                        <li lang="pt"><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>
+                        <!--<li lang="pt"><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>-->
                         <li lang="fr"><a href="http://www.voaafrique.com/p/6511.html">Français</a></li>
                         <li lang="ha"><a href="http://www.voahausa.com/p/6512.html">Hausa</a></li>
                         <li lang="so"><a href="http://www.voasomali.com/p/6506.html">Somali</a></li>
-                        <li lang="ti"><a href="http://tigrigna.voanews.com/p/5574.html">ትግርኛ</a></li>
+                        <li lang="ti"><a href="http://tigrigna.voanews.com/p/5574.html">Tigrigna</a></li>
                         <li lang="om"><a href="http://www.voaafaanoromoo.com/p/5577.html">Afaan Oromoo</a></li> 
-                        <li lang="am"><a href="http://amharic.voanews.com/p/5573.html">አማርኛ</a></li>
-                        <li lang="rw"><a href="http://www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li> 
-                        <li lang="sn"><a href="http://www.voashona.com/p/6510.html">Shona</a></li> 
-                        <li lang="nr"><a href="http://www.voandebele.com/p/6508.html">Ndebele</a></li> 
-                        <li lang="en"><a href="http://www.voazimbabwe.com/p/6509.html">Zimbabwe (English)</a></li>
+                        <li lang="am"><a href="http://amharic.voanews.com/p/5573.html">Amharic</a></li>
+                        <!--<li lang="rw"><a href="http://www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li>-->
+                        <!--<li lang="sn"><a href="http://www.voashona.com/p/6510.html">Shona</a></li>-->
+                        <!--<li lang="nr"><a href="http://www.voandebele.com/p/6508.html">Ndebele</a></li>-->
+                        <!--<li lang="en"><a href="http://www.voazimbabwe.com/p/6509.html">Zimbabwe (English)</a></li>-->
                     </ul>
                 </li>
             </ul>

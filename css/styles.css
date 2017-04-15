@@ -127,6 +127,8 @@ ol {
 .top-story, .more-top {
     margin-bottom: 40px;
 }
+
+.top-story img,
 .more-top img {
     margin-bottom: 20px;
 }
@@ -156,7 +158,22 @@ ol {
 .wrapper-region-reports .country {
     border-radius: 50%;
 }
+
+
+.countries-wide {
+    display: block
+}
+.countries-mobile {
+    display: none
+} 
+
 @media only screen and (max-width : 768px) {
+    .top-story {
+        margin-bottom: 0
+    }
+    .description {
+        margin-top: 20px
+    }
     .wrapper-region-reports .container h2 {
         text-align: center
     }
@@ -164,7 +181,16 @@ ol {
         margin: 0 auto 50px auto;
         width: 75%
     }
+    .countries-wide {
+        display: none
+    }
+    .countries-mobile {
+        display: block
+    }
 }
+
+
+  
 
 div.new-section {
     margin-top: 20px;
@@ -497,10 +523,12 @@ p.intro {
 
 #slider {
     width: 80%;
-    margin: 50px auto;    
+    margin: 50px auto 25px auto;    
 }
 
-
+p small {
+    padding-bottom: 20px
+}
 
 div.combined-map {
     position: relative;
