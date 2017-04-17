@@ -51,6 +51,21 @@ foreach( $entries_raw["Sheet1"] as $k => $v ) {
 // rekey the featured array since it relies on a dirty numerical trick
 $entries["featured"] = array_values($entries["featured"]);
 
+// sort all subgroups by reverse chronological
+foreach( $entries as $group => $list ) {
+    usort($entries[$group], function($a, $b) {
+        if( !isset($a["Date"]) ) return( -1 );
+        if( !isset($b["Date"]) ) return( 1 );
+
+        $ts_a = strtotime($a["Date"]);
+        $ts_b = strtotime($b["Date"]);
+
+        if( $ts_a < $ts_b ) return( 1 );
+        if( $ts_a > $ts_b ) return( -1 );
+
+        return( 0 );
+    });
+}
 $smarty->assign( "entries", $entries );
 
 
