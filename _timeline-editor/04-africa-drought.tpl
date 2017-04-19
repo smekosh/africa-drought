@@ -167,7 +167,7 @@
                             <span class='pubdate'>{$entry.Date}</span>
                             <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
-                            <p class='lead-video'>{$entry.Description} <a href='{$entry.Link}'>Read more</a>.</p>
+                            <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more</a>.</p>
                         </div>
                     </div>
 
@@ -179,7 +179,7 @@
                             <span class='pubdate'>{$entry.Date}</span>
                             <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
-                            <p class='lead-video'>{$entry.Description} <a href='{$entry.Link}'>Read more.</a></p>
+                            <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more.</a></p>
                         </div>
             {/if}
         {/foreach}
