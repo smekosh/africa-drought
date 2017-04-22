@@ -202,11 +202,13 @@
                                 <img class='img-responsive africa-map' src='img/africa.gif'>
                                 <img class='img-responsive africa-map country p1' src='img/region-1.gif'>
                                 <img class='img-responsive africa-map country p1 p2' src='img/region-2.gif'>
-                                <img class='img-responsive africa-map country p1 p2 p3' src='img/region-3.gif'>
-                                <img class='img-responsive africa-map country p2 p3' src='img/region-4.gif'>
-                                <img class='img-responsive africa-map country p1 p2 p3 p4' src='img/region-5.gif'>
-                                <img class='img-responsive africa-map country p2 p3 p4' src='img/region-6.gif'>
-                                <img class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-7.gif'>
+                                <img class='img-responsive africa-map country p2' src='img/region-3.gif'>
+                                <img class='img-responsive africa-map country p1 p2 p3' src='img/region-4.gif'>
+                                <img class='img-responsive africa-map country p2 p3' src='img/region-5.gif'>
+                                <img class='img-responsive africa-map country p3' src='img/region-6.gif'>
+                                <img class='img-responsive africa-map country p1 p2 p3 p4' src='img/region-7.gif'>
+                                <img class='img-responsive africa-map country p2 p3 p4' src='img/region-8.gif'>
+                                <img class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-9.gif'>
                             </a>
                             <div id='slider'></div>
                             {$slides[11].content}

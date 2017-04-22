@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
         $( '.slide' ).click(function() {
             $( '.languages' ).hide();
         });
-    })();
+    })();    
     (function() {
         // handle the intra-page navigation
         $( '.section-nav-toggle' ).click(function(e) {
@@ -24,9 +24,9 @@ jQuery(document).ready(function () {
         $( '.slide' ).click(function() {
             $( '.nav-sections' ).hide();
         });
-    })();
+    })();    
     $('#parallax-window-1').parallax({
-        imageSrc: px_title_image,
+        imageSrc: '{$slides[0].title_image}',
         speed: .75
     });
     var slider = document.getElementById('slider');
@@ -34,7 +34,6 @@ jQuery(document).ready(function () {
         start: [1, 5],
         connect: true,
         tooltips: true,
-        step: 1,
         range: {
             'min': 1,
             'max': 5
@@ -44,7 +43,7 @@ jQuery(document).ready(function () {
             prefix: 'Level ',
         })
     });
-    slider.noUiSlider.on('change', function(){
+    slider.noUiSlider.on('update', function(){
         var start = slider.noUiSlider.get()[0];
         var start = start.substring(start.length-1);
         var end = slider.noUiSlider.get()[1];
