@@ -65,6 +65,8 @@
     .share-fb { background-image: url(img/fa-fb_50_333333.png); }
     .share-tw { background-image: url(img/fa-tw_50_333333.png); }
     </style>
+    
+    {include file="crazyegg.tpl"}
 
     </head>
     <body>
