@@ -1,7 +1,3 @@
-var px_title_image = 'img/top-sm.jpg';
-
-
-
 jQuery(document).ready(function () {
     // scoped as anon for menu functions
     (function() {
