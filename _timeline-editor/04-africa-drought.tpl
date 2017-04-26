@@ -183,7 +183,7 @@
 
                     <div class='row top-story'>
                         <div class='col-sm-6 col-sm-offset-1'>
-                            <a href='{$entry.YouTube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
+                            <a href='{$entry.youtube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
                         </div>
                         <div class='col-sm-4'>
                             <span class='pubdate'>{$entry.Date}</span> 
