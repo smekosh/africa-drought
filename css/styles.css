@@ -656,3 +656,6 @@ p small {
     display: block;
     text-align: center;    
 }
+.video-poster {
+    background-size: 100% 100%;
+}
