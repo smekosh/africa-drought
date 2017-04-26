@@ -88,8 +88,7 @@
     </script>
 
     <nav class="voa-masthead">
-        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div
-        class="share-options">
+        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div class="share-options">
             <ul>
                 <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
                 <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
@@ -110,7 +109,7 @@
                     </ul>
                 </li>
             </ul>
-        </div></div>
+        </div>
     </nav>
 
     <div id="parallax-window-1" class="parallax">
@@ -156,13 +155,11 @@
                     <header id='news-ticker'>
                         <h5>The Latest Headlines</h5>
                         <div id="quote-container">
-                            <ol class='stories'>
-                                {foreach from=$entries.other item=entry }
-                                    {if $entry@index < 5}
-                                    <div id="quote{$entry@index}" class="quote"><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></div>
-                                    {/if}
-                                {/foreach}
-                            </ol>
+                            {foreach from=$entries.other item=entry }
+                                {if $entry@index < 5}
+                                <div id="quote{$entry@index}" class="quote"><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></div>
+                                {/if}
+                            {/foreach}
                         </div>
                     </header>
                 </div>
@@ -186,7 +183,7 @@
 
                     <div class='row top-story'>
                         <div class='col-sm-6 col-sm-offset-1'>
-                            <a href='{$entry.youtube}' data-fancybox ='http://www.voanews.com{$entry.Link}'><img class='img-responsive' src='img/video.png' style='background-image: url("{$entry.Photo}"); background-size: 100% 100%;'></a>
+                            <a href='{$entry.YouTube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
                         </div>
                         <div class='col-sm-4'>
                             <span class='pubdate'>{$entry.Date}</span> 
@@ -228,16 +225,10 @@
             {/if}
         {/foreach}
                     </div>
-                </div>
-
-
-
-
 
 
 <div class='row'>
 <div class='col-sm-5 col-sm-offset-1'>
-
 <ol class='stories'>
     {foreach from=$entries.other item=entry }
         {if $entry@index < 3}
@@ -248,7 +239,6 @@
         {/if}
     {/foreach}
 </ol>
-
 </div>
 <div class='col-sm-5'>
 <ol class='stories'>
@@ -336,11 +326,11 @@
                 <div class='row'>
                     <div class='col-sm-7'>
                         <h3>{$slides[1].title}</h3>
-                        <p>{$slides[1].content}</p>
+                        {$slides[1].content}
                     </div>
                     <div class='col-sm-5'>
                         <h3>{$slides[2].title}</h3>
-                        <p>{$slides[2].content}</p>
+                        {$slides[2].content}
                     </div>
                 </div>
             </div>
