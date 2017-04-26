@@ -1,3 +1,7 @@
+var px_title_image = 'img/top-sm.jpg';
+
+
+
 jQuery(document).ready(function () {
     // scoped as anon for menu functions
     (function() {
@@ -65,4 +69,36 @@ jQuery(document).ready(function () {
             }
         });
     });
+
+
+
+
+    var locked = false;
+    var interacted = false;
+    var maxQuote = jQuery('#quote-container > div').length;
+    var currentQuote = Math.floor((Math.random()*maxQuote)+0);
+    jQuery('#quote'+currentQuote).css('display','block');
+
+
+    setInterval(function () {
+        if (!interacted) {
+          locked = true;
+          jQuery('#quote'+currentQuote).fadeOut('slow', function () {
+            if (currentQuote+1 < maxQuote) {
+              target = currentQuote + 1;        
+            } else {
+              currentQuote = -1;
+              target = 0;        
+            }
+            jQuery('#quote'+target).fadeIn('slow', function () {
+              currentQuote++;
+              locked = false;
+            });
+          });
+        }
+  }, 6000);
+
+
+
+
 });
