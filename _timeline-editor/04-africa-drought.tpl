@@ -186,7 +186,7 @@
 
                     <div class='row top-story'>
                         <div class='col-sm-6 col-sm-offset-1'>
-                            <a href='{$entry.YouTube}' data-fancybox href='http://www.voanews.com{$entry.Link}'><img class='img-responsive' src='img/video.png' style='background-image: url("{$entry.Photo}"); background-size: 100% 100%;'></a>
+                            <a href='{$entry.youtube}' data-fancybox href='http://www.voanews.com{$entry.Link}'><img class='img-responsive' src='img/video.png' style='background-image: url("{$entry.Photo}"); background-size: 100% 100%;'></a>
                         </div>
                         <div class='col-sm-4'>
                             <span class='pubdate'>{$entry.Date}</span> 
