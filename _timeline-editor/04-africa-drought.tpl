@@ -194,7 +194,7 @@
                         </div>
                     </div>
 
-{/if} 
+{/if}
 
 {if $entry.Type != 'Video'}
 
@@ -210,22 +210,31 @@
                         </div>
                     </div>
 
-{/if}                    
+{/if}
 
-                    <div class='row more-top'>
-        {foreach from=$entries.featured item=$entry}
-            {if $entry@index > 0 }
-                        <div class='col-sm-5 {if $entry@index==1}col-sm-offset-1{/if}'>
-                            <img class='img-responsive' src='{$entry.Photo}'>
-                            <span class='pubdate'>{$entry.Date}</span>
-                            <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
-                            <span class='byline'>By {$entry.Byline}</span>
-                            <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more.</a></p>
-                        </div>
+<div class='row more-top'>
+    {foreach from=$entries.featured item=$entry}
+        {if $entry@index > 0 }
+            <div class='col-sm-5 {if $entry@index==1}col-sm-offset-1{/if}'>
+            {if $entry.Type == 'Video'}
+                <a href='{$entry.youtube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
+                <span class='pubdate'>{$entry.Date}</span>
+                <span class='video'>Video Report</span>
+                <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
+                <span class='byline'>By {$entry.Byline}</span>
+                <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Watch now</a>.</p>
             {/if}
-        {/foreach}
-                    </div>
-
+            {if $entry.Type != 'Video'}
+                <img class='img-responsive' src='{$entry.Photo}'>
+                <span class='pubdate'>{$entry.Date}</span>
+                <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
+                <span class='byline'>By {$entry.Byline}</span>
+                <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more</a>.</p>
+            {/if}
+            </div>
+        {/if}
+    {/foreach}
+</div>
 
 <div class='row'>
 <div class='col-sm-5 col-sm-offset-1'>
