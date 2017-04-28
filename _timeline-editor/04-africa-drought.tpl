@@ -65,7 +65,7 @@
     .share-fb { background-image: url(img/fa-fb_50_333333.png); }
     .share-tw { background-image: url(img/fa-tw_50_333333.png); }
     </style>
-    
+
     {include file="crazyegg.tpl"}
 
     </head>
@@ -75,16 +75,16 @@
     {include file="metrics.tpl"}
 
     <script type="text/javascript">
-    (function(a,b,c,d){
-    a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
-    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-    })();
+        (function(a,b,c,d){
+        a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
+        b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+        a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+        })();
     </script>
 
     <script>
-    // quickfix to provide parallax image to js/scripts.js as global var
-    var px_title_image = {$slides[0].title_image|json_encode};
+        // quickfix to provide parallax image to js/scripts.js as global var
+        var px_title_image = {$slides[0].title_image|json_encode};
     </script>
 
     <nav class="voa-masthead">
@@ -116,6 +116,7 @@
         <header>
             <h1>{$slides[0].title}</h1>
             <h2>{$slides[0].title_tagline}</h2>
+            <h5>{$slides[0].title_label_coverage}</h5>
         </header>
     </div>
 
