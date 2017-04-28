@@ -27,7 +27,8 @@ jQuery(document).ready(function () {
     })();    
     $('#parallax-window-1').parallax({
         imageSrc: px_title_image,
-        speed: .75
+        speed: .5,
+        positionY: '0'
     });
     var slider = document.getElementById('slider');
     noUiSlider.create(slider, {
@@ -66,15 +67,11 @@ jQuery(document).ready(function () {
         });
     });
 
-
-
-
     var locked = false;
     var interacted = false;
     var maxQuote = jQuery('#quote-container > div').length;
     var currentQuote = Math.floor((Math.random()*maxQuote)+0);
     jQuery('#quote'+currentQuote).css('display','block');
-
 
     setInterval(function () {
         if (!interacted) {
@@ -93,8 +90,4 @@ jQuery(document).ready(function () {
           });
         }
   }, 6000);
-
-
-
-
 });
