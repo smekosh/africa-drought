@@ -120,6 +120,12 @@ ol {
     margin-bottom: 40px
 }
 
+video {
+  width: 100%    !important;
+  height: auto   !important;
+  margin: 0 0 40px 0;
+}
+
 .wrapper ol#ipc-phases li {
     font-size: 1em;
     margin-bottom: 15px;

@@ -165,6 +165,19 @@
                     </header>
                 </div>
             </div>
+
+
+            <div class='row'>
+                <div class='col-md-12'>
+                    <video controls poster="img/drought-explainer.jpg">
+                      <source src="media/drought-explainer.mp4" type="video/mp4">
+                      <source src="media/drought-explainer.webm" type="video/webm">
+                      <source src="media/drought-explainer.ogv" type="video/ogg">
+                    </video>
+                </div>
+            </div>
+
+
         </div>    
 
         <div class='wrapper'>
