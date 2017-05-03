@@ -102,7 +102,7 @@
                         <li lang="ti"><a href="http://tigrigna.voanews.com/p/5574.html">Tigrigna</a></li>
                         <li lang="om"><a href="http://www.voaafaanoromoo.com/p/5577.html">Afaan Oromoo</a></li> 
                         <li lang="am"><a href="http://amharic.voanews.com/p/5573.html">Amharic</a></li>
-                        <!--<li lang="rw"><a href="http://www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li>-->
+                        <li lang="rw"><a href="http://www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li>
                         <li lang="sn"><a href="http://www.voashona.com/p/6510.html">Shona</a></li>
                         <li lang="nr"><a href="http://www.voandebele.com/p/6508.html">Ndebele</a></li>
                         <li lang="en"><a href="http://www.voazimbabwe.com/p/6509.html">Zimbabwe (English)</a></li>
@@ -170,9 +170,7 @@
             <div class='row'>
                 <div class='col-md-12'>
                     <video controls poster="img/drought-explainer.jpg">
-                      <source src="media/drought-explainer.mp4" type="video/mp4">
-                      <source src="media/drought-explainer.webm" type="video/webm">
-                      <source src="media/drought-explainer.ogv" type="video/ogg">
+                      <source src="https://av.voanews.com/Videoroot/Pangeavideo/2017/05/7/74/747a6785-809c-4dfd-834f-290016cda845.mp4" type= "video/mp4"> 
                     </video>
                 </div>
             </div>
