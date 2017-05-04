@@ -170,7 +170,7 @@
             <div class='row'>
                 <div class='col-md-12'>
                     <video controls poster="img/drought-explainer.jpg">
-                      <source src="https://av.voanews.com/Videoroot/Pangeavideo/2017/05/7/74/747a6785-809c-4dfd-834f-290016cda845.mp4" type= "video/mp4"> 
+                      <source src="https://av.voanews.com/Videoroot/Pangeavideo/2017/05/6/63/63cda88a-0991-49cd-9ce2-8be7ec5a4286.mp4" type= "video/mp4"> 
                     </video>
                 </div>
             </div>
