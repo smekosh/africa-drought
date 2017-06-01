@@ -11,6 +11,10 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css?434e2fee23432497" />
 
+        <script>
+            // quickfix to provide parallax image to js/scripts.js as global var
+            var px_title_image = '';
+        </script>
 
     </head>
     <body>

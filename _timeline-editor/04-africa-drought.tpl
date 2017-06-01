@@ -11,7 +11,7 @@
 {assign var="fb_action_properties" value=['object'=>$canonical_url]}
 
 {/strip}<!doctype html>
-<html>
+<html lang="en">
     <head>
         <title>{$slides[0].title} | {$slides[0].title_tagline}</title>
         <meta charset="utf-8">
@@ -87,7 +87,7 @@
     </script>
 
     <nav class="voa-masthead">
-        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a><a href="{$voa_homepage_url}" title="Return to the VOA News home page" class="hideable1"><h1>{$slides[0].title}</h1></a>{$slides[12].content}</div><div class="share-options">
+        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$canonical_url}" title="Return to the project home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25"></a><a href="{$voa_homepage_url}" title="Return to the VOA News home page" class="hideable1"><h1>{$slides[0].title}</h1></a>{$slides[12].content} {strip_tags($slides[12].content,"<a>")}</div><div class="share-options">
             <ul>
                 <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
                 <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
@@ -119,36 +119,6 @@
         </header>
     </div>
 
-    {*<!--
-            <div class='container'>
-                <div class='row'>
-                    <div class='col-md-12'>
-                    <header>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href='#'>Overview</a>
-                            </li>
-                            <li>
-                                <a href='#'>Latest News</a>
-                            </li>
-                            <li>
-                                <a href='#'>Data</a>
-                            </li>
-                            <li>
-                                <a href='#'>Agencies</a>
-                            </li>
-                            <li>
-                                <a href='#'>The Team</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    </header>
-                    </div>
-                </div>
-            </div>
-    -->*}
-
         <div class='container'>
             <div class='row'>
                 <div class='col-md-12'>
@@ -169,7 +139,7 @@
             <div class='row'>
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
 
-                    <h2 class='explainer-headline'>{$slides[11].content}</h2>
+                    <h2 class='explainer-headline'>{$slides[11].content|strip_tags}</h2>
 
                     <video controls poster="img/drought-explainer.jpg">
                       <source src="https://av.voanews.com/Videoroot/Pangeavideo/2017/05/6/63/63cda88a-0991-49cd-9ce2-8be7ec5a4286.mp4" type= "video/mp4"> 
@@ -197,7 +167,7 @@
 
                     <div class='row top-story'>
                         <div class='col-sm-5'>
-                            <a href='{$entry.youtube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
+                            <a href='{$entry.youtube}' data-fancybox><img alt='Play this Video' class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
                         </div>
                         <div class='col-sm-7'>
                             <span class='pubdate'>{$entry.Date}</span> 
@@ -213,7 +183,7 @@
 
                     <div class='row top-story'>
                         <div class='col-sm-5'>
-                            <img class='img-responsive' src='{$entry.Photo}'>
+                            <img alt='Photo for story' class='img-responsive' src='{$entry.Photo}'>
                         </div>
                         <div class='col-sm-7'>
                             <span class='pubdate'>{$entry.Date}</span>
@@ -225,8 +195,6 @@
 
 {/if}
 {/foreach}
-
-</div>
 
 <div class='row'>
 <div class='col-sm-6'>
@@ -254,6 +222,7 @@
 </ol>
 </div>
 </div>
+
 </div>
 
         <div id='mapping-the-threat' class='wrapper-map'>
@@ -267,16 +236,16 @@
                     </div>
                     <div class="col-sm-7">
                         <div class = 'combined-map'>
-                                <img class='img-responsive africa-map' src='img/africa.gif'>
-                                <img class='img-responsive africa-map country p1' src='img/region-1.gif'>
-                                <img class='img-responsive africa-map country p1 p2' src='img/region-2.gif'>
-                                <img class='img-responsive africa-map country p2' src='img/region-3.gif'>
-                                <img class='img-responsive africa-map country p1 p2 p3' src='img/region-4.gif'>
-                                <img class='img-responsive africa-map country p2 p3' src='img/region-5.gif'>
-                                <img class='img-responsive africa-map country p3' src='img/region-6.gif'>
-                                <img class='img-responsive africa-map country p1 p2 p3 p4' src='img/region-7.gif'>
-                                <img class='img-responsive africa-map country p2 p3 p4' src='img/region-8.gif'>
-                                <img class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-9.gif'>
+                                <img alt='Map of Africa' class='img-responsive africa-map' src='img/africa.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p1' src='img/region-1.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p1 p2' src='img/region-2.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p2' src='img/region-3.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p1 p2 p3' src='img/region-4.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p2 p3' src='img/region-5.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p3' src='img/region-6.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p1 p2 p3 p4' src='img/region-7.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p2 p3 p4' src='img/region-8.gif'>
+                                <img alt='Map of food insecurity' class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-9.gif'>
                             <div id='slider'></div>
                             {$slides[10].content}
                         </div>
