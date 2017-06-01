@@ -2,7 +2,13 @@
     background: rgba(255, 255, 255, .4);
     border-bottom: 1px solid #ccc;
     margin: 0;
-    position: relative;
+
+    margin-bottom: 20px;
+    position: fixed;
+    background-color: #fff;
+
+    box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.1);
+
     text-align: center;
     top: 0;
     width: 100%;
@@ -14,23 +20,51 @@
     max-width: 1170px;
     padding: .5em 1em;
     width: 100%;
+    text-align: left;
 }
 
 .voa-masthead .voa-logo {
     display: inline-block;
     line-height: 100%;
-    margin: 5px 0 0 0;
+    margin: 15px 0 0 0;
     padding: 0;
     text-align: left;
-    width: 40%;
 }
 
-.voa-masthead .voa-logo img { display: block; }
+.voa-logo h1 {
+    display: inline-block;
+    font-size: 1em;
+    padding: 0;
+    letter-spacing: 1px;
+    line-height: 15px;
+    margin: 0;
+    margin-bottom: 14px;
+    margin-left: 20px;
+}
+@media only screen and (max-width : 768px) {
+    .voa-logo h1 {
+        font-size: .9em;
+        letter-spacing: 0;
+        margin-left: 10px;
+    }
+    .voa-masthead .voa-logo img { 
+        width:45px;
+        height: 19px;
+    }
+}
+
+.voa-masthead .voa-logo img { 
+
+    display: inline-block; 
+    margin-top: -2px;
+
+}
 
 .voa-masthead .share-options {
     display: inline-block;
+    float: right;
+    margin-top: 10px;    
     text-align: right;
-    width: 60%;
 }
 
 .voa-masthead ul, .voa-masthead li {
@@ -52,12 +86,16 @@
     display: block;
     height: 25px;
     line-height: 100%;
-    margin: 0 0 0 1em;
+    margin: .15em 0 0 .5em;
     overflow: auto;
     padding: 0 .5em;
     width: 25px;
 }
 
+
+.unknown {
+    font-size: .9em;
+}
 
 .language-toggle { background-image: url('../img/language.png'); }
 
@@ -95,7 +133,7 @@
 
 
 .parallax {
-    min-height: 375px;
+    min-height: 400px;
     background: transparent;
 }
 
@@ -137,6 +175,7 @@ video {
 
 .top-story img,
 .more-top img {
+    filter: grayscale(50%);
     margin-bottom: 20px;
 }
 
@@ -175,8 +214,16 @@ video {
 } 
 
 @media only screen and (max-width : 768px) {
+
+    .voa-masthead ul li a {
+        width: 20px;
+    }
+
+    ol.left-list {
+        margin-bottom: 0;
+    }
     .top-story {
-        margin-bottom: 0
+        margin-bottom: 20px;
     }
     .description {
         margin-top: 20px
@@ -223,10 +270,19 @@ div.new-section {
         div.parallax header h2 {
 
 
-            padding: 0 15px;
+            padding: 0;
 
         }
-
+ div.parallax header h1 {
+    margin-top: 75px
+ }
+  div.parallax header h2 {
+    line-height: 20px
+ }
+div.voa-masthead-inner a.hideable1,
+div.voa-masthead-inner a.hideable {
+    opacity: 0
+ }
 
         div header h1,
         div header h2 {
@@ -278,6 +334,43 @@ div.new-section {
             font-weight: normal;
         }
 
+        img.team-photo {
+            margin: 0 auto;
+            width: 50%;
+            filter: contrast(.75) saturate(2) sepia(.5);
+        }
+        .reporter-list {
+            font-size: .9em;
+            letter-spacing: .5px;
+            list-style-type: none;
+            margin-left: -40px;
+            text-transform: uppercase;
+        }
+        .reporter-list li {
+            margin-bottom: 5px;
+        }
+        #the-team {
+            margin-top: 20px;
+        }
+        #the-team h5 {
+            font-size: 1em;
+            font-weight: bold;
+            letter-spacing: .5px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        #the-team h6 {
+            font-size: .9em;
+            font-weight: normal;
+            letter-spacing: .5px;
+            margin-top: 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .team-row {
+            margin-bottom: 20px;
+        }
+
 
         h4,h5,h6 {
             font-family: 'Noto Sans';
@@ -305,21 +398,21 @@ div.new-section {
         }
 
         p {
-            font-family: 'Georgia';
+            font-family: 'noto sans';
 
         }
         p.lead {
             color:#222;
-            font-family: 'Georgia';
+            font-family: 'noto sans';
             font-size: 1.3em;          
             line-height: 34px;
             margin: 40px 0;
             text-align: center;
         }    
         p.lead-video {
-            color:#222;
-            font-family: 'Georgia';
-            font-size: 1.1em;          
+            font-family: 'noto sans';
+            color: #333;
+            font-size: 1.1em;
             line-height: 24px;
             margin: 15px 0;
         }    
@@ -343,24 +436,25 @@ div.new-section {
         ol.stories a {
             display: block;
             font-family: 'noto sans';
-            font-size: 1.1em;
+            font-size: 1em;
             margin: 5px 0;
         }
 
         span.pubdate,
         span.video {
-            background-color: #ffeb9f;
-            border-radius: 2px;
-            color: #111;
+            background-color: #666;
+            color: #fff;
             display: inline-block;
              font-family: 'Noto Sans';
-             font-weight: bold;
-            font-size: .75em;           
+
+            font-size: .75em;      
+            letter-spacing: .5px;     
             padding: 3px 6px;
+            text-transform: uppercase;
         }
 
         span.video {
-            background-color: #df5a49;
+            background-color: #666;
             color: #fff;
         }
 
@@ -402,11 +496,11 @@ div.new-section {
         }
 
         button {
-        	margin: 10px 0;
+            margin: 10px 0;
         }
 
         p.note {
-            font-size: 1.1em;
+            font-size: 1em;
             font-style: italic;
             color: #333;
             margin-bottom: 20px;
@@ -416,10 +510,41 @@ div.new-section {
             backgroun 100% 100%d: url('images/top.jpg') 100% 100%;
         }
 
+
+
+
+
 .wrapper {
-    background-color: rgba(51, 77, 92, .10);
-    margin-bottom: 40px;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.45)),url(https://gdb.voanews.com/63FBA654-290A-4E9E-95C9-69658E62087E_w1600_r1_s.jpg) no-repeat;
+    margin-bottom: 40px;    
 }
+.wrapper h1 {
+    color: #fff;
+    text-align: left;
+    font-size: 2em;
+    line-height: 40px;
+    margin-bottom: -20px;
+    font-weight: bold;
+    margin-top: 60px;
+    font-family: 'noto sans';
+    text-align: left;
+}
+.wrapper p.lead {
+    color: #fff;
+    font-family: 'noto sans';
+    line-height: 34px;
+    margin: 40px 0;
+    margin-bottom: 60px;    
+    font-size: 18px;
+    text-align: left;
+
+}
+
+
+
+
 
 .wrapper-region-reports {
     background-color: rgba(51, 77, 92, .10);
@@ -427,9 +552,9 @@ div.new-section {
 }
 
 
-.wrapper li {
-    font-family: Georgia;
-    font-size: 1.1em;
+.wrapper-map li {
+    font-family: 'noto sans';
+    font-size: 1em;
     list-style-type: none;
     margin-left: -40px;
     margin-bottom: 10px;
@@ -456,11 +581,11 @@ div.new-section {
     padding-left: 20px;
 }
 
-.wrapper h2 {
+.wrapper-map h2 {
     margin-bottom: 15px;
     text-align: left
 }
-.wrapper h3,
+.wrapper-map h3,
 .wrapper-region-reports h3 {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -521,15 +646,20 @@ h1.featured-story {
 
 
 h1.featured-video {
-    font-size: 1.8em;
+    line-height: 24px;
+    font-size: 1.5em;
+    font-weight: normal;
     margin: 10px 0 10px 0;
     text-align: left;
+    color: #222;
+    font-family: 'noto sans';
+    font-weight: bold;
 }
 
 
 p.intro {
             color:#222;
-            font-family: 'Georgia';
+            font-family: 'noto sans';
             font-size: 1.1em;          
             line-height: 24px;
             margin: 15px 0 20px 0;
@@ -624,6 +754,16 @@ div.quote-content {
 #quote-container {
   margin: 0 auto;
 }
+#quote-container p {
+    font-family: 'noto sans';
+    font-size: .9em;  
+    margin-top: 5px;  
+}
+#quote-container a {
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 8px;    
+}
 #quote-container .invisible {
   display: none;
 }
@@ -632,19 +772,36 @@ div.quote-content {
 #news-ticker h5 {
     font-weight: bold;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
+
+a.main-nav {
+    color: #444;
+    font-size: .9em;
+    font-weight: normal;
+    padding-left: 15px;
+    letter-spacing: .5px;
+}
+a.main-nav:hover {
+    color: #999;
+    text-decoration: none;
+}
 
 div.noUi-handle {
     cursor: pointer
 }
 
+h2.explainer-headline {
+    text-align: center;
+}
+
 #mapping-the-threat p.lead {
     color: #222;
-    font-family: 'Georgia';
+    font-family: 'noto sans';
     font-size: 1.1em;
-    line-height: 28px;
+    line-height: 24px;
     margin: 20px 0 30px 0;
     text-align: left;
 }
@@ -668,18 +825,242 @@ p small {
 }
 
 
-
+#parallax-window-1 {
+    margin-top: 52px;
+}
 #parallax-window-1 h5 {
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.5);
     color: #eee;
     font-size: .8em;
-    font-style: italic;
     line-height: 16px;
     margin:0;
-    margin-top: 50px;
-
-    padding:10px 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding:10px;
     text-align: center;
     text-transform: none;
 }
 
+
+div.country-record
+{
+    transition:all 0.5s ease;
+        opacity: 1;
+
+}
+div.country-record:hover
+{
+        opacity: .8;
+
+}
+
+
+#chartA {
+
+    margin-top: 80px;
+
+}
+
+
+
+.country-col {
+    background-color: #eee;
+    height: 200px;
+    padding: 0;
+
+}
+.country-col div {
+    backgroud: #4fb7f4;
+    background: linear-gradient(to right, #0ca5ff , #4fb7f4);
+    height: 100%;
+    position: relative;
+}
+
+
+
+.table {
+    width: 95%;
+    margin: 0 auto;
+}
+th.rotate {
+  height: 140px;
+  white-space: nowrap;
+}
+
+th.rotate > div {
+  transform: translate(25px, 51px) rotate(290deg);
+  width: 1px;
+  position: relative;
+  top: -50px;
+  left: -15px;
+}
+
+
+.team-narrow {
+    display:none
+}
+.team-wide {
+    display:block
+}
+
+@media only screen and (max-width: 768px) {
+
+.team-narrow {
+    display:block
+}
+#the-team h6 {
+    margin-bottom: 30px;
+}
+#more-credits header h4 {
+    margin-top: -20px;
+}
+.team-wide {
+    display:none
+}
+
+        h1, h2, #parallax-window-1 h5 {
+           text-align: left;
+        }
+
+
+    a.main-nav {
+        display: none
+    }
+    th.rotate > div {
+      transform: translate(25px, 51px) rotate(270deg);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    th.rotate > div {
+      transform: translate(25px, 51px) rotate(315deg);
+    }
+}
+
+
+td.country-col {
+    padding: 0 10px !important;
+}
+th.rotate > div > span {
+    font-family: 'Noto Sans';
+    font-weight: normal;
+    font-size: .9em;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+
+.table > tbody > tr > td, 
+.table > thead > tr > th.rotate {
+    border: 0;
+}
+
+
+.table-footer {
+    background-color: #bbb;
+    border-bottom: 4px solid #444;
+    color: #111;
+    font-family: 'Noto Sans';
+    font-weight: bold;
+    font-size: .9em;
+    text-transform: uppercase;
+}
+.table-footer td {
+
+    padding: 10px !important;    
+}
+
+
+
+.wrapper-map {
+    background-color: rgba(51, 77, 92, .10);
+    margin-bottom: 40px;
+}
+
+.wrapper-infographic h2 {
+    background-color: #666;
+            border-left: 8px solid #df5a49;
+    color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 15px;
+    text-align: left;
+    letter-spacing: .5px;
+}
+
+.wrapper-infographic img {
+    padding-bottom: 20px;
+}
+
+.wrapper-infographic h4 {
+    color: #444;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    letter-spacing: .5px;
+
+}
+.wrapper-infographic h4.disease {
+    font-size: .9em;
+
+}
+.wrapper-infographic h5 {
+
+    font-size: .9em;
+    margin: 0;
+    letter-spacing: .5px;
+
+}
+
+.wrapper-infographic {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.wrapper-infographic img.country {
+}
+
+.wrapper-infographic h5.country-link {
+   margin-top: 20px; 
+}
+
+
+#more-credits,
+#data-sources {
+    margin-bottom: 40px;
+    text-align: center
+}
+
+#more-credits h4,
+#data-sources h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+#more-credits h4 {
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+#more-credits p,
+#data-sources p {
+    font-size: 1em;
+}
+
+#infographic-intro h4 {
+    margin-bottom: 10px;
+}
+#infographic-intro {
+    margin-top: 90px;
+    text-align: center
+}
+#infographic-intro p {
+    font-size: 1.1em;
+}
+
+.country-record {
+    background-color: #eee;
+    background: linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.05));
+    margin-bottom: 20px;
+}
+.country-record section {
+    padding: 5px 15px 30px 15px;
+
+}

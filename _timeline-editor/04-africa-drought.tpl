@@ -13,7 +13,7 @@
 {/strip}<!doctype html>
 <html>
     <head>
-        <title>{$slides[0].title} :: {$slides[0].title_tagline}</title>
+        <title>{$slides[0].title} | {$slides[0].title_tagline}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -67,7 +67,6 @@
     </style>
 
     {include file="crazyegg.tpl"}
-
     </head>
 
     <body>
@@ -88,7 +87,7 @@
     </script>
 
     <nav class="voa-masthead">
-        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a></div><div class="share-options">
+        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0" /></a><a href="{$voa_homepage_url}" title="Return to the VOA News home page" class="hideable1"><h1>{$slides[0].title}</h1></a>{$slides[12].content}</div><div class="share-options">
             <ul>
                 <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
                 <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
@@ -168,7 +167,10 @@
 
 
             <div class='row'>
-                <div class='col-md-12'>
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+
+                    <h2 class='explainer-headline'>{$slides[11].content}</h2>
+
                     <video controls poster="img/drought-explainer.jpg">
                       <source src="https://av.voanews.com/Videoroot/Pangeavideo/2017/05/6/63/63cda88a-0991-49cd-9ce2-8be7ec5a4286.mp4" type= "video/mp4"> 
                     </video>
@@ -181,23 +183,23 @@
         <div class='wrapper'>
             <div class='container'>
                 <div class='row'>
-                    <div class='col-sm-10 col-sm-offset-1'>
-                        <p class='lead'>{$slides[0].content|strip_tags}</p>
+                    <div class='col-md-12 col-lg-10 col-lg-offset-1'>
+                        {$slides[0].content}
                     </div>
                 </div>
             </div>
         </div>
 
-        {$entry=$entries.featured[0]}
-                <div class='container'>
+                <div id='news' class='container'>
 
+{foreach from=$entries.featured item=$entry}
 {if $entry.Type == 'Video'}
 
                     <div class='row top-story'>
-                        <div class='col-sm-6 col-sm-offset-1'>
+                        <div class='col-sm-5'>
                             <a href='{$entry.youtube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
                         </div>
-                        <div class='col-sm-4'>
+                        <div class='col-sm-7'>
                             <span class='pubdate'>{$entry.Date}</span> 
                             <span class='video'>Video Report</span>
                             <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
@@ -207,14 +209,13 @@
                     </div>
 
 {/if}
-
 {if $entry.Type != 'Video'}
 
                     <div class='row top-story'>
-                        <div class='col-sm-6 col-sm-offset-1'>
+                        <div class='col-sm-5'>
                             <img class='img-responsive' src='{$entry.Photo}'>
                         </div>
-                        <div class='col-sm-4'>
+                        <div class='col-sm-7'>
                             <span class='pubdate'>{$entry.Date}</span>
                             <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
@@ -223,34 +224,13 @@
                     </div>
 
 {/if}
+{/foreach}
 
-<div class='row more-top'>
-    {foreach from=$entries.featured item=$entry}
-        {if $entry@index > 0 }
-            <div class='col-sm-5 {if $entry@index==1}col-sm-offset-1{/if}'>
-            {if $entry.Type == 'Video'}
-                <a href='{$entry.youtube}' data-fancybox><img class='img-responsive video-poster' src='img/video.png' style='background-image: url("{$entry.Photo}");'></a>
-                <span class='pubdate'>{$entry.Date}</span>
-                <span class='video'>Video Report</span>
-                <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
-                <span class='byline'>By {$entry.Byline}</span>
-                <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Watch now</a>.</p>
-            {/if}
-            {if $entry.Type != 'Video'}
-                <img class='img-responsive' src='{$entry.Photo}'>
-                <span class='pubdate'>{$entry.Date}</span>
-                <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
-                <span class='byline'>By {$entry.Byline}</span>
-                <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more</a>.</p>
-            {/if}
-            </div>
-        {/if}
-    {/foreach}
 </div>
 
 <div class='row'>
-<div class='col-sm-5 col-sm-offset-1'>
-<ol class='stories'>
+<div class='col-sm-6'>
+<ol class='stories left-list'>
     {foreach from=$entries.other item=entry }
         {if $entry@index < 3}
         <li><span class='pubdate'>{$entry.Date}</span>
@@ -261,7 +241,7 @@
     {/foreach}
 </ol>
 </div>
-<div class='col-sm-5'>
+<div class='col-sm-6'>
 <ol class='stories'>
     {foreach from=$entries.other item=entry }
         {if $entry@index > 2 && $entry@index < 6}
@@ -276,14 +256,14 @@
 </div>
 </div>
 
-        <div id='mapping-the-threat' class='wrapper'>
+        <div id='mapping-the-threat' class='wrapper-map'>
             <div class='container'>
                 <div class="row">
                     <div class='col-sm-12'>
-                        <h3>Mapping the Threat</h3>
+                        <h3>{$slides[5].title}</h3>
                     </div>
                     <div class="col-sm-5">
-                        {$slides[6].content}
+                        {$slides[5].content}
                     </div>
                     <div class="col-sm-7">
                         <div class = 'combined-map'>
@@ -298,7 +278,7 @@
                                 <img class='img-responsive africa-map country p2 p3 p4' src='img/region-8.gif'>
                                 <img class='img-responsive africa-map country p2 p3 p4 p5' src='img/region-9.gif'>
                             <div id='slider'></div>
-                            {$slides[11].content}
+                            {$slides[10].content}
                         </div>
                     </div>
                 </div>
@@ -307,10 +287,10 @@
 
         <div class='container'>
             <div class='row'>
-                <div class='col-sm-5 col-sm-offset-1'>
+                <div class='col-sm-6'>
                     <div class = 'mini-section'>
-                        <h3>{$slides[9].title}</h3>
-                        <p class='note'>{$slides[9].content|strip_tags}</p>
+                        <h3>{$slides[8].title}</h3>
+                        <p class='note'>{$slides[8].content|strip_tags}</p>
                     </div>
                     <ol class='stories'>
                         {foreach from=$entries.causes item=entry }
@@ -320,10 +300,10 @@
                         {/foreach}
                     </ol>
                 </div>
-                <div class='col-sm-5'>
+                <div class='col-sm-6'>
                     <div class = 'mini-section'>
-                        <h3>{$slides[10].title}</h3>
-                        <p class='note'>{$slides[10].content|strip_tags}</p>
+                        <h3>{$slides[9].title}</h3>
+                        <p class='note'>{$slides[9].content|strip_tags}</p>
                     </div>
                     <ol class='stories'>
                         {foreach from=$entries.solutions item=entry }
@@ -338,7 +318,7 @@
 
         <div class='wrapper-region-reports'>
             <div class='container'>
-                {$slides[5].content}
+                {$slides[4].content}
             </div>
         </div>
 
