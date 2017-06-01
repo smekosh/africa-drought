@@ -9,14 +9,14 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
         <link rel="stylesheet" type="text/css" href="css/nouislider.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?434ess2fee23432497" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?" />
 
 
     </head>
     <body>
 
         <nav class="voa-masthead">
-            <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0"><h1>Hunger Across Africa</h1></a>
+            <div class="voa-masthead-inner"><div class="voa-logo"><a href="http://www.voanews.com" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0"><h1><a href='http://projects.voanews.com/africa-drought'>Hunger Across Africa</a></h1></a>
 
 
 
@@ -28,67 +28,6 @@
                 </ul>
             </div></div>
         </nav>
-
-
-
-        <!--
-        <div class='container'>
-            <div class='row'>
-                <div class='col-md-12'>
-                    <header>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href='#'>Overview</a>
-                                </li>
-                                <li>
-                                    <a href='#'>Latest News</a>
-                                </li>
-                                <li>
-                                    <a href='#'>Data</a>
-                                </li>
-                                <li>
-                                    <a href='#'>Agencies</a>
-                                </li>
-                                <li>
-                                    <a href='#'>The Team</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </header>
-                </div>
-            </div>
-        </div>
-        -->
-
-
-
-<!--
-
-            <div class="container">
-                <div class="row">
-                    <div class='col-sm-12'>
-
-                    <div class="table-responsive">
-
-
-<table id='chartA' class="table  table-header-rotated">
-  <thead>
-    <tr></tr> 
-  </thead>
-  <tbody>
-    <tr></tr>
-  </tbody>
-</table>
-</div>
-
-                </div>
-            </div>
-        </div>
-
-
--->
-
 
             <div class="container">
                 <div class="row">
@@ -111,32 +50,25 @@
                         <img class='img-responsive img-circle team-photo' src='img/team-salem.jpg'>
                         <h5>Salem Solomon</h5>
                         <h6>Editor/Designer/Developer</h6>
-                    </div>                
-                    <div class='col-sm-4'>
-                        <img class='img-responsive img-circle team-photo' src='img/team-tom.jpg'>
-                        <h5>Tom Detzel</h5>
-                        <h6>Editor</h6>
                     </div>
                     <div class='col-sm-4'>
                         <img class='img-responsive img-circle team-photo' src='img/team-dino.jpg'>
                         <h5>Dino Beslagic</h5>
                         <h6>Developer</h6>
                     </div>
-                </div>
-
-                <div class="row team-row team-wide">
                     <div class='col-sm-4'>
                         <img class='img-responsive img-circle team-photo' src='img/team-tom.jpg'>
                         <h5>Tom Detzel</h5>
                         <h6>Editor</h6>
+                    </div>                    
+                </div>
 
-                    </div>
-                    <div class='col-sm-4'>
+                <div class="row team-row team-wide">
+                    <div class='col-sm-4 col-sm-offset-2'>
                         <img class='img-responsive img-circle team-photo' src='img/team-salem.jpg'>
                         <h5>Salem Solomon</h5>
                         <h6>Editor/Designer/Developer</h6>
                     </div>
-
                     <div class='col-sm-4'>
                         <img class='img-responsive img-circle team-photo' src='img/team-dino.jpg'>
                         <h5>Dino Beslagic</h5>
@@ -147,11 +79,14 @@
 
 
                 <div class="row team-row">
+
                     <div class='col-sm-4 col-sm-offset-2'>
-                        <img class='img-responsive img-circle team-photo' src='img/team-stephen.jpg'>
-                        <h5>Stephen Mekosh</h5>
-                        <h6>Designer</h6>
+                        <img class='img-responsive img-circle team-photo' src='img/team-tom.jpg'>
+                        <h5>Tom Detzel</h5>
+                        <h6>Editor</h6>
+
                     </div>
+
                     <div class='col-sm-4'>
                         <img class='img-responsive img-circle team-photo' src='img/team-anand.jpg'>
                         <h5>Anand Mistry</h5>

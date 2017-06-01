@@ -31,6 +31,13 @@
     text-align: left;
 }
 
+.voa-masthead .voa-logo a {
+    color: #222;
+} 
+.voa-masthead .voa-logo a:hover {
+    color: #444;
+    text-decoration: none
+}
 .voa-logo h1 {
     display: inline-block;
     font-size: 1em;

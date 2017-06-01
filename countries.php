@@ -16,7 +16,7 @@
     <body>
 
         <nav class="voa-masthead">
-            <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0"><h1>Hunger Across Africa</h1></a>
+            <div class="voa-masthead-inner"><div class="voa-logo"><a href="http://www.voanews.com" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0"><h1><a href='http://projects.voanews.com/africa-drought'>Hunger Across Africa</a></h1></a>
 
 
 
@@ -29,37 +29,6 @@
             </div></div>
         </nav>
 
-
-
-        <!--
-        <div class='container'>
-            <div class='row'>
-                <div class='col-md-12'>
-                    <header>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href='#'>Overview</a>
-                                </li>
-                                <li>
-                                    <a href='#'>Latest News</a>
-                                </li>
-                                <li>
-                                    <a href='#'>Data</a>
-                                </li>
-                                <li>
-                                    <a href='#'>Agencies</a>
-                                </li>
-                                <li>
-                                    <a href='#'>The Team</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </header>
-                </div>
-            </div>
-        </div>
-        -->
 
 
 
@@ -112,10 +81,10 @@
                     <div class='col-sm-10 col-sm-offset-1'>
         <section id='data-sources'>
             <header><h4>Data Sources</h4></header>
-            <p>IPC level data from FEWS.net (May, 2017).</p>
-            <p>People at risk data from FEWS 2017 outlook data published by the Food and Agriculture Organization of the United Nations (March, 2017).</p>
-            <p>Conflict death data from the Armed Conflict Location and Event Data Project "Realtime Africa" data (May, 2017).
-            Funding gap data from the UN Office for the Coordination of Humanitarian Affairs (May, 2017).</p>
+            <p>IPC data from FEWS.net (May, 2017).</p>
+            <p>People at risk data from a FEWS outlook analysis by the Food and Agriculture Organization of the United Nations (March, 2017).</p>
+            <p>Conflict death data from the Armed Conflict Location and Event Data Project&#8217;s "Realtime Africa" dataset (May, 2017).</p>
+            <p>Funding gap data from the UN Office for the Coordination of Humanitarian Affairs (May, 2017).</p>
         </section>
                 </div>
             </div>
@@ -128,7 +97,7 @@
         <script src="js/wNumb.js"></script>
         <script src="js/nouislider.min.js"></script>
         <script src="js/jquery.fancybox.min.js"></script>
-        <script src="js/scripts.js?872d3d343434326"></script>
+        <script src="js/scripts.js?123123"></script>
 
     </body>
 </html>
