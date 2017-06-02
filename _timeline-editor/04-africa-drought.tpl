@@ -2,8 +2,8 @@
 
 {$fb_app_id = '490219017808002'}
 
-{$canonical_url = 'http://projects.voanews.com/africa-drought/'}
-{$voa_homepage_url = 'http://www.voanews.com/'}
+{$canonical_url = '//projects.voanews.com/africa-drought/'}
+{$voa_homepage_url = '//www.voanews.com/'}
 {$twitter_share_text = 'Millions in Africa lack access to enough food. VOA provides ongoing coverage of this critical story.'}
 {$twitter_username = '@VOANews'}
 {$twitter_related = ''}
@@ -18,8 +18,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link rel="canonical" href="http://projects.voanews.com/africa-drought/" />
-    <link type="image/x-icon" rel="icon" href="http://www.voanews.com/img/voa/favicon.ico" />
+    <link rel="canonical" href="//projects.voanews.com/africa-drought/" />
+    <link type="image/x-icon" rel="icon" href="//www.voanews.com/img/voa/favicon.ico" />
     <link rel="image_src" href="{$slides[0].title_image}" />
 
 
@@ -34,7 +34,7 @@
     <meta property="og:title" content="{$slides[0].title}" />
     <meta property="og:description" content="{$slides[0].title_tagline}" />
     <meta property="og:image" content="{$slides[0].title_image}" />
-    <meta property="og:url" content="http://projects.voanews.com/africa-drought/" />
+    <meta property="og:url" content="//projects.voanews.com/africa-drought/" />
 
     <!-- for Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -43,7 +43,7 @@
     <meta property="twitter:title" content="{$slides[0].title}">
     <meta property="twitter:description" content="{$slides[0].title_tagline}">
     <meta property="twitter:image" content="{$slides[0].title_image}">
-    <meta name="twitter:url" content="http://projects.voanews.com/africa-drought/" />
+    <meta name="twitter:url" content="//projects.voanews.com/africa-drought/" />
 
     <meta name="DISPLAYDATE" content="April 6, 2017" />
     <meta itemprop="dateModified" content="2017-04-06" />
@@ -67,6 +67,7 @@
     </style>
 
     {include file="crazyegg.tpl"}
+
     </head>
 
     <body>
@@ -87,47 +88,80 @@
     </script>
 
     <nav class="voa-masthead">
-        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$canonical_url}" title="Return to the project home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25"></a><a href="{$voa_homepage_url}" title="Return to the VOA News home page" class="hideable1"><h1>{$slides[0].title}</h1></a>{$slides[12].content} {strip_tags($slides[12].content,"<a>")}</div><div class="share-options">
+        <div class="voa-masthead-inner"><div class="voa-logo"><a href="{$voa_homepage_url}" title="Return to the project home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25"></a><a href="{$canonical_url}" title="Return to the VOA News home page" class="hideable1"><h1>{$slides[0].title}</h1></a>{strip_tags($slides[12].content,"<a>")}</div><div class="share-options">
             <ul>
                 <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
                 <li><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text={$twitter_share_text|escape:'url'}&amp;url={$canonical_url|escape:'url'}&amp;via={$twitter_username|replace:'@':''}&amp;related={$twitter_related|escape:'url'}" class="share-tw"><span class="scr">Share on Twitter</span></a></li>
                 <li class="language-dropdown">
                     <a class="language-toggle" title="Change Language" href="javascript:return(false);"><span class="scr">Languages</span></a>
                     <ul class="submenu languages" style="display: none;">
-                        <li lang="pt"><a href="http://www.voaportugues.com/p/6513.html">Português</a></li>
-                        <li lang="fr"><a href="http://www.voaafrique.com/p/6511.html">Français</a></li>
-                        <li lang="ha"><a href="http://www.voahausa.com/p/6512.html">Hausa</a></li>
-                        <li lang="so"><a href="http://www.voasomali.com/p/6506.html">Somali</a></li>
-                        <li lang="ti"><a href="http://tigrigna.voanews.com/p/5574.html">Tigrigna</a></li>
-                        <li lang="om"><a href="http://www.voaafaanoromoo.com/p/5577.html">Afaan Oromoo</a></li> 
-                        <li lang="am"><a href="http://amharic.voanews.com/p/5573.html">Amharic</a></li>
-                        <li lang="rw"><a href="http://www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li>
-                        <li lang="sn"><a href="http://www.voashona.com/p/6510.html">Shona</a></li>
-                        <li lang="nr"><a href="http://www.voandebele.com/p/6508.html">Ndebele</a></li>
-                        <li lang="en"><a href="http://www.voazimbabwe.com/p/6509.html">Zimbabwe (English)</a></li>
+                        <li lang="pt"><a href="//www.voaportugues.com/p/6513.html">Português</a></li>
+                        <li lang="fr"><a href="//www.voaafrique.com/p/6511.html">Français</a></li>
+                        <li lang="ha"><a href="//www.voahausa.com/p/6512.html">Hausa</a></li>
+                        <li lang="so"><a href="//www.voasomali.com/p/6506.html">Somali</a></li>
+                        <li lang="ti"><a href="//tigrigna.voanews.com/p/5574.html">Tigrigna</a></li>
+                        <li lang="om"><a href="//www.voaafaanoromoo.com/p/5577.html">Afaan Oromoo</a></li> 
+                        <li lang="am"><a href="//amharic.voanews.com/p/5573.html">Amharic</a></li>
+                        <li lang="rw"><a href="//www.radiyoyacuvoa.com/p/6507.html">Kinyarwanda/Kirundi</a></li>
+                        <li lang="sn"><a href="//www.voashona.com/p/6510.html">Shona</a></li>
+                        <li lang="nr"><a href="//www.voandebele.com/p/6508.html">Ndebele</a></li>
+                        <li lang="en"><a href="//www.voazimbabwe.com/p/6509.html">Zimbabwe (English)</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
+        </div>
     </nav>
 
+
+
+
+
+
     <div id="parallax-window-1" class="parallax">
-        <header>
-            <h1>{$slides[0].title}</h1>
-            <h2>{$slides[0].title_tagline}</h2>
-            <h5>{$slides[0].title_label_coverage}</h5>
-        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <header>
+                        <h1>{$slides[0].title}</h1>
+                        <h2>{$slides[0].title_tagline}</h2>
+                        <h5>{$slides[0].title_label_coverage}</h5>
+                    </header>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 
+
+
+
+
+        <div class='site-nav'>
+            <div class='container'>
+                <div class = 'row'>
+                    <div class='col-sm-12'>
+                        <nav>
+                            <a class="main-nav hideable" href="news.php" style="opacity: 1;">News Updates</a><a class="main-nav hideable" href="countries.php" style="opacity: 1;">Affected Countries</a><a class="main-nav hideable" href="team.php" style="opacity: 1;">Meet the Team</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class='container'>
+
             <div class='row'>
-                <div class='col-md-12'>
+                <div class='col-sm-12'>
                     <header id='news-ticker'>
                         <h5>The Latest Headlines</h5>
                         <div id="quote-container">
                             {foreach from=$entries.other item=entry }
                                 {if $entry@index < 5}
-                                <div id="quote{$entry@index}" class="quote"><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></div>
+                                <div id="quote{$entry@index}" class="quote"><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a></div>
                                 {/if}
                             {/foreach}
                         </div>
@@ -142,7 +176,7 @@
                     <h2 class='explainer-headline'>{$slides[11].content|strip_tags}</h2>
 
                     <video controls poster="img/drought-explainer.jpg">
-                      <source src="https://av.voanews.com/Videoroot/Pangeavideo/2017/05/6/63/63cda88a-0991-49cd-9ce2-8be7ec5a4286.mp4" type= "video/mp4"> 
+                      <source src="//av.voanews.com/Videoroot/Pangeavideo/2017/05/6/63/63cda88a-0991-49cd-9ce2-8be7ec5a4286.mp4" type= "video/mp4"> 
                     </video>
                 </div>
             </div>
@@ -172,9 +206,9 @@
                         <div class='col-sm-7'>
                             <span class='pubdate'>{$entry.Date}</span> 
                             <span class='video'>Video Report</span>
-                            <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
+                            <h1 class='featured-video'><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
-                            <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Watch now</a>.</p>
+                            <p class='lead-video'>{$entry.Description} <a href='//www.voanews.com{$entry.Link}'>Watch now</a>.</p>
                         </div>
                     </div>
 
@@ -187,9 +221,9 @@
                         </div>
                         <div class='col-sm-7'>
                             <span class='pubdate'>{$entry.Date}</span>
-                            <h1 class='featured-video'><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
+                            <h1 class='featured-video'><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a></h1>
                             <span class='byline'>By {$entry.Byline}</span>
-                            <p class='lead-video'>{$entry.Description} <a href='http://www.voanews.com{$entry.Link}'>Read more</a>.</p>
+                            <p class='lead-video'>{$entry.Description} <a href='//www.voanews.com{$entry.Link}'>Read more</a>.</p>
                         </div>
                     </div>
 
@@ -202,7 +236,7 @@
     {foreach from=$entries.other item=entry }
         {if $entry@index < 3}
         <li><span class='pubdate'>{$entry.Date}</span>
-        <a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+        <a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a>
         <span class='byline'>By {$entry.Byline}</span>
         </li>
         {/if}
@@ -214,7 +248,7 @@
     {foreach from=$entries.other item=entry }
         {if $entry@index > 2 && $entry@index < 6}
         <li><span class='pubdate'>{$entry.Date}</span>
-        <a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+        <a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a>
         <span class='byline'>By {$entry.Byline}</span>
         </li>
         {/if}
@@ -263,7 +297,7 @@
                     </div>
                     <ol class='stories'>
                         {foreach from=$entries.causes item=entry }
-                        <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+                        <li><span class='pubdate'>{$entry.Date}</span><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a>
                         <span class='byline'>By {$entry.Byline}</span>
                         </li>
                         {/foreach}
@@ -276,7 +310,7 @@
                     </div>
                     <ol class='stories'>
                         {foreach from=$entries.solutions item=entry }
-                        <li><span class='pubdate'>{$entry.Date}</span><a href='http://www.voanews.com{$entry.Link}'>{$entry.Title}</a>
+                        <li><span class='pubdate'>{$entry.Date}</span><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a>
                         <span class='byline'>By {$entry.Byline}</span>
                         </li>
                         {/foreach}

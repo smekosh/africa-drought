@@ -1,6 +1,5 @@
 //var px_title_image = 'img/top-sm.jpg';
 
-
 jQuery(document).ready(function () {
     // scoped as anon for menu functions
     (function() {
@@ -75,6 +74,9 @@ jQuery(document).ready(function () {
 
     }
 
+
+
+
     var locked = false;
     var interacted = false;
     var maxQuote = jQuery('#quote-container > div').length;
@@ -99,25 +101,23 @@ jQuery(document).ready(function () {
         }
   }, 6000);
 
+if (jQuery('.wrapper-infographic').length) {
 
     jQuery.getJSON("data/countries.json", function(result){
 
         var arr = jQuery.map(result, function(el) { return el });
         for (var i in arr) {
             arr[i] = jQuery.map(arr[i], function(el) { return el });
-                //jQuery("body").append('<h6>' + arr[i] + '</h6>');
         }
 
         var chart1 = '';
         var output = '<div class="container"><div class="row">';
 
         var countryCount = 0;
-
-
         var refugeesMax = 0;
         var refugeesCount = 0;
-
         var refugeesBarCount = 0;
+
         // Calculate max/count values...
         for (var i in arr) {
 
@@ -201,22 +201,91 @@ jQuery(document).ready(function () {
 
 
     });
+}
 
 
 
-        if (jQuery('#parallax-window-1').length) {
+if (jQuery('#news-page').length) {
+
+    jQuery.getJSON("data/spreadsheet.json?1", function(result){
+
+        var arr = jQuery.map(result, function(el) { return el });
+        for (var i in arr) {
+            arr[i] = jQuery.map(arr[i], function(el) { return el });
+        }
+
+
+        var storyCount = 0;
+
+        var output = '';
+
+        arr.reverse();
+
+        for (var i in arr) {
+
+
+var title = arr[storyCount][0]
+var byline = arr[storyCount][1]
+var link = arr[storyCount][2]
+var photo = arr[storyCount][3]
+var countries = arr[storyCount][5]
+var date = arr[storyCount][6]
+var type = arr[storyCount][8]
+var description = arr[storyCount][11]
+
+
+title = title.replace("â€¦", "…");
+description = description.replace("â€¦", "…");
+
+title = title.replace("â€“", "–");
+description = description.replace("â€“", "–");
+
+title = title.replace("â€™", "’");
+description = description.replace("â€™", "’");
+
+title = title.replace("â€œ", "“");
+description = description.replace("â€œ", "“");
+
+title = title.replace("â€", "”");
+description = description.replace("â€", "”");
+
+output += '<div class="row"><div class="col-sm-3"><img class="img-responsive lazy" data-original="'+photo+'"></div><div class="col-sm-9"><span class="pubdate">'+date+'</span><h1 class="featured-video"><a href="'+link+'">'+title+'</a></h1><span class="byline">By '+byline+'</span><p class="lead-video">'+description+'</p></div></div>';
+
+
+
+            storyCount++;
+
+
+        }
+
+        jQuery("#all-stories").append(output);
+
+        jQuery("img.lazy").lazyload({
+            effect : "fadeIn"
+        });        
+
+    });
+}
+
+
+
+
+        //if (jQuery('#parallax-window-1').length) {
             jQuery(window).scroll(function() {
-                var tT = jQuery('#parallax-window-1').offset().top;
-                var tH = jQuery('#parallax-window-1').outerHeight();
+                //var tT = jQuery('#parallax-window-1').offset().top;
+                //var tH = jQuery('#parallax-window-1').outerHeight();
+
                 var wS = $(this).scrollTop();
-                if (wS > (tT+tH) && jQuery('div.voa-masthead-inner a.hideable1').css('opacity') == 0){
+                
+
+                if (wS > 200 && jQuery('div.voa-masthead-inner a.hideable1').css('opacity') == 0){
                     console.log('fade stuff in');
 
                     jQuery('div.voa-masthead-inner a.hideable1').fadeTo('slow', 1);
                     if (jQuery(window).width() > 768) {
                         jQuery('div.voa-masthead-inner a.hideable').fadeTo('slow', 1);
                     }
-                } else if (wS < (tT+tH) && jQuery('div.voa-masthead-inner a.hideable1').css('opacity') == 1) {
+                } else if (wS < 200 && jQuery('div.voa-masthead-inner a.hideable1').css('opacity') == 1) {
                     console.log('fade stuff out');
                     jQuery('div.voa-masthead-inner a.hideable1').fadeTo('slow', 0);
                     if (jQuery(window).width() > 768) {
@@ -224,9 +293,9 @@ jQuery(document).ready(function () {
                     }                    
                 }
             });
-        } else {
-            jQuery('div.voa-masthead-inner a.hideable1').css({opacity:1});
-        }
+        //} else {
+        //    jQuery('div.voa-masthead-inner a.hideable1').css({opacity:1});
+        //}
 
 
 

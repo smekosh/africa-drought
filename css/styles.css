@@ -117,6 +117,37 @@
     z-index: 110;
 }
 
+.site-nav nav {
+    margin: 15px 0 10px 0
+}
+.site-nav {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.1em;
+    text-align: center
+}
+.site-nav h6 {
+    display:none;
+    font-size: .8em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.site-nav a {
+    color: #222;
+    font-size: .9em;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 5px 20px;
+    letter-spacing: .5px;
+
+}
+.site-nav a:hover {
+    text-decoration: none
+}
+.site-nav a span:hover {
+    border-bottom: 5px solid #888;
+}
+
 .submenu > li {
     background-color: rgba(255,255,255,.8);
     display: block;
@@ -221,6 +252,14 @@ video {
 } 
 
 @media only screen and (max-width : 768px) {
+
+.site-nav h6 {
+    display: block;
+}
+.site-nav a {
+    display: block;
+}
+
 
     .voa-masthead ul li a {
         width: 20px;
@@ -423,6 +462,13 @@ div.voa-masthead-inner a.hideable {
             line-height: 24px;
             margin: 15px 0;
         }    
+
+        #news-page p.lead-video {
+            font-size: 1em;
+            margin: 5px 0 15px 0;
+
+        }
+ 
 
         ol.stories {
             margin-left: -40px;
@@ -1030,18 +1076,27 @@ th.rotate > div > span {
    margin-top: 20px; 
 }
 
-
+#language-services {
+    text-align: center
+}
 #more-credits,
 #data-sources {
     margin-bottom: 40px;
     text-align: center
 }
 
+#language-services h4,
 #more-credits h4,
 #data-sources h4 {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
+
+#language-services p {
+    margin-bottom: 40px;
+}
+
+#language-services h4,
 #more-credits h4 {
     font-size: 1.1em;
     margin-top: 20px;
@@ -1051,15 +1106,34 @@ th.rotate > div > span {
     font-size: 1em;
 }
 
+#news-intro h4,
 #infographic-intro h4 {
     margin-bottom: 10px;
 }
+
+#news-intro,
 #infographic-intro {
-    margin-top: 90px;
+    margin-top: 40px;
     text-align: center
 }
+
+#the-team .site-nav,
+#countries .site-nav,
+#news-page .site-nav {
+    margin-top: 60px;
+}
+
+#news-intro p,
 #infographic-intro p {
     font-size: 1.1em;
+}
+
+#news-intro {
+    margin-bottom: 60px
+}
+
+#all-stories .row {
+    margin-bottom: 20px
 }
 
 .country-record {
