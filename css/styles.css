@@ -129,8 +129,11 @@
 .site-nav h6 {
     display:none;
     font-size: .8em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-transform: uppercase;
+}
+.site-nav h6:hover {
+    cursor: pointer
 }
 .site-nav a {
     color: #222;
@@ -257,7 +260,7 @@ video {
     display: block;
 }
 .site-nav a {
-    display: block;
+    display: none;
 }
 
 
@@ -395,17 +398,23 @@ div.voa-masthead-inner a.hideable {
         .reporter-list li {
             margin-bottom: 5px;
         }
-        #the-team {
+
+        #language-services,
+        #meet-the-team {
             margin-top: 20px;
         }
-        #the-team h5 {
+
+        #language-services h5,
+        #meet-the-team h5 {
             font-size: 1em;
             font-weight: bold;
             letter-spacing: .5px;
             margin-top: 15px;
             text-align: center;
         }
-        #the-team h6 {
+
+        #language-services h6,
+        #meet-the-team h6 {
             font-size: .9em;
             font-weight: normal;
             letter-spacing: .5px;
@@ -961,7 +970,9 @@ th.rotate > div {
 .team-narrow {
     display:block
 }
-#the-team h6 {
+
+#language-services h6,
+#meet-the-team h6 {
     margin-bottom: 30px;
 }
 #more-credits header h4 {

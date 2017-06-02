@@ -78,7 +78,7 @@
             
 
 
-            <div id="the-team" class="container">
+            <div id="meet-the-team" class="container">
 
                 <div class="row team-row team-narrow">
                     <div class='col-sm-4'>
@@ -124,6 +124,7 @@
                         <img class='img-responsive img-circle team-photo' src='img/team-anand.jpg'>
                         <h5>Anand Mistry</h5>
                         <h6>Video Production/Animation</h6>
+
                     </div>
 
                 </div>

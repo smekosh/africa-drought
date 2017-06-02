@@ -138,19 +138,18 @@
 
 
 
-
-
-        <div class='site-nav'>
-            <div class='container'>
-                <div class = 'row'>
-                    <div class='col-sm-12'>
-                        <nav>
-                            <a class="main-nav hideable" href="news.php" style="opacity: 1;">News Updates</a><a class="main-nav hideable" href="countries.php" style="opacity: 1;">Affected Countries</a><a class="main-nav hideable" href="team.php" style="opacity: 1;">Meet the Team</a>
-                        </nav>
-                    </div>
+    <div class='site-nav'>
+        <div class='container'>
+            <div class = 'row'>
+                <div class='col-sm-12'>
+                    <nav>
+                        <h6>Menu</h6>
+                        <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
+                    </nav>
                 </div>
             </div>
         </div>
+    </div>
 
         <div class='container'>
 

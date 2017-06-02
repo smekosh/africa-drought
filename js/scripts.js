@@ -101,9 +101,20 @@ jQuery(document).ready(function () {
         }
   }, 6000);
 
+
+if (jQuery('.site-nav h6').length) {
+    jQuery('.site-nav h6').click (function () {
+        if (jQuery('.site-nav a').css('display') == 'none') {
+            jQuery('.site-nav a').css({'display':'block'}); 
+        } else {
+            jQuery('.site-nav a').css({'display':'none'}); 
+        }
+    });
+}
+
 if (jQuery('.wrapper-infographic').length) {
 
-    jQuery.getJSON("data/countries.json", function(result){
+    jQuery.getJSON("countries.json", function(result){
 
         var arr = jQuery.map(result, function(el) { return el });
         for (var i in arr) {
@@ -270,6 +281,8 @@ output += '<div class="row"><div class="col-sm-3"><img class="img-responsive laz
 
 
 
+
+
         //if (jQuery('#parallax-window-1').length) {
             jQuery(window).scroll(function() {
                 //var tT = jQuery('#parallax-window-1').offset().top;
@@ -296,9 +309,5 @@ output += '<div class="row"><div class="col-sm-3"><img class="img-responsive laz
         //} else {
         //    jQuery('div.voa-masthead-inner a.hideable1').css({opacity:1});
         //}
-
-
-
-
 
 });
