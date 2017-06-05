@@ -218,7 +218,7 @@ if (jQuery('.wrapper-infographic').length) {
 
 if (jQuery('#news-page').length) {
 
-    jQuery.getJSON("data/spreadsheet.json?1", function(result){
+    jQuery.getJSON("data/spreadsheet.json?2", function(result){
 
         var arr = jQuery.map(result, function(el) { return el });
         for (var i in arr) {
@@ -234,6 +234,8 @@ if (jQuery('#news-page').length) {
 
         for (var i in arr) {
 
+
+            if (arr[storyCount][14] == undefined) {
 
 var title = arr[storyCount][0]
 var byline = arr[storyCount][1]
@@ -260,11 +262,13 @@ description = description.replace("â€œ", "“");
 title = title.replace("â€", "”");
 description = description.replace("â€", "”");
 
-output += '<div class="row"><div class="col-sm-3"><img class="img-responsive lazy" data-original="'+photo+'"></div><div class="col-sm-9"><span class="pubdate">'+date+'</span><h1 class="featured-video"><a href="'+link+'">'+title+'</a></h1><span class="byline">By '+byline+'</span><p class="lead-video">'+description+'</p></div></div>';
+output += '<div class="row"><div class="col-sm-3"><img class="img-responsive lazy" data-original="'+photo+'"></div><div class="col-sm-9"><span class="pubdate">'+date+'</span><h1 class="featured-video"><a href="//www.voanews.com'+link+'">'+title+'</a></h1><span class="byline">By '+byline+'</span><p class="lead-video">'+description+'</p></div></div>';
 
 
 
             storyCount++;
+
+}
 
 
         }

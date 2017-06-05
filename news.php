@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
         <link rel="stylesheet" type="text/css" href="css/nouislider.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?4s324s97" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?4s24dsds97" />
 
         <script>
             // quickfix to provide parallax image to js/scripts.js as global var
@@ -57,7 +57,7 @@
                     <div class='col-sm-12'>
                         <nav>
                             <h6>Menu</h6>
-                            <a href="#news" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
+                            <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
                         </nav>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
         <script src="js/wNumb.js"></script>
         <script src="js/nouislider.min.js"></script>
         <script src="js/jquery.fancybox.min.js"></script>
-        <script src="js/scripts.js?2f123"></script>
+        <script src="js/scripts.js?2f1dwfefefd23"></script>
 
     </body>
 </html>

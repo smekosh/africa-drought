@@ -996,6 +996,12 @@ th.rotate > div {
 
 @media only screen and (max-width: 768px) {
 
+#all-stories .row {
+    margin-bottom: 40px
+}
+#all-stories .col-sm-3 {
+    margin-bottom: 20px
+}
 
 #quote-container p {
     margin-bottom: 0;
@@ -1174,6 +1180,10 @@ th.rotate > div > span {
     margin-bottom: 60px
 }
 
+
+#all-stories span.byline {
+    margin-bottom: 10px; 
+}
 #all-stories .row {
     margin-bottom: 20px
 }
