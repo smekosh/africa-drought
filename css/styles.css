@@ -214,10 +214,22 @@ video {
     margin-bottom: 40px;
 }
 
+
+#quote-container img,
 .top-story img,
 .more-top img {
     filter: grayscale(50%);
     margin-bottom: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+    transition: all 1s;
+}
+
+#quote-container img:hover,
+.top-story img:hover,
+.more-top img:hover {
+    filter: grayscale(0%);
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
 }
 
 .video-container {
@@ -387,7 +399,12 @@ div.voa-masthead-inner a.hideable {
             margin: 0 auto;
             width: 50%;
             filter: contrast(.75) saturate(2) sepia(.5);
+            transition: all .5s;
         }
+        img.team-photo:hover {
+            filter: contrast(1) saturate(1) sepia(0);
+        }
+
         .reporter-list {
             font-size: .9em;
             letter-spacing: .5px;
@@ -504,20 +521,14 @@ div.voa-masthead-inner a.hideable {
 
         span.pubdate,
         span.video {
-            background-color: #666;
-            color: #fff;
+            background-color: #DDD;
+            color: #333;
             display: inline-block;
-             font-family: 'Noto Sans';
-
+            font-family: 'Noto Sans';
             font-size: .75em;      
             letter-spacing: .5px;     
             padding: 3px 6px;
             text-transform: uppercase;
-        }
-
-        span.video {
-            background-color: #666;
-            color: #fff;
         }
 
         span.byline {
@@ -623,23 +634,23 @@ div.voa-masthead-inner a.hideable {
 }
 
 #phase1 {
-    border-left: 40px solid #334d5c;
+    border-left: 20px solid #334d5c;
     padding-left: 20px;
 }
 #phase2 {
-    border-left: 40px solid #45b29d;
+    border-left: 20px solid #45b29d;
     padding-left: 20px;
 }
 #phase3 {
-    border-left: 40px solid #efc94c;
+    border-left: 20px solid #efc94c;
     padding-left: 20px;
 }
 #phase4 {
-    border-left: 40px solid #e27a3f;
+    border-left: 20px solid #e27a3f;
     padding-left: 20px;
 }
 #phase5 {
-    border-left: 40px solid #df5a49;
+    border-left: 20px solid #df5a49;
     padding-left: 20px;
 }
 
@@ -786,12 +797,12 @@ div.quote-content {
   padding: 20px;
 }
 #news-ticker {
-  padding: 30px 20px;
+  padding: 0;
 }
 #quote-container .quote {
   display: none;
   /*float: left;*/
-  text-align: center;
+  text-align: left;
   font-family: 'Noto Sans';
   font-size: 1.1em;
   /*width: 50%;*/
@@ -819,12 +830,14 @@ div.quote-content {
 #quote-container p {
     font-family: 'noto sans';
     font-size: .9em;  
-    margin-top: 5px;  
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 22px;  
 }
 #quote-container a {
     font-weight: bold;
-    font-size: 1.2em;
-    line-height: 8px;    
+    font-size: 1.6em;
+    line-height: 28px;    
 }
 #quote-container .invisible {
   display: none;
@@ -833,9 +846,14 @@ div.quote-content {
 
 #news-ticker h5 {
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #45b29d;
+    display: inline-block;
+    padding: 5px;
+
 }
 
 
@@ -856,7 +874,12 @@ div.noUi-handle {
 }
 
 h2.explainer-headline {
-    text-align: center;
+    color: #fff;
+    background-color: #45b29d;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 30px;
+    padding: 5px;
 }
 
 #mapping-the-threat p.lead {
@@ -923,6 +946,18 @@ div.country-record:hover
 
 }
 
+div.social {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+div.social a {
+    display: inline-block;
+    padding: 0 5px
+}
+div.social img {
+    width: 15px
+}
 
 
 .country-col {
@@ -958,29 +993,25 @@ th.rotate > div {
 }
 
 
-.team-narrow {
-    display:none
-}
-.team-wide {
-    display:block
-}
 
 @media only screen and (max-width: 768px) {
 
-.team-narrow {
-    display:block
+
+#quote-container p {
+    margin-bottom: 0;
 }
 
-#language-services h6,
-#meet-the-team h6 {
+
+#language-services h6 {
     margin-bottom: 30px;
+}
+#meet-the-team div.social {
+    margin-bottom: 30px
 }
 #more-credits header h4 {
     margin-top: -20px;
 }
-.team-wide {
-    display:none
-}
+
 
         h1, h2, #parallax-window-1 h5 {
            text-align: left;

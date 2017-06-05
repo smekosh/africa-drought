@@ -154,23 +154,20 @@
         <div class='container'>
 
             <div class='row'>
-                <div class='col-sm-12'>
+                <div class='col-sm-4'>
                     <header id='news-ticker'>
                         <h5>The Latest Headlines</h5>
                         <div id="quote-container">
                             {foreach from=$entries.other item=entry }
                                 {if $entry@index < 5}
-                                <div id="quote{$entry@index}" class="quote"><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a></div>
+                                <div id="quote{$entry@index}" class="quote"><a href='//www.voanews.com{$entry.Link}'><img alt='Photo for story' class='img-responsive' src='{$entry.Photo}'></a><a href='//www.voanews.com{$entry.Link}'>{$entry.Title}</a><p>{$entry.Description}</p></div>
                                 {/if}
                             {/foreach}
                         </div>
                     </header>
                 </div>
-            </div>
 
-
-            <div class='row'>
-                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <div class="col-sm-8">
 
                     <h2 class='explainer-headline'>{$slides[11].content|strip_tags}</h2>
 

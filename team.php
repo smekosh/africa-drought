@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
         <link rel="stylesheet" type="text/css" href="css/nouislider.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?sqsw" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?sqdwdwddssw" />
 
 
         <script>
@@ -80,51 +80,51 @@
 
             <div id="meet-the-team" class="container">
 
-                <div class="row team-row team-narrow">
-                    <div class='col-sm-4'>
-                        <img class='img-responsive img-circle team-photo' src='img/team-salem.jpg'>
-                        <h5>Salem Solomon</h5>
-                        <h6>Editor/Designer/Developer</h6>
-                    </div>
-                    <div class='col-sm-4'>
-                        <img class='img-responsive img-circle team-photo' src='img/team-dino.jpg'>
-                        <h5>Dino Beslagic</h5>
-                        <h6>Developer</h6>
-                    </div>
-                    <div class='col-sm-4'>
-                        <img class='img-responsive img-circle team-photo' src='img/team-tom.jpg'>
-                        <h5>Tom Detzel</h5>
-                        <h6>Editor</h6>
-                    </div>                    
-                </div>
+                
 
                 <div class="row team-row team-wide">
                     <div class='col-sm-4 col-sm-offset-2'>
                         <img class='img-responsive img-circle team-photo' src='img/team-salem.jpg'>
                         <h5>Salem Solomon</h5>
                         <h6>Editor/Designer/Developer</h6>
+                        <div class="social">
+                            <a href='https://twitter.com/salem_solomon/'><img src='img/social-twitter.png'></a>
+                            <a href='https://www.linkedin.com/in/salemsolomon'><img src='img/social-linkedin.png'></a>
+                            <a href='https://github.com/salem-solomon'><img src='img/social-github.png'></a>
+                            <a href='mailto:sfekadu@voanews.com'><img src='img/social-email.png'></a>
+                        </div>
+
                     </div>
                     <div class='col-sm-4'>
-                        <img class='img-responsive img-circle team-photo' src='img/team-dino.jpg'>
+                        <img class='img-responsive img-circle team-photo' src='img/team-dino-2.jpg'>
                         <h5>Dino Beslagic</h5>
                         <h6>Developer</h6>
+                        <div class="social">
+                            <a href='https://twitter.com/pp19dd/'><img src='img/social-twitter.png'></a>
+                            <a href='https://github.com/pp19dd/'><img src='img/social-github.png'></a>
+                        </div>                        
                     </div>
                 </div>
           
-                <div class="row team-row">
+                <div class="row team-row team-wide">
 
                     <div class='col-sm-4 col-sm-offset-2'>
                         <img class='img-responsive img-circle team-photo' src='img/team-tom.jpg'>
                         <h5>Tom Detzel</h5>
                         <h6>Editor</h6>
-
+                        <div class="social">
+                            <a href='mailto:tdetzel@voanews.com'><img src='img/social-email.png'></a>
+                        </div>
                     </div>
 
                     <div class='col-sm-4'>
                         <img class='img-responsive img-circle team-photo' src='img/team-anand.jpg'>
                         <h5>Anand Mistry</h5>
                         <h6>Video Production/Animation</h6>
-
+                        <div class="social">
+                            <a href='https://www.linkedin.com/in/anandmistry1'><img src='img/social-linkedin.png'></a>
+                            <a href='mailto:amistry@voanews.com'><img src='img/social-email.png'></a>
+                        </div>
                     </div>
 
                 </div>
@@ -142,7 +142,7 @@
             
             <header>
                 <h4>Language Services</h4>
-                <p>The Voice of America’s Africa Division provides continuous coverage of food insecurity through 11 of its language services. Each service has a team of reporters, both on the ground and abroad, covering the effects of prolonged drought, conflict and climate change throughout Africa.</p>
+                <p>The Voice of America’s Africa Division provides continuous coverage of food insecurity through 11 of its language services. Each service has a team of reporters, both on the ground and abroad, covering the effects of prolonged drought, conflict and climate change throughout Africa. Web producers in each service coordinate with the Africa Division's Digital Team to maintain special coverage pages, from directing content to versioning English stories to respective languages.</p>
             </header>
 
                 <div class="row team-row">
