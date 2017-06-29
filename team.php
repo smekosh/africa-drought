@@ -23,7 +23,7 @@
 
 
         <nav class="voa-masthead">
-            <div class="voa-masthead-inner"><div class="voa-logo"><a href="//www.voanews.com" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0"><h1><a href='//projects.voanews.com/africa-drought' class='hideable1'>Hunger Across Africa</a></h1></a><a class='main-nav hideable' href='news.php'>News Updates</a><a class='main-nav hideable' href='countries.php'>Affected Countries</a><a class='main-nav hideable' href='team.php'>Meet The Team</a></div><div
+            <div class="voa-masthead-inner"><div class="voa-logo"><a href="//www.voanews.com" title="Return to the VOA News home page"><img alt="VOA" src="img/voa-logo_333333_60x25_2x.png" width="60" height="25" border="0"><h1><a href='//projects.voanews.com/africa-drought' class='hideable1'>Hunger Across Africa</a></h1></a><a class='main-nav hideable' href='news.php'>News Updates</a><a class='main-nav hideable' href='countries.php'>Affected Countries</a><a class='main-nav hideable' href='data.php'>Data & Graphics</a><a class='main-nav hideable' href='team.php'>Meet The Team</a></div><div
             class="share-options">
                 <ul>
                     <li><a title="Share on Facebook" href="https://www.facebook.com/dialog/share_open_graph?app_id={$fb_app_id}&amp;display=popup&amp;action_type=og.likes&amp;action_properties={$fb_action_properties|json_encode|escape:'url'}&amp;href={$canonical_url|escape:'url'}&amp;redirect_uri={$canonical_url|escape:'url'}" class="share-fb"><span class="scr">Share on Facebook</span></a></li>
@@ -54,7 +54,7 @@
                 <div class='col-sm-12'>
                     <nav>
                         <h6>Menu</h6>
-                        <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
+                        <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href='data.php'><span>Data & Graphics</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
                     </nav>
                 </div>
             </div>

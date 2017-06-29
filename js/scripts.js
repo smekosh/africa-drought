@@ -112,6 +112,93 @@ if (jQuery('.site-nav h6').length) {
     });
 }
 
+
+if (jQuery('#ipc-comparison').length) {
+    
+    var population = 12235167;
+
+    var population2 = 1495000+20000;
+
+    var population3 = 1685000+45000;
+
+
+
+    var mayLevel1 = (2320000/population)*100;
+    var mayLevel2 = (4030000/population)*100;
+    var mayLevel3 = (4015000/population)*100;
+    var mayLevel4 = (1495000/population)*100;
+    var mayLevel5 = (20000/population)*100;
+    var mayLevel0 = 100 - mayLevel1 - mayLevel2 - mayLevel3 - mayLevel4 - mayLevel5;
+
+
+    var mayLevel4Focus = (1495000/population3)*100;
+    var mayLevel5Focus = (20000/population3)*100;
+    var mayLevel0Focus = 100 - mayLevel4 - mayLevel5;
+
+
+    var juneJulyLevel1 = (2190000/population)*100;
+    var juneJulyLevel2 = (3615000/population)*100;
+    var juneJulyLevel3 = (4345000/population)*100;
+    var juneJulyLevel4 = (1685000/population)*100;
+    var juneJulyLevel5 = (45000/population)*100;
+    var juneJulyLevel0 = 100 - juneJulyLevel1 - juneJulyLevel2 - juneJulyLevel3 - juneJulyLevel4 - juneJulyLevel5;
+
+
+    var juneJulyLevel4Focus = (1685000/population3)*100;
+    var juneJulyLevel5Focus = (45000/population3)*100;
+    var juneJulyLevel0Focus = 100 - juneJulyLevel4 - juneJulyLevel5;
+
+
+    jQuery('.may .level-0').css({height : mayLevel0 + '%'});
+    jQuery('.may .level-1').css({height : mayLevel1 + '%'});
+    jQuery('.may .level-2').css({height : mayLevel2 + '%'});
+    jQuery('.may .level-3').css({height : mayLevel3 + '%'});
+    jQuery('.may .level-4').css({height : mayLevel4 + '%'});
+    jQuery('.may .level-5').css({height : mayLevel5 + '%'});
+
+    jQuery('.juneJuly .level-0').css({height : juneJulyLevel0 + '%'});
+    jQuery('.juneJuly .level-1').css({height : juneJulyLevel1 + '%'});
+    jQuery('.juneJuly .level-2').css({height : juneJulyLevel2 + '%'});
+    jQuery('.juneJuly .level-3').css({height : juneJulyLevel3 + '%'});
+    jQuery('.juneJuly .level-4').css({height : juneJulyLevel4 + '%'});
+    jQuery('.juneJuly .level-5').css({height : juneJulyLevel5 + '%'});
+
+    jQuery('.juneJulyLabels .level-0').css({'min-height' : juneJulyLevel0 + '%'});
+    jQuery('.juneJulyLabels .level-1').css({'min-height' : juneJulyLevel1 + '%'});
+    jQuery('.juneJulyLabels .level-2').css({'min-height' : juneJulyLevel2 + '%'});
+    jQuery('.juneJulyLabels .level-3').css({'min-height' : juneJulyLevel3 + '%'});
+    jQuery('.juneJulyLabels .level-4').css({'min-height' : juneJulyLevel4 + '%'});
+    jQuery('.juneJulyLabels .level-5').css({'min-height' : juneJulyLevel5 + '%'});
+
+    jQuery('.mayLabels .level-0').css({'min-height' : mayLevel0 + '%'});
+    jQuery('.mayLabels .level-1').css({'min-height' : mayLevel1 + '%'});
+    jQuery('.mayLabels .level-2').css({'min-height' : mayLevel2 + '%'});
+    jQuery('.mayLabels .level-3').css({'min-height' : mayLevel3 + '%'});
+    jQuery('.mayLabels .level-4').css({'min-height' : mayLevel4 + '%'});
+    jQuery('.mayLabels .level-5').css({'min-height' : mayLevel5 + '%'});
+
+
+    var mayLevel0Focus = (juneJulyLevel4Focus + juneJulyLevel5Focus) - (mayLevel4Focus + mayLevel5Focus);
+
+    jQuery('.may .level-0-focus').css({height : mayLevel0Focus + '%'});
+
+    jQuery('.mayLabels .level-4-focus').css({'min-height' : mayLevel4Focus + '%'});
+    jQuery('.mayLabels .level-5-focus').css({'min-height' : mayLevel5Focus + '%'});
+    jQuery('.mayLabels .level-0-focus').css({'min-height' : mayLevel0Focus + '%'});
+
+    jQuery('.may .level-4-focus').css({'min-height' : mayLevel4Focus + '%'});
+    jQuery('.may .level-5-focus').css({'min-height' : mayLevel5Focus + '%'});
+
+    jQuery('.juneJuly .level-4-focus').css({'min-height' : juneJulyLevel4Focus + '%'});
+    jQuery('.juneJuly .level-5-focus').css({'min-height' : juneJulyLevel5Focus + '%'});
+
+    jQuery('.juneJulyLabels .level-4-focus').css({'min-height' : juneJulyLevel4Focus + '%'});
+    jQuery('.juneJulyLabels .level-5-focus').css({'min-height' : juneJulyLevel5Focus + '%'});
+
+
+
+}
+
 if (jQuery('.wrapper-infographic').length) {
 
     jQuery.getJSON("countries.json", function(result){

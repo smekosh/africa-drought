@@ -144,7 +144,7 @@
                 <div class='col-sm-12'>
                     <nav>
                         <h6>Menu</h6>
-                        <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
+                        <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href='data.php' style="opacity: 1;"><span>Data & Graphics</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
                     </nav>
                 </div>
             </div>
@@ -152,7 +152,6 @@
     </div>
 
         <div class='container'>
-
             <div class='row'>
                 <div class='col-sm-4'>
                     <header id='news-ticker'>
@@ -166,18 +165,13 @@
                         </div>
                     </header>
                 </div>
-
                 <div class="col-sm-8">
-
                     <h2 class='explainer-headline'>{$slides[11].content|strip_tags}</h2>
-
                     <video controls poster="img/drought-explainer.jpg">
                       <source src="//av.voanews.com/Videoroot/Pangeavideo/2017/05/6/63/63cda88a-0991-49cd-9ce2-8be7ec5a4286.mp4" type= "video/mp4"> 
                     </video>
                 </div>
             </div>
-
-
         </div>    
 
         <div class='wrapper'>

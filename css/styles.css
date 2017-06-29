@@ -1023,6 +1023,10 @@ th.rotate > div {
            text-align: left;
         }
 
+#ipc-comparison h1, #ipc-comparison h2 {
+    text-align: center
+}
+
 
     a.main-nav {
         display: none
@@ -1078,7 +1082,8 @@ th.rotate > div > span {
     margin-bottom: 40px;
 }
 
-.wrapper-infographic h2 {
+.wrapper-infographic h2,
+.wrapper-data h2 {
     background-color: #666;
             border-left: 8px solid #df5a49;
     color: #fff;
@@ -1090,37 +1095,46 @@ th.rotate > div > span {
     letter-spacing: .5px;
 }
 
-.wrapper-infographic img {
+.wrapper-infographic img,
+.wrapper-data img {
     padding-bottom: 20px;
 }
 
-.wrapper-infographic h4 {
+.wrapper-infographic h4,
+.wrapper-data h4 {
     color: #444;
     font-size: 1.2em;
     margin: 0 0 10px 0;
     letter-spacing: .5px;
 
 }
-.wrapper-infographic h4.disease {
+.wrapper-infographic h4.disease,
+.wrapper-data h4.disease {
     font-size: .9em;
 
 }
-.wrapper-infographic h5 {
+.wrapper-infographic h5,
+.wrapper-data h5 {
 
     font-size: .9em;
     margin: 0;
     letter-spacing: .5px;
 
 }
+.wrapper-data h5 {
+    line-height: 20px;
+}
 
-.wrapper-infographic {
+.wrapper-infographic,
+.wrapper-data {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .wrapper-infographic img.country {
 }
 
-.wrapper-infographic h5.country-link {
+.wrapper-infographic h5.country-link,
+.wrapper-data h5.country-link {
    margin-top: 20px; 
 }
 
@@ -1167,6 +1181,8 @@ th.rotate > div > span {
 
 #the-team .site-nav,
 #countries .site-nav,
+#data .site-nav,
+#ipc-comparison .site-nav,
 #news-page .site-nav {
     margin-top: 60px;
 }
@@ -1197,3 +1213,189 @@ th.rotate > div > span {
     padding: 5px 15px 30px 15px;
 
 }
+
+
+
+
+        #ipc-comparison .infographic .level-0 {
+            background-color: #ddd;
+        }
+
+        #ipc-comparison .infographic .level-0-focus {
+            background-color: #fff;
+        }
+
+        #ipc-comparison .infographic .level-1,
+        #ipc-comparison .infographic .level-1-focus {
+            background-color: #334d5c;
+        }
+
+        #ipc-comparison .infographic .level-2,
+        #ipc-comparison .infographic .level-2-focus {
+            background-color: #45b29d;
+        }
+
+        #ipc-comparison .infographic .level-3,
+        #ipc-comparison .infographic .level-3-focus {
+            background-color: #efc94c;
+        }
+
+        #ipc-comparison .infographic .level-4,
+        #ipc-comparison .infographic .level-4-focus {
+            background-color: #e27a3f;
+        }
+
+        #ipc-comparison .infographic .level-5,
+        #ipc-comparison .infographic .level-5-focus {
+            background-color: #df5a49;
+        }
+        #ipc-comparison .infographic .status {
+            height: 1200px;
+        }
+        #ipc-comparison .infographic .status2 {
+            height: 1200px;
+        }
+
+        #ipc-comparison .infographic header {
+            margin-top: 40px;
+        }
+
+        #ipc-comparison .infographic .half-size {
+            width: 30%;
+            margin: 20px auto;
+        }
+
+        #ipc-comparison .infographic h1 {
+            font-family: 'Noto Serif';
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        #ipc-comparison .infographic h2 {
+            font-family: 'Noto Sans';
+            font-size: 1em;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+
+        }
+        #ipc-comparison .infographic h3 {
+            background-color: #fff;
+            color: #222;
+            font-family: 'Noto Serif';
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 25px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            text-transform: none;
+        }
+
+        #ipc-comparison .infographic header {
+            text-align: center;
+        }
+        #ipc-comparison .infographic header h1 {
+            color: #111;
+
+        }
+
+        #ipc-comparison .infographic header h2 {
+            color: #111;
+            
+        }
+        #ipc-comparison ol {
+            font-weight: bold;
+            list-style-type: none;
+            margin: 20px 0;
+            margin-left: -40px
+        }
+        #ipc-comparison .infographic p {
+            margin: 10px 0;
+        }
+
+        #ipc-comparison .infographic .chart-footer {
+            font-size: .9em;
+            margin: 40px 0;
+        }
+
+        #ipc-comparison .infographic .chart-explainer {
+            margin: 40px 0;
+        }
+
+        #ipc-comparison .infographic .chart-explainer header {
+            margin: 0;
+        }
+
+
+        #ipc-comparison .infographic .left-label h6 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            font-family: 'noto sans';
+            font-size: .9em;
+            font-weight: bold;
+            text-align: center;         
+        }
+        #ipc-comparison .infographic .right-label h6 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            font-family: 'noto sans';
+            font-size: .9em;
+            font-weight: bold;
+            text-align: center;         
+
+        }
+
+        #ipc-comparison .infographic footer {
+            text-align: center
+        }
+
+
+        #ipc-comparison .infographic .juneJulyLabels,
+        #ipc-comparison .infographic .mayLabels {
+            padding: 0
+        }
+        #ipc-comparison .infographic .mayLabels  {
+            text-align: right;
+        }
+        #ipc-comparison .infographic .juneJulyLabels div,
+        #ipc-comparison .infographic .mayLabels div {
+            background-color: #fff;
+        }
+        #ipc-comparison .infographic .juneJulyLabels span,
+        #ipc-comparison .infographic .mayLabels span {
+
+            display: block;
+            font-size: .9em;
+            line-height: 14px;
+            padding-top: 0;        
+        }
+
+
+
+       #ipc-comparison .infographic .juneJulyLabels .glyphicon {
+            margin-bottom: 0;
+            margin-top: 10px;
+             transform: rotate(45deg);
+            transform-origin: 5% 5%;
+        }
+
+       #ipc-comparison .infographic .mayLabels .glyphicon {
+            margin-bottom: -5px;
+            margin-top: 10px;
+            margin-right:-10px;
+             transform: rotate(-45deg);
+            transform-origin: 90% 90%;
+        }
+
+        #ipc-comparison .infographic .chartLabel {
+            margin-bottom: 20px;    
+            margin-top: 5px;
+        }
+
+        #ipc-comparison .infographic .may .level-5-focus {
+            border-bottom: 2px solid #000;
+        }
+        #ipc-comparison .infographic .juneJuly .level-5-focus {
+            border-top: 2px solid #000;
+        }
+
+

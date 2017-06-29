@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic|Noto+Serif:400,400italic,700italic,700&subset=latin,latin-ext" />
         <link rel="stylesheet" type="text/css" href="css/nouislider.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css?434e97" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css?434dwedw97" />
 
         <script>
             // quickfix to provide parallax image to js/scripts.js as global var
@@ -17,7 +17,7 @@
         </script>
 
     </head>
-    <body id='countries'>
+    <body id='data'>
 
         <nav class="voa-masthead">
         
@@ -85,7 +85,7 @@
                     <div class='col-sm-12'>
                         <nav>
                             <h6>Menu</h6>
-                            <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href='data.php'><span>Data & Graphics</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
+                            <a href="news.php" style="opacity: 1;"><span>News Updates</span></a><a href="countries.php" style="opacity: 1;"><span>Affected Countries</span></a><a href='data.php' style="opacity: 1;"><span>Data & Graphics</span></a><a href="team.php" style="opacity: 1;"><span>Meet the Team</span></a>
                         </nav>
                     </div>
                 </div>
@@ -97,8 +97,8 @@
                 <div class="row">
                     <div class='col-sm-10 col-sm-offset-1'>
         <section id='infographic-intro'>
-            <header><h4>Country Profiles</h4></header>
-            <p>Across Africa, famine threatens up to 14 million people. Up to 41 million additional people face severe food insecurity. In many of these nations, other risk factors, including armed conflict, diease and gaps in humanitarian funding, put even more lives in peril.</p>
+            <header><h4>Data & Graphics</h4></header>
+            <p>Explore these visualizations to learn more about conditions on the ground in affected countries.</p>
         </section>
                 </div>
             </div>
@@ -106,23 +106,28 @@
 
 
 
-        <div class='wrapper-infographic'>
-        </div>
 
 
+        <div class="wrapper-data">
             <div class="container">
                 <div class="row">
-                    <div class='col-sm-10 col-sm-offset-1'>
-        <section id='data-sources'>
-            <header><h4>Data Sources</h4></header>
-            <p>IPC data from FEWS.net (May, 2017).</p>
-            <p>People at risk data from a FEWS outlook analysis by the Food and Agriculture Organization of the United Nations (March, 2017).</p>
-            <p>Conflict death data from the Armed Conflict Location and Event Data Project&#8217;s "Realtime Africa" dataset (May, 2017).</p>
-            <p>Funding gap data from the UN Office for the Coordination of Humanitarian Affairs (May, 2017).</p>
-        </section>
+                    <div class="col-sm-4 col-sm-offset-4 col-xs-12">
+                        <a href='south-sudan.php'>
+                        <div class="country-record">
+                            <h2>FOOD INSECURITY IN South Sudan</h2><img class="img-responsive country" src="img/data-south-sudan.gif">
+                            <section>
+                                <h5>South Sudan is no longer experiencing famine. But has food security in the East African nation improved?</h5>
+                            </section>
+                        </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
 
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
